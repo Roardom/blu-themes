@@ -1,0 +1,414 @@
+:root {
+  --color-light-blue: #64b5f6;
+  --color-light-green: #64b5f6;
+  --color-light-magenta: #64b5f6;
+  --color-light-purple: #64b5f6;
+  --color-400: #42a5f5;
+  --color-blue: #2196f3;
+  --color-green: #2196f3;
+  --color-yellow: #2196f3;
+  --color-magenta: #1e88e5;
+  --color-red: #1565c0;
+  --color-dark-green: #1565c0;
+  --color-A200: #448aff;
+  --color-A400: #2979ff;
+  --color-purple: #2962ff;
+  --color-dark-blue: #212121;
+  --color-dark-red: #181818;
+    --color-grey-bg-1: #464646; /* Ratiobar */
+    --color-grey-bg-2: #363636; /* Site banner */
+    --color-grey-bg-3: #292929; /* Navbar */
+    --color-grey-bg-4: #212121; /* Site background */
+    --color-grey-bg-5: #181818; /* Chat background */
+  
+    --color-grey-text-1: #d6d6d6; /* Main titles */
+    --color-grey-text-2: #a6a6a6; /* Regular text and subheadings */
+    --color-grey-text-3: #aaaaaa; /* Emphasized text */
+    --color-grey-text-4: #696969; /* De-emphasized text */
+  
+    --color-grey-border-1: #565656; 
+    --color-grey-border-2: #464646; 
+    --color-grey-border-3: #393939; 
+    --color-grey-border-4: #363636; 
+
+    --color-grey-table-1: #2c2c2c; /* Table rows 2n */
+    --color-grey-table-2: #262626; /* Table rows 2n+1 */
+    --color-grey-table-3: #c7c7c7; /* Table row text */
+}
+
+
+
+  --movie-overlay: radial-gradient(
+    circle at 20% 50%,
+    #000 5.46%,
+    rgba(21, 101, 192, 0.46)
+  );
+  --background-pipe: url(/img/pipes/blue.png);
+  --gradient-background: radial-gradient(at 30% top, #072e46 0%, #081c24 70%);
+}
+body {
+  background-color: var(--color-dark-blue);
+}
+.btn-danger,
+.btn-primary,
+.label-primary {
+  background-color: var(--color-grey-bg-3);
+  border: 1px solid var(--color-grey-border-3) !important;
+  background-image: none;
+}
+.btn-info {
+  background-color: var(--color-grey-bg-3);
+  border: 1px solid var(--color-grey-border-3) !important;
+  background-image: none;
+}
+.label-success, .label-info {
+  background-color: var(--color-grey-bg-3);
+  background-image: none;
+}
+.btn-success {
+  background-color: var(--color-grey-bg-3);
+  border: 1px solid var(--color-grey-border-3) !important;
+  background-image: none;
+}
+.btn-warning {
+  background-color: var(--color-grey-bg-3);
+  border: 1px solid var(--color-grey-border-3) !important;
+  background-image: none;
+}
+.btn:active,
+.btn:active:focus,
+.btn:active:hover,
+.btn:active:hover:focus,
+.btn:focus,
+.btn:hover {
+  background-color: var(--color-light-purple) !important;
+  background-image: none;
+}
+#hoeapp-wrapper,
+#main-content,
+.inner-content {
+  background-color: var(--color-dark-blue);
+}
+/* Left NavBar */
+#hoeapp-container[hoe-color-type="lpanel-bg5"].hoe-minimized-lpanel
+  #hoe-left-panel {
+  background: var(--color-grey-bg-3);
+}
+/* Top NavBar / Site Banner */
+.hoe-right-header[hoe-color-type="header-bg5"] {
+  background: var(--color-grey-bg-2);
+  border: 0 0 0 10px solid var(--color-grey-border-1);
+}
+/* RatioBar */
+.ratio-bar {
+  background-color: var(--color-grey-bg-1);
+}
+.ratio-bar .badge-user {
+  background-color: var(--color-grey-bg-1);
+}
+.nav-tabs > #active {
+  background-color: var(--color-dark-green);
+}
+.nav-tabs > li.active > a, .nav-tabs > li > a:hover {
+    background-color: var(--color-grey-bg-5) !important;
+    border: 2px solid var(--color-grey-bg-5) !important;
+}
+.nav-tabs > li > a {
+    background-color: var(--color-grey-bg-1);
+}
+.btn-primary :hover {
+  background-color: var(--color-light-purple);
+}
+.hoe-right-header .hoe-rheader-submenu > .dropdown-menu > li {
+  border-bottom: none;
+}
+.hoe-right-header .hoe-rheader-submenu > .dropdown-menu > li > a,
+.hoe-right-header .hoe-rheader-submenu > .dropdown-menu > li > a > .fa {
+  color: #fff;
+}
+#hoeapp-container[hoe-color-type="lpanel-bg5"] #hoe-left-panel,
+#hoeapp-container[hoe-color-type="lpanel-bg5"]
+  #hoe-left-panel
+  .panel-list
+  > li
+  > a,
+.hoe-right-header .hoe-rheader-submenu > .dropdown-menu > li > a {
+  background: var(--color-grey-bg-2);
+}
+/* Blutopia logo background */
+.hoe-left-header {
+  background: var(--color-grey-bg-2);
+}
+
+#hoeapp-container[hoe-color-type="lpanel-bg5"]
+  #hoe-left-panel
+  .panel-list
+  > li
+  > a:hover,
+.hoe-right-header .hoe-rheader-submenu > .dropdown-menu > li > a:focus,
+.hoe-right-header .hoe-rheader-submenu > .dropdown-menu > li > a:hover {
+  background: var(--color-grey-bg-3);
+}
+#hoeapp-container[hoe-color-type="lpanel-bg5"]
+  #hoe-left-panel
+  .panel-list
+  > li
+  > a {
+  border-top: 1px solid #393939;
+}
+.text-green {
+  color: #3fb618;
+}
+.text-muted {
+  color: #999;
+}
+.carousel-control > .glyphicon,
+i.torrent-icon {
+  color: var(--color-blue);
+}
+/* Main div that surrounds all elements on the page */
+.col-md-10 {
+  background-color: var(--color-grey-bg-4);
+  margin-top: 5px;
+  padding-top: 10px;
+}
+/* Chat messages */
+.panel-chat > .panel-body > #frame > .content {
+  background-color: var(--color-grey-bg-5);
+}
+/* Panel Headings */
+.panel-chat > .panel-heading {
+    background-color: var(--color-grey-bg-2);
+    padding: 8px;
+    margin: 0;
+}
+/* Panel Headings Title */
+.panel-chat > .panel-heading h4 {
+    font-size: 13px;
+}
+/* Panels */
+.panel {
+    border: 1px solid var(--color-grey-border-3);
+    border-radius: 0;
+}
+
+
+#l-footer {
+  background-color: #1f1f1f;
+}
+.notify .point {
+  background-color: var(--color-A400);
+}
+.notify .heartbit {
+  border: 4px solid var(--color-A200);
+}
+.message-sent .message-body,
+.message-sent .message-headers,
+.message-unread .message-body,
+.message-unread .message-headers {
+  background-color: #404040;
+}
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+.topic-info,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #fff;
+}
+.progress-bar {
+  background-color: var(--color-grey-1);
+  border-bottom: 0px solid var(--color-red) !important;
+}
+select,
+select option {
+  background-color: #454545 !important;
+}
+/* Site Banner / Top NavBar Search Boxes */
+.form-control {
+  background-color: var(--color-grey-bg-1);
+  color: #fff;
+  border: 0px solid rgba(0, 0, 0, 0.56);
+  border-radius: 0;
+}
+.form-control:focus {
+  box-shadow: 0 0 0px var(--color-light-blue);
+  border: 0px solid var(--color-light-blue);
+}
+.form-control > option {
+  background-color: var(--color-grey-bg-1);
+}
+.bbcode-code,
+.bbcode-quote {
+  border: 1px solid var(--color-light-blue);
+}
+.bbcode-quote {
+  margin: 0 15px 15px;
+}
+.movie-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: var(--movie-overlay);
+}
+.footer-icon,
+.text-info {
+  color: var(--color-400);
+}
+.badge-extra {
+  border: 1px solid rgba(66, 70, 92, 0.61);
+  border-radius: 0;
+}
+.text-bright {
+  color: #ccc;
+}
+a.text-bright:focus,
+a.text-bright:hover {
+  color: #fcfcfc;
+}
+.fa-coins,
+.text-orange,
+.text-pink,
+.text-purple,
+.text-success {
+  color: var(--color-400);
+}
+.text-danger {
+  color: #966;
+}
+.alert-danger,
+.alert-default,
+.alert-info,
+.alert-primary,
+.alert-success,
+.alert-warning,
+.btn-info,
+.panel-danger,
+.panel-danger > .panel-heading,
+.panel-default,
+.panel-default > .panel-heading,
+.panel-info,
+.panel-info > .panel-heading,
+.panel-primary,
+.panel-primary > .panel-heading,
+.panel-success,
+.panel-success > .panel-heading,
+.panel-warning,
+.panel-warning > .panel-heading {
+  background-color: var(--color-magenta) !important;
+}
+.alert {
+  color: #424242;
+}
+.alert > h2,
+.alert > h2 > strong,
+.movie-title > a,
+.panel > .panel-heading > div > h2,
+.panel > .panel-heading > div > h4,
+.panel > .panel-heading > h2,
+.panel > .panel-heading > h4 {
+  color: #000;
+}
+.panel-chat > .panel-heading > h4 {
+  color: #fff;
+}
+.panel-collapse > .panel-heading {
+  background-color: #1b1b1b !important;
+}
+.badge-user {
+  border-radius: 0;
+}
+/* Encapsulates Torrent table */
+.container.box {
+  background: var(--color-grey-bg-4);
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2);
+}
+.list-inline {
+  color: inherit;
+}
+/* Page Titles */
+.gradient.blue,
+.gradient.green,
+.gradient.light_blue,
+.gradient.orange,
+.gradient.pink,
+.gradient.purple,
+.gradient.red,
+.gradient.silver,
+.gradient.teal,
+.gradient.yellow {
+  background-image: var(--color-grey-bg-4);
+}
+#l-footer,
+div.header.blue div.inner_content,
+div.header.green div.inner_content,
+div.header.light_blue div.inner_content,
+div.header.orange div.inner_content,
+div.header.pink div.inner_content,
+div.header.purple div.inner_content,
+div.header.red div.inner_content,
+div.header.silver div.inner_content,
+div.header.teal div.inner_content,
+div.header.yellow div.inner_content {
+  background-color: var(--color-grey-bg-4) !important;
+  background-image: none!important;
+}
+/* Tables */
+.table-responsive {
+    border: 1px solid var(--color-grey-border-3);
+    color: var(--color-grey-table-3);
+}
+/* Table row 2n */
+.table > tbody > tr:nth-child(2n) > td {
+    background: var(--color-grey-table-1) !important;
+    border-bottom: 1px solid var(--color-grey-border-4);
+}
+/* Table row 2n+1 */
+.table > tbody > tr:nth-child(2n+1) > td {
+    background: var(--color-grey-table-2) !important;
+    border-bottom: 1px solid var(--color-grey-border-4);
+}
+
+.table > tbody > tr > td.text-green {
+  color: #3fb618 !important;
+}
+.table > tbody > tr > td.text-red {
+  color: var(--color-light-red) !important;
+}
+/* Block surround tables in active/seeds/torrents/etc */
+.block, .well {
+    background-color: var(--color-grey-bg-4);
+}
+/* Title for Active/seeds/torrents/etc */
+div.block div.inner_content {
+    justify-content: left;
+}
+div.block div.inner_content h1 {
+    font-size: 25px !important;
+}
+/* Filters for Active/seeds/torrents/etc */
+.block .container {
+    background-color: var(--color-grey-bg-3);
+    border: 1px solid var(--color-grey-border-3);
+    border-radius: 0px;
+    width: 100%;
+}
+/* links */
+a.view-torrent {
+    font-weight: 400;
+    font-size: 14px;
+}
+a.view-torrent:hover {
+    text-decoration: none !important;
+    color: #3987cc !important;
+    -webkit-text-fill-color: #3987cc;
+}
