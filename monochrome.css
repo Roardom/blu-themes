@@ -15,35 +15,31 @@
   --color-purple: #2962ff;
   --color-dark-blue: #212121;
   --color-dark-red: #181818;
-    --color-grey-bg-1: #464646; /* Ratiobar */
-    --color-grey-bg-2: #363636; /* Site banner */
-    --color-grey-bg-3: #292929; /* Navbar */
-    --color-grey-bg-4: #212121; /* Site background */
-    --color-grey-bg-5: #181818; /* Chat background */
-  
-    --color-grey-text-1: #d6d6d6; /* Main titles */
-    --color-grey-text-2: #a6a6a6; /* Regular text and subheadings */
-    --color-grey-text-3: #aaaaaa; /* Emphasized text */
-    --color-grey-text-4: #696969; /* De-emphasized text */
-    --color-grey-text-5: #cccccc; /* Code */
-    --color-grey-text-6: #d6d6d6; /* Form text */
-    --color-grey-text-7: #b6b6b6; /* Ratio Bar Text */
-  
-    --color-grey-border-1: #565656; 
-    --color-grey-border-2: #464646; 
-    --color-grey-border-3: #393939; /* panel border */
-    --color-grey-border-4: #363636; 
-    --color-grey-border-5: #444444; /* pre border */
+  --color-grey-bg-1: #464646; /* Ratiobar */
+  --color-grey-bg-2: #363636; /* Site banner */
+  --color-grey-bg-3: #292929; /* Navbar */
+  --color-grey-bg-4: #212121; /* Site background */
+  --color-grey-bg-5: #181818; /* Chat background */
 
-    --color-grey-table-1: #2c2c2c; /* Table rows 2n */
-    --color-grey-table-2: #262626; /* Table rows 2n+1 */
-    --color-grey-table-3: #c7c7c7; /* Table row text */
-    --color-grey-table-4: #292929; /* Table rows Details */
-    --color-grey-table-5: #333333; /* Table rows Pinned */
+  --color-grey-text-1: #d6d6d6; /* Main titles */
+  --color-grey-text-2: #a6a6a6; /* Regular text and subheadings */
+  --color-grey-text-3: #aaaaaa; /* Emphasized text */
+  --color-grey-text-4: #696969; /* De-emphasized text */
+  --color-grey-text-5: #cccccc; /* Code */
+  --color-grey-text-6: #d6d6d6; /* Form text */
+  --color-grey-text-7: #b6b6b6; /* Ratio Bar Text */
 
-}
+  --color-grey-border-1: #565656;
+  --color-grey-border-2: #464646;
+  --color-grey-border-3: #393939; /* panel border */
+  --color-grey-border-4: #363636;
+  --color-grey-border-5: #444444; /* pre border */
 
-
+  --color-grey-table-1: #2c2c2c; /* Table rows 2n */
+  --color-grey-table-2: #262626; /* Table rows 2n+1 */
+  --color-grey-table-3: #c7c7c7; /* Table row text */
+  --color-grey-table-4: #292929; /* Table rows Details */
+  --color-grey-table-5: #333333; /* Table rows Pinned */
 
   --movie-overlay: radial-gradient(
     circle at 20% 50%,
@@ -107,7 +103,11 @@ body {
 .ratio-bar {
   background-color: var(--color-grey-bg-1);
 }
-.ratio-bar .badge-user, .badge-user, a .badge-user, h4 .badge-user, .col-sm-10 .badge-user {
+.ratio-bar .badge-user,
+.badge-user,
+a .badge-user,
+h4 .badge-user,
+.col-sm-10 .badge-user {
   background-color: transparent;
   border: 0;
   box-shadow: none;
@@ -116,28 +116,28 @@ body {
   text-shadow: none;
 }
 .ratio-bar .container-fluid ul li:nth-of-type(3) span i {
-    color: #00bc8c !important;
+  color: #00bc8c !important;
 }
 .ratio-bar .container-fluid ul li:nth-of-type(4) span i {
-    color: #ff4373 !important;
+  color: #ff4373 !important;
 }
 .ratio-bar .container-fluid ul li:nth-of-type(5) span i {
-    color: #0096bc !important;
+  color: #0096bc !important;
 }
 .ratio-bar .container-fluid ul li:nth-of-type(7) span i {
-    color: #00bc8c !important;
+  color: #00bc8c !important;
 }
 .ratio-bar .container-fluid ul li:nth-of-type(8) span i {
-    color: #ff4373 !important;
+  color: #ff4373 !important;
 }
 .ratio-bar .container-fluid ul li:nth-of-type(9) span i {
-    color: red !important;
+  color: red !important;
 }
 .ratio-bar .container-fluid ul li:nth-of-type(10) span i {
-    color: #ffc00a !important;
+  color: #ffc00a !important;
 }
 .ratio-bar .container-fluid ul li:nth-of-type(11) span i {
-    color: #ffc00a !important;
+  color: #ffc00a !important;
 }
 /* Theme color text */
 /* .fa-coins,
@@ -154,65 +154,66 @@ body {
 } */
 /* Chat message name */
 .sent .badge-user {
-    background-color: transparent;
-    box-shadow: none;
-    font-weight: bold;
-    font-size: 14px;
+  background-color: transparent;
+  box-shadow: none;
+  font-weight: bold;
+  font-size: 14px;
 }
 /* Chat message avatar */
 .sent .chat-user-image {
-    display: none;
+  display: none;
 }
 /* Chat message header */
 .sent h4 {
-    display: inline;
+  display: inline;
 }
 /* Chat message time */
 #frame .content .messages ul li.sent h4 .text-muted {
-    color: var(--color-grey-text-4);
-    display: float;
-    float: left;
-    margin-top: 5px;
+  color: var(--color-grey-text-4);
+  display: float;
+  float: left;
+  margin-top: 5px;
 }
 /* Chat Message Text */
 .sent .text-bright {
-    font-size: 16px;
-    display: inline-block;
+  font-size: 16px;
+  display: inline-block;
 }
 /* Chat System Messages */
 #frame .content .messages ul li.sent .system {
-    size: 16px;
+  size: 16px;
 }
 /* Chat typing message */
 .typing.pull-left {
-    color: var(--color-grey-text-3);
+  color: var(--color-grey-text-3);
 }
 /* Chat tabs */
 #frameTabs {
-    background-color: var(--color-grey-bg-2);
+  background-color: var(--color-grey-bg-2);
 }
 .nav-tabs {
-    border-bottom: 0;
+  border-bottom: 0;
 }
 .nav-tabs > #active {
   background-color: var(--color-dark-green);
 }
-.nav-tabs > li.active > a, .nav-tabs > li > a:hover {
-    background-color: var(--color-grey-bg-5) !important;
-    border: 2px solid var(--color-grey-bg-5) !important;
+.nav-tabs > li.active > a,
+.nav-tabs > li > a:hover {
+  background-color: var(--color-grey-bg-5) !important;
+  border: 2px solid var(--color-grey-bg-5) !important;
 }
 .nav-tabs > li > a {
-    background-color: var(--color-grey-bg-1);
+  background-color: var(--color-grey-bg-1);
 }
 /* Top Uploaders Tabs */
 ul.nav-tabs {
-    background-color: var(--color-grey-bg-2);
+  background-color: var(--color-grey-bg-2);
 }
 .tab-pane .table-responsive table {
-    background: var(--color-grey-bg-5);
+  background: var(--color-grey-bg-5);
 }
 .tab-pane .table-responsive .table > tbody > tr:nth-child(n) > td {
-    background: var(--color-grey-bg-5) !important;
+  background: var(--color-grey-bg-5) !important;
 }
 .hoe-right-header .hoe-rheader-submenu > .dropdown-menu > li {
   border-bottom: none;
@@ -273,31 +274,30 @@ i.torrent-icon {
 }
 /* Chat message */
 #frame .content .messages ul li {
-    border-bottom: 1px dashed var(--color-grey-border-3);
+  border-bottom: 1px dashed var(--color-grey-border-3);
 }
 /* Panel Headings */
 .panel-chat > .panel-heading {
-    background-color: var(--color-grey-bg-2);
-    padding: 8px;
-    margin: 0;
+  background-color: var(--color-grey-bg-2);
+  padding: 8px;
+  margin: 0;
 }
 /* Panel Footers */
 .panel-chat > .panel-footer {
-    background-color: var(--color-grey-bg-2);
-    border-top: 0;
+  background-color: var(--color-grey-bg-2);
+  border-top: 0;
 }
 /* Panel Headings Title */
 .panel-chat > .panel-heading h4 {
-    font-size: 13px;
+  font-size: 13px;
 }
 /* Panels */
 .panel {
-    border: 1px solid var(--color-grey-border-3);
-    border-radius: 0;
-    box-shadow: none;
-    background-color: var(--color-grey-bg-3)
+  border: 1px solid var(--color-grey-border-3);
+  border-radius: 0;
+  box-shadow: none;
+  background-color: var(--color-grey-bg-3);
 }
-
 
 #l-footer {
   background-color: #1f1f1f;
@@ -312,17 +312,17 @@ i.torrent-icon {
 .message-sent .message-body,
 .message-read .message-body,
 .message-unread .message-body {
-    background-color: var(--color-grey-bg-3);
-    border: 1px solid var(--color-grey-border-3)
+  background-color: var(--color-grey-bg-3);
+  border: 1px solid var(--color-grey-border-3);
 }
 .message-read .message-headers,
 .message-sent .message-headers,
 .message-unread .message-headers {
   background-color: var(--color-grey-bg-2);
-  border: 1px solid var(--color-grey-border-3)
+  border: 1px solid var(--color-grey-border-3);
 }
 .message-read {
-    border: 1px solid var
+  border: 1px solid var;
 }
 .h1,
 .h2,
@@ -340,8 +340,8 @@ h6 {
   color: #fff;
 }
 .progress {
-    background-color: var(--color-grey-bg-1);
-    border: 0
+  background-color: var(--color-grey-bg-1);
+  border: 0;
 }
 .progress-bar {
   background-color: var(--color-grey-1);
@@ -364,21 +364,21 @@ select option {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(28,31,36,.9);
+  background: var(--movie-overlay);
 }
 .footer-icon,
 .text-info {
   color: var(--color-400);
 }
 .badge-extra {
-    border: 0;
-    background-color: transparent;
+  border: 0;
+  background-color: transparent;
 }
 .badge-user.group-member {
   border: 1px solid rgba(66, 70, 92, 0.61);
   border-radius: 3px;
   background-color: var(--color-grey-bg-2);
-  color: var(--color-grey-text-7)
+  color: var(--color-grey-text-7);
 }
 .text-bright {
   color: #ccc;
@@ -451,10 +451,11 @@ a.text-bright:hover {
   border: 0;
 }
 /* Profile encapsulation */
-.container .block, .container .well {
-    border-radius: 0;
-    border: 0;
-    background-color: transparent;
+.container .block,
+.container .well {
+  border-radius: 0;
+  border: 0;
+  background-color: transparent;
 }
 .list-inline {
   color: inherit;
@@ -485,33 +486,33 @@ div.header.silver div.inner_content,
 div.header.teal div.inner_content,
 div.header.yellow div.inner_content {
   background-color: transparent !important;
-  background-image: none!important;
+  background-image: none !important;
 }
 /* Tables */
 .table-responsive {
-    border: 1px solid var(--color-grey-border-3);
-    color: var(--color-grey-table-3);
+  border: 1px solid var(--color-grey-border-3);
+  color: var(--color-grey-table-3);
 }
 /* Table for torrent details */
 .panel .table > tbody > tr:nth-child(n) > td {
-    background: var(--color-grey-table-4) !important;
-    color: var(--color-grey-text-2);
+  background: var(--color-grey-table-4) !important;
+  color: var(--color-grey-text-2);
 }
 .panel .table > tbody > tr:nth-child(n) > td strong {
-    font-weight: 400 !important;
+  font-weight: 400 !important;
 }
 .table-bordered > tbody > tr > td {
-    border: 0;
+  border: 0;
 }
 /* Table row 2n */
 .table > tbody > tr:nth-child(2n) > td {
-    background: var(--color-grey-table-1) !important;
-    border-bottom: 1px solid var(--color-grey-border-4);
+  background: var(--color-grey-table-1) !important;
+  border-bottom: 1px solid var(--color-grey-border-4);
 }
 /* Table row 2n+1 */
-.table > tbody > tr:nth-child(2n+1) > td {
-    background: var(--color-grey-table-2) !important;
-    border-bottom: 1px solid var(--color-grey-border-4);
+.table > tbody > tr:nth-child(2n + 1) > td {
+  background: var(--color-grey-table-2) !important;
+  border-bottom: 1px solid var(--color-grey-border-4);
 }
 
 .table > tbody > tr > td.text-green {
@@ -521,141 +522,144 @@ div.header.yellow div.inner_content {
   color: var(--color-light-red) !important;
 }
 /* Forum messages */
-.topic .topic-new-post, .profil {
-    background: var(--color-grey-bg-3);
+.topic .topic-new-post,
+.profil {
+  background: var(--color-grey-bg-3);
 }
 .topic .topic-posts .post article.post-content {
-    color: var(--color-grey-text-2);
+  color: var(--color-grey-text-2);
 }
 .topic .topic-posts .post .post-signature {
-    border-top: 1px solid var(--color-grey-border-3)
+  border-top: 1px solid var(--color-grey-border-3);
 }
 .topic .topic-posts .post aside.post-info {
-    border: 0;
-    background-color: var(--color-grey-bg-3);
+  border: 0;
+  background-color: var(--color-grey-bg-3);
 }
 .head {
-    background-color: var(--color-grey-bg-2);
-    box-shadow: none;
+  background-color: var(--color-grey-bg-2);
+  box-shadow: none;
 }
 .profil {
-    padding: 0 0 1em 0;
+  padding: 0 0 1em 0;
 }
 ul.comments-list li {
-    background-color: var(--color-grey-bg-2);
-    color: var(--color-grey-text-2);
+  background-color: var(--color-grey-bg-2);
+  color: var(--color-grey-text-2);
 }
 /* Wells used to encapsulate forms */
 .well {
-    border: 1px solid var(--color-grey-border-3);
-    background-color: var(--color-grey-bg-3);
-    box-shadow: none;
-    border-radius: 0;
-    padding: 8px;
+  border: 1px solid var(--color-grey-border-3);
+  background-color: var(--color-grey-bg-3);
+  box-shadow: none;
+  border-radius: 0;
+  padding: 8px;
 }
 .well h3 {
-    background-color: transparent;
-    margin: 0;
-    padding: 12px;
-    font-size: 13px;
-    font-weight: bold;
+  background-color: transparent;
+  margin: 0;
+  padding: 12px;
+  font-size: 13px;
+  font-weight: bold;
 }
 .well hr {
-    margin: 0;
-    border-top: 0;
+  margin: 0;
+  border-top: 0;
 }
 .well .form-group {
-    padding: 12px;
-    margin-bottom: 0;
+  padding: 12px;
+  margin-bottom: 0;
 }
 .well .form-group label {
-    color: var(--color-grey-text-3);
-    font-size: 14px;
+  color: var(--color-grey-text-3);
+  font-size: 14px;
 }
-.well .form-group select, .well .radio-inline {
-    margin-top: 12px;
+.well .form-group select,
+.well .radio-inline {
+  margin-top: 12px;
 }
 .well > .control-label {
-    color: var(--color-grey-text-3);
-    padding: 12px;
-    width: 100%;
-    display: inline-block;
+  color: var(--color-grey-text-3);
+  padding: 12px;
+  width: 100%;
+  display: inline-block;
 }
-.well > .radio-inline, .well > .form-control {
-    margin: 12px;
-    width: 98%;
+.well > .radio-inline,
+.well > .form-control {
+  margin: 12px;
+  width: 98%;
 }
 .well > .radio-inline > label {
-    color: var(--color-grey-text-2);
-    font-weight: 400;
-    font-size: 13px;
+  color: var(--color-grey-text-2);
+  font-weight: 400;
+  font-size: 13px;
 }
 /* Well used to encapsulate rows in profile */
 .profile-footer {
-    background-color: var(--color-grey-bg-3);
+  background-color: var(--color-grey-bg-3);
 }
 .well .row {
-    margin: 0;
+  margin: 0;
 }
 /* Block surround tables in active/seeds/torrents/etc */
 .block {
-    background-color: var(--color-grey-bg-4);
-    border: 0px;
-    box-shadow: none;
+  background-color: var(--color-grey-bg-4);
+  border: 0px;
+  box-shadow: none;
 }
 /* Title for Active/seeds/torrents/etc */
 div.block div.inner_content {
-    justify-content: left;
+  justify-content: left;
 }
 div.block div.inner_content h1 {
-    font-size: 25px !important;
+  font-size: 25px !important;
 }
 /* Filters for Active/seeds/torrents/etc */
 .block .container {
-    background-color: var(--color-grey-bg-3);
-    border: 1px solid var(--color-grey-border-3);
-    border-radius: 0px;
-    width: 100%;
+  background-color: var(--color-grey-bg-3);
+  border: 1px solid var(--color-grey-border-3);
+  border-radius: 0px;
+  width: 100%;
 }
 /* links */
 a.view-torrent {
-    font-weight: 400;
-    font-size: 14px;
-    color: var(--color-grey-text-2)
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--color-grey-text-2);
 }
 a.view-torrent:hover {
-    font-weight: 400;
-    font-size: 14px;
-    text-decoration: none !important;
-    color: #3987cc !important;
-    -webkit-text-fill-color: #3987cc;
+  font-weight: 400;
+  font-size: 14px;
+  text-decoration: none !important;
+  color: #3987cc !important;
+  -webkit-text-fill-color: #3987cc;
 }
 /* Breadcrumb */
 .breadcrumb {
-    background-color: var(--color-grey-bg-2);
-    border: 0;
-    text-align: center;
+  background-color: var(--color-grey-bg-2);
+  border: 0;
+  text-align: center;
 }
 .breadcrumb a {
-    color: var(--color-grey-text-4);
+  color: var(--color-grey-text-4);
 }
 /* Code blocks */
 pre {
-    background-color: var(--color-grey-bg-3);
-    color: var(--color-grey-text-5);
-    border: 1px solid var(--color-grey-border-5);
+  background-color: var(--color-grey-bg-3);
+  color: var(--color-grey-text-5);
+  border: 1px solid var(--color-grey-border-5);
 }
 /* Tables */
 table {
-    background-color: var(--color-grey-bg-3);
-    color: var(--color-grey-text-5);
-    border: 0px solid var(--color-grey-border-5) !important;
-    margin: 0;
+  background-color: var(--color-grey-bg-3);
+  color: var(--color-grey-text-5);
+  border: 0px solid var(--color-grey-border-5) !important;
+  margin: 0;
 }
 .table-bordered > thead > tr > th {
-    border-width: 1px 0px;
-    border-style: solid;
-    border-color: var(--color-grey-border-2);
+  border-width: 1px 0px;
+  border-style: solid;
+  border-color: var(--color-grey-border-2);
 }
 .table-bordered,
 .table-bordered > tbody > tr > td,
@@ -664,30 +668,38 @@ table {
 .table-bordered > tfoot > tr > th,
 .table-bordered > thead > tr > td,
 .table-bordered > thead > tr > th {
-    border: 1px solid var(--color-grey-border-3)
+  border: 1px solid var(--color-grey-border-3);
 }
 /* text editor */
 .wysibb {
-    background-color: var(--color-grey-bg-3);
-    border: 1px solid var(--color-grey-border-1);
-    color: var(--color-grey-text-2)
+  background-color: var(--color-grey-bg-3);
+  border: 1px solid var(--color-grey-border-1);
+  color: var(--color-grey-text-2);
 }
 .wysibb .wysibb-toolbar {
-    background-color: var(--color-grey-bg-1);
-    border-bottom: 1px solid var(--color-grey-border-1);
+  background-color: var(--color-grey-bg-1);
+  border-bottom: 1px solid var(--color-grey-border-1);
 }
 .wysibb .wysibb-toolbar .wysibb-toolbar-container {
-    background-color: var(--color-grey-bg-1);
-    border-right: 1px solid var(--color-grey-border-1);
+  background-color: var(--color-grey-bg-1);
+  border-right: 1px solid var(--color-grey-border-1);
 }
 .wysibb .wysibb-toolbar .wysibb-toolbar-container .wysibb-toolbar-btn {
-    background-color: var(--color-grey-bg-1);
+  background-color: var(--color-grey-bg-1);
 }
-.wysibb .wysibb-toolbar .wysibb-toolbar-container .wysibb-toolbar-btn span.btn-inner {
-    color: var(--color-grey-text-2);
+.wysibb
+  .wysibb-toolbar
+  .wysibb-toolbar-container
+  .wysibb-toolbar-btn
+  span.btn-inner {
+  color: var(--color-grey-text-2);
 }
-.wysibb .wysibb-toolbar .wysibb-toolbar-container .wysibb-toolbar-btn .fonticon {
-    text-shadow: none;
+.wysibb
+  .wysibb-toolbar
+  .wysibb-toolbar-container
+  .wysibb-toolbar-btn
+  .fonticon {
+  text-shadow: none;
 }
 /* Pagination */
 .pagination > .active > a,
@@ -696,15 +708,15 @@ table {
 .pagination > .active > span,
 .pagination > .active > span:focus,
 .pagination > .active > span:hover {
-    background-color: var(--color-grey-bg-4);
-    border: 1px solid var(--color-grey-border-3);
-    margin-top: 0;
+  background-color: var(--color-grey-bg-4);
+  border: 1px solid var(--color-grey-border-3);
+  margin-top: 0;
 }
 .pagination > li > a,
 .pagination > li > span {
-    background-color: var(--color-grey-bg-3);
-    border: 1px solid var(--color-grey-border-3);
-    color: var(--color-grey-text-2);
+  background-color: var(--color-grey-bg-3);
+  border: 1px solid var(--color-grey-border-3);
+  color: var(--color-grey-text-2);
 }
 .pagination > .disabled > a,
 .pagination > .disabled > a:focus,
@@ -712,117 +724,118 @@ table {
 .pagination > .disabled > span,
 .pagination > .disabled > span:focus,
 .pagination > .disabled > span:hover {
-    background-color: var(--color-grey-bg-3);
-    border: 1px solid var(--color-grey-border-3);
+  background-color: var(--color-grey-bg-3);
+  border: 1px solid var(--color-grey-border-3);
 }
 /* Search Filter Titles */
 .label-default {
-    border: 0;
-    background-color: transparent;
-    color: var(--color-grey-text-2);
+  border: 0;
+  background-color: transparent;
+  color: var(--color-grey-text-2);
 }
 /* Search filter grid */
 form .form-group .col-sm-10 {
-    display: grid;
-    grid: auto / 25% 25% 25% 25%;
-    grid-row-gap: 6px;
-    text-align: left;
-    padding: 6px 0;
+  display: grid;
+  grid: auto / 25% 25% 25% 25%;
+  grid-row-gap: 6px;
+  text-align: left;
+  padding: 6px 0;
 }
 form .form-group div .badge-user {
-    text-align: left;
-    background-color: transparent;
-    box-shadow: none;
+  text-align: left;
+  background-color: transparent;
+  box-shadow: none;
 }
 form .form-group div .badge-user label {
-    background-color: var(--color-grey-bg-2);
-    padding: 4px;
-    margin: 4px 0;
-    border-radius: 3px;
-    border: 1px solid var(--color-grey-border-5);
+  background-color: var(--color-grey-bg-2);
+  padding: 4px;
+  margin: 4px 0;
+  border-radius: 3px;
+  border: 1px solid var(--color-grey-border-5);
 }
 /* Torrent search cards */
-.card.is-torrent .card_head, .card.is-torrent .card_footer {
-    background: var(--color-grey-bg-2)
+.card.is-torrent .card_head,
+.card.is-torrent .card_footer {
+  background: var(--color-grey-bg-2);
 }
 .card.is-torrent .card_body {
-    background: var(--color-grey-bg-3)
+  background: var(--color-grey-bg-3);
 }
 .card.is-torrent {
-    background: transparent;
+  background: transparent;
 }
 .card {
-    background: transparent
+  background: transparent;
 }
 .card.is-torrent .genre-label {
-    box-shadow: none;
-    border: 1px solid var(--color-grey-border-3)
+  box-shadow: none;
+  border: 1px solid var(--color-grey-border-3);
 }
 /* Search table rows 2n+1 */
-#facetedSearch .table > tbody > tr:nth-child(2n+1) > td {
-    background: var(--color-grey-table-1) !important;
-    border-bottom: 1px solid var(--color-grey-border-4);
+#facetedSearch .table > tbody > tr:nth-child(2n + 1) > td {
+  background: var(--color-grey-table-1) !important;
+  border-bottom: 1px solid var(--color-grey-border-4);
 }
 /* Search table row 2n */
 #facetedSearch .table > tbody > tr:nth-child(2n) > td {
-    background: var(--color-grey-table-2) !important;
-    border-bottom: 1px solid var(--color-grey-border-4);
+  background: var(--color-grey-table-2) !important;
+  border-bottom: 1px solid var(--color-grey-border-4);
 }
 /* Remove Genres */
 #facetedSearch > .table > tbody > tr > td > br:nth-of-type(2) ~ .badge-extra {
-    display: none;
+  display: none;
 }
 /* Search torrent table styling */
 #facetedSearch .table-responsive {
-    border: 0;
+  border: 0;
 }
 #facetedSearch .table-responsive .table {
-    border: 1px solid var(--color-grey-border-3) !important;
+  border: 1px solid var(--color-grey-border-3) !important;
 }
 /* Make legend background transparent */
 #facetedSearch + .well {
-    border: 0;
-    background-color: transparent;
+  border: 0;
+  background-color: transparent;
 }
 /* Pinned torrent colour */
 #facetedSearch .table-responsive .table tbody tr.success td {
-    background-color: var(--color-grey-table-5) !important;
+  background-color: var(--color-grey-table-5) !important;
 }
 /* Remove HR after default search */
 #facetedDefault .box hr {
-    display: none;
+  display: none;
 }
 /* Profile table */
 .table-striped tbody tr:nth-child(n) td {
-    background: var(--color-grey-table-4) !important;
-    border-width: 1px 0;
-    border-style: solid;
-    border-color: var(--color-grey-border-4);
+  background: var(--color-grey-table-4) !important;
+  border-width: 1px 0;
+  border-style: solid;
+  border-color: var(--color-grey-border-4);
 }
 /* ImgBB button on upload form */
 .imgbb-container .imgbb-button {
-    color: var(--color-grey-text-2);
+  color: var(--color-grey-text-2);
 }
 /* Form colors */
 .form-control[disabled] {
-    background-color: var(--color-grey-bg-2);
-    border-color: var(--color-grey-border-3);
+  background-color: var(--color-grey-bg-2);
+  border-color: var(--color-grey-border-3);
 }
 .form-control {
-    border-radius: 0;
-    background-color: var(--color-grey-bg-1);
-    border: 1px solid var(--color-grey-border-1);
-    color: var(--color-grey-text-6)
+  border-radius: 0;
+  background-color: var(--color-grey-bg-1);
+  border: 1px solid var(--color-grey-border-1);
+  color: var(--color-grey-text-6);
 }
 /* NavBar Search placeholders */
 .form-control::placeholder {
-    color: var(--color-grey-text-4);
+  color: var(--color-grey-text-4);
 }
 .form-control:-ms-input-placeholder {
-    color: var(--color-grey-text-4);
+  color: var(--color-grey-text-4);
 }
 .form-control::-webkit-input-placeholder {
-    color: var(--color-grey-text-4);
+  color: var(--color-grey-text-4);
 }
 .form-control:focus {
   box-shadow: 0 0 0px var(--color-light-blue);
@@ -833,55 +846,57 @@ form .form-group div .badge-user label {
   background-color: var(--color-grey-bg-1);
 }
 /* alert from torrent upload form / bon pool / rules */
-.alert-info, .alert-warning, .alert-danger {
-    border: 3px solid var(--color-grey-border-1);
-    color: var(--color-grey-text-2);
+.alert-info,
+.alert-warning,
+.alert-danger {
+  border: 3px solid var(--color-grey-border-1);
+  color: var(--color-grey-text-2);
 }
 .alert h2 strong {
-    color: var(--color-grey-text-3);
+  color: var(--color-grey-text-3);
 }
 /* Similar page */
 .movie-wrapper + .table-responsive .table thead {
-    background-color: var(--color-grey-bg-2);
+  background-color: var(--color-grey-bg-2);
 }
 .dark-th {
-    background-color: var(--color-grey-bg-1);
+  background-color: var(--color-grey-bg-1);
 }
 .movie-wrapper + .table-responsive .table thead tr th span {
-    color: var(--color-grey-text-1);
+  color: var(--color-grey-text-1);
 }
 /* Gallery thumbnails */
 .thumbnail {
-    background-color: var(--color-grey-bg-3);
-    border: 1px solid var(--color-grey-border-3);
+  background-color: var(--color-grey-bg-3);
+  border: 1px solid var(--color-grey-border-3);
 }
 /* Extra Stats */
 div.stats {
-    background-color: var(--color-grey-bg-3);
-    color: var(--color-grey-text-2);
+  background-color: var(--color-grey-bg-3);
+  color: var(--color-grey-text-2);
 }
 /* Extra Stats */
 .stats .table-responsive .content .inner-content {
-    color: var(--color-grey-text-1)
+  color: var(--color-grey-text-1);
 }
 div.stats div.content div.inner_stats div.stat p:first-of-type {
-    color: var(--color-grey-text-2);
-    font-weight: 400;
+  color: var(--color-grey-text-2);
+  font-weight: 400;
 }
 div.stats div.content {
-    color: var(--color-grey-text-4)
+  color: var(--color-grey-text-4);
 }
 /* Blockquotes */
 .page-content > blockquote {
-    background-color: var(--color-grey-bg-3);
-    color: var(--color-grey-text-3);
+  background-color: var(--color-grey-bg-3);
+  color: var(--color-grey-text-3);
 }
 /* Headings */
 h1 {
-    color: var(--color-grey-text-1);
+  color: var(--color-grey-text-1);
 }
 h2 {
-    color: var(--color-grey-text-2);
+  color: var(--color-grey-text-2);
 }
 /* Panel Heading text */
 .alert > h2,
@@ -891,19 +906,19 @@ h2 {
 .panel > .panel-heading > div > h4,
 .panel > .panel-heading > h2,
 .panel > .panel-heading > h4 {
-    color: var(--color-grey-text-1);
+  color: var(--color-grey-text-1);
 }
 /* Code */
 .page-content code {
-    background-color: var(--color-grey-bg-4);
-    border: 1px solid var(--color-grey-border-3);
-    border-radius: 4px;
-    color: var(--color-grey-text-3);
+  background-color: var(--color-grey-bg-4);
+  border: 1px solid var(--color-grey-border-3);
+  border-radius: 4px;
+  color: var(--color-grey-text-3);
 }
 /* Modals */
 .modal-body .form-group .col-sm-10 {
-    display: inline-block;
-    grid: none;
+  display: inline-block;
+  grid: none;
 }
 
 
