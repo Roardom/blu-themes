@@ -25,15 +25,20 @@
     --color-grey-text-2: #a6a6a6; /* Regular text and subheadings */
     --color-grey-text-3: #aaaaaa; /* Emphasized text */
     --color-grey-text-4: #696969; /* De-emphasized text */
+    --color-grey-text-5: #cccccc; /* Code */
   
     --color-grey-border-1: #565656; 
     --color-grey-border-2: #464646; 
-    --color-grey-border-3: #393939; 
+    --color-grey-border-3: #393939; /* panel border */
     --color-grey-border-4: #363636; 
+    --color-grey-border-5: #444444; /* pre border */
 
     --color-grey-table-1: #2c2c2c; /* Table rows 2n */
     --color-grey-table-2: #262626; /* Table rows 2n+1 */
     --color-grey-table-3: #c7c7c7; /* Table row text */
+    --color-grey-table-4: #292929; /* Table rows Details */
+    --color-grey-table-5: #333333; /* Table rows Pinned */
+
 }
 
 
@@ -49,40 +54,37 @@
 body {
   background-color: var(--color-dark-blue);
 }
+.btn,
 .btn-danger,
 .btn-primary,
-.label-primary {
-  background-color: var(--color-grey-bg-3);
+.btn-info,
+.btn-success,
+.btn-warning,
+.imgbb-button,
+.label-danger,
+.label-primary,
+.label-info,
+.label-success,
+.label-warning {
+  background-color: var(--color-grey-bg-2) !important;
   border: 1px solid var(--color-grey-border-3) !important;
   background-image: none;
-}
-.btn-info {
-  background-color: var(--color-grey-bg-3);
-  border: 1px solid var(--color-grey-border-3) !important;
-  background-image: none;
-}
-.label-success, .label-info {
-  background-color: var(--color-grey-bg-3);
-  background-image: none;
-}
-.btn-success {
-  background-color: var(--color-grey-bg-3);
-  border: 1px solid var(--color-grey-border-3) !important;
-  background-image: none;
-}
-.btn-warning {
-  background-color: var(--color-grey-bg-3);
-  border: 1px solid var(--color-grey-border-3) !important;
-  background-image: none;
+  box-shadow: none;
+  color: var(--color-grey-text-3);
+  font-weight: 400;
 }
 .btn:active,
 .btn:active:focus,
 .btn:active:hover,
 .btn:active:hover:focus,
 .btn:focus,
-.btn:hover {
-  background-color: var(--color-light-purple) !important;
+.btn:hover,
+.imgbb-button:hover,
+.btn-primary:hover {
+  background-color: var(--color-grey-bg-1) !important;
   background-image: none;
+  box-shadow: none;
+  color: #ffffef;
 }
 #hoeapp-wrapper,
 #main-content,
@@ -103,8 +105,60 @@ body {
 .ratio-bar {
   background-color: var(--color-grey-bg-1);
 }
-.ratio-bar .badge-user {
-  background-color: var(--color-grey-bg-1);
+.ratio-bar .badge-user, .badge-user, a .badge-user, h4 .badge-user, .col-sm-10 .badge-user {
+  background-color: transparent;
+  border: 0;
+  box-shadow: none;
+  color: var(--color-grey-text-2);
+}
+/* Theme color text */
+.fa-coins,
+.text-orange,
+.text-pink,
+.text-purple,
+.text-success,
+.text-black,
+.text-blue,
+.text-green,
+.text-gold,
+.text-red {
+    color: var(--color-grey-text-2) !important;
+}
+/* Chat message name */
+.sent .badge-user {
+    background-color: transparent;
+    box-shadow: none;
+}
+/* Chat message avatar */
+.sent .chat-user-image {
+    display: none;
+}
+/* Chat message header */
+.sent h4 {
+    display: inline;
+}
+/* Chat message time */
+#frame .content .messages ul li.sent h4 .text-muted {
+    color: var(--color-grey-text-4);
+    display: float;
+    float: left;
+    margin-top: 5px;
+}
+/* Chat Message Text */
+.sent .text-bright {
+    font-size: 14px;
+    display: inline-block;
+}
+/* Chat typing message */
+.typing.pull-left {
+    color: var(--color-grey-text-3);
+}
+/* Chat tabs */
+#frameTabs {
+    background-color: var(--color-grey-bg-2);
+}
+.nav-tabs {
+    border-bottom: 0;
 }
 .nav-tabs > #active {
   background-color: var(--color-dark-green);
@@ -116,8 +170,15 @@ body {
 .nav-tabs > li > a {
     background-color: var(--color-grey-bg-1);
 }
-.btn-primary :hover {
-  background-color: var(--color-light-purple);
+/* Top Uploaders Tabs */
+ul.nav-tabs {
+    background-color: var(--color-grey-bg-2);
+}
+.tab-pane .table-responsive table {
+    background: var(--color-grey-bg-5);
+}
+.tab-pane .table-responsive .table > tbody > tr:nth-child(n) > td {
+    background: var(--color-grey-bg-5) !important;
 }
 .hoe-right-header .hoe-rheader-submenu > .dropdown-menu > li {
   border-bottom: none;
@@ -176,11 +237,20 @@ i.torrent-icon {
 .panel-chat > .panel-body > #frame > .content {
   background-color: var(--color-grey-bg-5);
 }
+/* Chat message */
+#frame .content .messages ul li {
+    border-bottom: 1px dashed var(--color-grey-border-3);
+}
 /* Panel Headings */
 .panel-chat > .panel-heading {
     background-color: var(--color-grey-bg-2);
     padding: 8px;
     margin: 0;
+}
+/* Panel Footers */
+.panel-chat > .panel-footer {
+    background-color: var(--color-grey-bg-2);
+    border-top: 0;
 }
 /* Panel Headings Title */
 .panel-chat > .panel-heading h4 {
@@ -190,6 +260,8 @@ i.torrent-icon {
 .panel {
     border: 1px solid var(--color-grey-border-3);
     border-radius: 0;
+    box-shadow: none;
+    background-color: var(--color-grey-bg-3)
 }
 
 
@@ -202,11 +274,21 @@ i.torrent-icon {
 .notify .heartbit {
   border: 4px solid var(--color-A200);
 }
+/* PM Messages */
 .message-sent .message-body,
+.message-read .message-body,
+.message-unread .message-body {
+    background-color: var(--color-grey-bg-3);
+    border: 1px solid var(--color-grey-border-3)
+}
+.message-read .message-headers,
 .message-sent .message-headers,
-.message-unread .message-body,
 .message-unread .message-headers {
-  background-color: #404040;
+  background-color: var(--color-grey-bg-2);
+  border: 1px solid var(--color-grey-border-3)
+}
+.message-read {
+    border: 1px solid var
 }
 .h1,
 .h2,
@@ -223,6 +305,10 @@ h5,
 h6 {
   color: #fff;
 }
+.progress {
+    background-color: var(--color-grey-bg-1);
+    border: 0
+}
 .progress-bar {
   background-color: var(--color-grey-1);
   border-bottom: 0px solid var(--color-red) !important;
@@ -230,20 +316,6 @@ h6 {
 select,
 select option {
   background-color: #454545 !important;
-}
-/* Site Banner / Top NavBar Search Boxes */
-.form-control {
-  background-color: var(--color-grey-bg-1);
-  color: #fff;
-  border: 0px solid rgba(0, 0, 0, 0.56);
-  border-radius: 0;
-}
-.form-control:focus {
-  box-shadow: 0 0 0px var(--color-light-blue);
-  border: 0px solid var(--color-light-blue);
-}
-.form-control > option {
-  background-color: var(--color-grey-bg-1);
 }
 .bbcode-code,
 .bbcode-quote {
@@ -258,15 +330,21 @@ select option {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: var(--movie-overlay);
+  background: rgba(28,31,36,.9);
 }
 .footer-icon,
 .text-info {
   color: var(--color-400);
 }
 .badge-extra {
+    border: 0;
+    background-color: transparent;
+}
+.badge-user.group-member {
   border: 1px solid rgba(66, 70, 92, 0.61);
-  border-radius: 0;
+  border-radius: 3px;
+  background-color: var(--color-grey-bg-2);
+  color: var(--color-grey-text-2)
 }
 .text-bright {
   color: #ccc;
@@ -304,7 +382,7 @@ a.text-bright:hover {
 .panel-success > .panel-heading,
 .panel-warning,
 .panel-warning > .panel-heading {
-  background-color: var(--color-magenta) !important;
+  background-color: var(--color-grey-bg-2) !important;
 }
 .alert {
   color: #424242;
@@ -324,13 +402,12 @@ a.text-bright:hover {
 .panel-collapse > .panel-heading {
   background-color: #1b1b1b !important;
 }
-.badge-user {
-  border-radius: 0;
-}
 /* Encapsulates Torrent table */
 .container.box {
-  background: var(--color-grey-bg-4);
-  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2);
+  background: var(--color-grey-bg-3);
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+  border-radius: 0;
+  border: 1px solid var(--color-grey-border-3);
 }
 .list-inline {
   color: inherit;
@@ -346,7 +423,8 @@ a.text-bright:hover {
 .gradient.silver,
 .gradient.teal,
 .gradient.yellow {
-  background-image: var(--color-grey-bg-4);
+  background-image: transparent;
+  background: transparent;
 }
 #l-footer,
 div.header.blue div.inner_content,
@@ -359,13 +437,24 @@ div.header.red div.inner_content,
 div.header.silver div.inner_content,
 div.header.teal div.inner_content,
 div.header.yellow div.inner_content {
-  background-color: var(--color-grey-bg-4) !important;
+  background-color: transparent !important;
   background-image: none!important;
 }
 /* Tables */
 .table-responsive {
     border: 1px solid var(--color-grey-border-3);
     color: var(--color-grey-table-3);
+}
+/* Table for torrent details */
+.panel .table > tbody > tr:nth-child(n) > td {
+    background: var(--color-grey-table-4) !important;
+    color: var(--color-grey-text-2);
+}
+.panel .table > tbody > tr:nth-child(n) > td strong {
+    font-weight: 400 !important;
+}
+.table-bordered > tbody > tr > td {
+    border: 0;
 }
 /* Table row 2n */
 .table > tbody > tr:nth-child(2n) > td {
@@ -384,9 +473,87 @@ div.header.yellow div.inner_content {
 .table > tbody > tr > td.text-red {
   color: var(--color-light-red) !important;
 }
+/* Forum messages */
+.topic .topic-new-post, .profil {
+    background: var(--color-grey-bg-3);
+}
+.topic .topic-posts .post article.post-content {
+    color: var(--color-grey-text-2);
+}
+.topic .topic-posts .post .post-signature {
+    border-top: 1px solid var(--color-grey-border-3)
+}
+.topic .topic-posts .post aside.post-info {
+    border: 0;
+    background-color: var(--color-grey-bg-3);
+}
+.head {
+    background-color: var(--color-grey-bg-2);
+    box-shadow: none;
+}
+.profil {
+    padding: 0 0 1em 0;
+}
+ul.comments-list li {
+    background-color: var(--color-grey-bg-2);
+    color: var(--color-grey-text-2);
+}
+/* Wells used to encapsulate forms */
+.well {
+    border: 1px solid var(--color-grey-border-3);
+    background-color: var(--color-grey-bg-3);
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0;
+}
+.well h3 {
+    background-color: var(--color-grey-bg-2);
+    margin: 0;
+    padding: 12px;
+    font-size: 13px;
+}
+.well hr {
+    margin: 0;
+    border-top: 0;
+}
+.well .form-group {
+    padding: 12px;
+    margin-bottom: 0;
+}
+.well .form-group label {
+    color: var(--color-grey-text-3);
+    font-size: 14px;
+}
+.well .form-group select, .well .radio-inline {
+    margin-top: 12px;
+}
+.well > .control-label {
+    color: var(--color-grey-text-3);
+    padding: 12px;
+    width: 100%;
+    display: inline-block;
+}
+.well > .radio-inline, .well > .form-control {
+    margin: 12px;
+    width: 98%;
+}
+.well > .radio-inline > label {
+    color: var(--color-grey-text-2);
+    font-weight: 400;
+    font-size: 13px;
+}
+/* Well used to encapsulate rows in profile */
+.profile-footer {
+    background-color: var(--color-grey-bg-3);
+}
+.well .row {
+    margin: 0;
+}
 /* Block surround tables in active/seeds/torrents/etc */
-.block, .well {
+.block {
     background-color: var(--color-grey-bg-4);
+    border: 0px;
+    box-shadow: none;
 }
 /* Title for Active/seeds/torrents/etc */
 div.block div.inner_content {
@@ -406,9 +573,268 @@ div.block div.inner_content h1 {
 a.view-torrent {
     font-weight: 400;
     font-size: 14px;
+    color: var(--color-grey-text-2)
 }
 a.view-torrent:hover {
+    font-weight: 400;
+    font-size: 14px;
     text-decoration: none !important;
     color: #3987cc !important;
     -webkit-text-fill-color: #3987cc;
+}
+/* Breadcrumb */
+.breadcrumb {
+    background-color: var(--color-grey-bg-2);
+    border: 0;
+    text-align: center;
+}
+.breadcrumb a {
+    color: var(--color-grey-text-4);
+}
+/* Code blocks */
+pre {
+    background-color: var(--color-grey-bg-3);
+    color: var(--color-grey-text-5);
+    border: 1px solid var(--color-grey-border-5);
+}
+/* Tables */
+table {
+    background-color: var(--color-grey-bg-3);
+    color: var(--color-grey-text-5);
+    border: 0px solid var(--color-grey-border-5) !important;
+    margin: 0;
+}
+.table-bordered > thead > tr > th {
+    border-width: 1px 0px;
+    border-style: solid;
+    border-color: var(--color-grey-border-2);
+}
+.table-bordered,
+.table-bordered > tbody > tr > td,
+.table-bordered > tbody > tr > th,
+.table-bordered > tfoot > tr > td,
+.table-bordered > tfoot > tr > th,
+.table-bordered > thead > tr > td,
+.table-bordered > thead > tr > th {
+    border: 1px solid var(--color-grey-border-3)
+}
+/* text editor */
+.wysibb {
+    background-color: var(--color-grey-bg-3);
+    border: 1px solid var(--color-grey-border-1);
+    color: var(--color-grey-text-2)
+}
+.wysibb .wysibb-toolbar {
+    background-color: var(--color-grey-bg-1);
+    border-bottom: 1px solid var(--color-grey-border-1);
+}
+.wysibb .wysibb-toolbar .wysibb-toolbar-container {
+    background-color: var(--color-grey-bg-1);
+    border-right: 1px solid var(--color-grey-border-1);
+}
+.wysibb .wysibb-toolbar .wysibb-toolbar-container .wysibb-toolbar-btn {
+    background-color: var(--color-grey-bg-1);
+}
+.wysibb .wysibb-toolbar .wysibb-toolbar-container .wysibb-toolbar-btn span.btn-inner {
+    color: var(--color-grey-text-2);
+}
+.wysibb .wysibb-toolbar .wysibb-toolbar-container .wysibb-toolbar-btn .fonticon {
+    text-shadow: none;
+}
+/* Pagination */
+.pagination > .active > a,
+.pagination > .active > a:focus,
+.pagination > .active > a:hover,
+.pagination > .active > span,
+.pagination > .active > span:focus,
+.pagination > .active > span:hover {
+    background-color: var(--color-grey-bg-4);
+    border: 1px solid var(--color-grey-border-3);
+    margin-top: 0;
+}
+.pagination > li > a,
+.pagination > li > span {
+    background-color: var(--color-grey-bg-3);
+    border: 1px solid var(--color-grey-border-3);
+    color: var(--color-grey-text-2);
+}
+.pagination > .disabled > a,
+.pagination > .disabled > a:focus,
+.pagination > .disabled > a:hover,
+.pagination > .disabled > span,
+.pagination > .disabled > span:focus,
+.pagination > .disabled > span:hover {
+    background-color: var(--color-grey-bg-3);
+    border: 1px solid var(--color-grey-border-3);
+}
+/* Search Filter Titles */
+.label-default {
+    border: 0;
+    background-color: transparent;
+    color: var(--color-grey-text-2);
+}
+/* Search filter grid */
+form .form-group .col-sm-10 {
+    display: grid;
+    grid: auto / 25% 25% 25% 25%;
+    grid-row-gap: 6px;
+    text-align: left;
+    padding: 6px 0;
+}
+form .form-group div .badge-user {
+    text-align: left;
+    background-color: transparent;
+    box-shadow: none;
+}
+form .form-group div .badge-user label {
+    background-color: var(--color-grey-bg-2);
+    padding: 4px;
+    margin: 4px 0;
+    border-radius: 3px;
+    border: 1px solid var(--color-grey-border-5);
+}
+/* Torrent search cards */
+.card.is-torrent .card_head, .card.is-torrent .card_footer {
+    background: var(--color-grey-bg-2)
+}
+.card.is-torrent .card_body {
+    background: var(--color-grey-bg-3)
+}
+.card.is-torrent {
+    background: transparent;
+}
+.card {
+    background: transparent
+}
+.card.is-torrent .genre-label {
+    box-shadow: none;
+    border: 1px solid var(--color-grey-border-3)
+}
+/* Search table rows 2n+1 */
+#facetedSearch .table > tbody > tr:nth-child(2n+1) > td {
+    background: var(--color-grey-table-1) !important;
+    border-bottom: 1px solid var(--color-grey-border-4);
+}
+/* Search table row 2n */
+#facetedSearch .table > tbody > tr:nth-child(2n) > td {
+    background: var(--color-grey-table-2) !important;
+    border-bottom: 1px solid var(--color-grey-border-4);
+}
+/* Remove Genres */
+#facetedSearch > .table > tbody > tr > td > br:nth-of-type(2) ~ .badge-extra {
+    display: none;
+}
+/* Search torrent table styling */
+#facetedSearch .table-responsive {
+    border: 0;
+}
+#facetedSearch .table-responsive .table {
+    border: 1px solid var(--color-grey-border-3) !important;
+}
+/* Make legend background transparent */
+#facetedSearch + .well {
+    border: 0;
+    background-color: transparent;
+}
+/* Pinned torrent colour */
+#facetedSearch .table-responsive .table tbody tr.success td {
+    background-color: var(--color-grey-table-5) !important;
+}
+/* Remove HR after default search */
+#facetedDefault .box hr {
+    display: none;
+}
+/* Profile table */
+.table-striped tbody tr:nth-child(n) td {
+    background: var(--color-grey-table-4) !important;
+    border-width: 1px 0;
+    border-style: solid;
+    border-color: var(--color-grey-border-4);
+}
+/* ImgBB button on upload form */
+.imgbb-container .imgbb-button {
+    color: var(--color-grey-text-2);
+}
+/* Form colors */
+.form-control[disabled] {
+    background-color: var(--color-grey-bg-2);
+    border-color: var(--color-grey-border-3);
+}
+.form-control {
+    border-radius: 0;
+    background-color: var(--color-grey-bg-1);
+    border: 1px solid var(--color-grey-border-1);
+}
+/* alert from torrent upload form / bon pool / rules */
+.alert-info, .alert-warning, .alert-danger {
+    border: 3px solid var(--color-grey-border-1);
+    color: var(--color-grey-text-2);
+}
+.alert h2 strong {
+    color: var(--color-grey-text-3);
+}
+/* Similar page */
+.movie-wrapper + .table-responsive .table thead {
+    background-color: var(--color-grey-bg-2);
+}
+.dark-th {
+    background-color: var(--color-grey-bg-1);
+}
+/* NavBar Search placeholders */
+.form-control::placeholder {
+    color: var(--color-grey-text-4);
+}
+.form-control:-ms-input-placeholder {
+    color: var(--color-grey-text-4);
+}
+.form-control::-webkit-input-placeholder {
+    color: var(--color-grey-text-4);
+}
+.form-control:focus {
+  box-shadow: 0 0 0px var(--color-light-blue);
+  border: 0px solid var(--color-light-blue);
+  color: var(--color-grey-text-2);
+}
+.form-control > option {
+  background-color: var(--color-grey-bg-1);
+}
+/* Gallery thumbnails */
+.thumbnail {
+    background-color: var(--color-grey-bg-3);
+    border: 1px solid var(--color-grey-border-3);
+}
+/* Extra Stats */
+div.stats {
+    background-color: var(--color-grey-bg-3);
+    color: var(--color-grey-text-2);
+}
+/* Extra Stats */
+.stats .table-responsive .content .inner-content {
+    color: var(--color-grey-text-1)
+}
+div.stats div.content div.inner_stats div.stat p:first-of-type {
+    color: var(--color-grey-text-2);
+    font-weight: 400;
+}
+div.stats div.content {
+    color: var(--color-grey-text-4)
+}
+/* Blockquotes */
+.page-content > blockquote {
+    background-color: var(--color-grey-bg-3);
+    color: var(--color-grey-text-3);
+}
+/* Headings */
+h1 {
+    color: var(--color-grey-text-1);
+}
+h2 {
+    color: var(--color-grey-text-2);
+}
+/* Code */
+.page-content code {
+    background-color: var(--color-grey-bg-4);
+    border: 1px solid var(--color-grey-border-3);
+    border-radius: 4px;
+    color: var(--color-grey-text-3);
 }
