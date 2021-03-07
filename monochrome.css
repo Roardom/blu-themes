@@ -133,7 +133,7 @@ body {
     background-color: transparent;
     box-shadow: none;
     font-weight: bold;
-    font-size: 12px;
+    font-size: 14px;
 }
 /* Chat message avatar */
 .sent .chat-user-image {
@@ -152,8 +152,12 @@ body {
 }
 /* Chat Message Text */
 .sent .text-bright {
-    font-size: 14px;
+    font-size: 16px;
     display: inline-block;
+}
+/* Chat System Messages */
+#frame .content .messages ul li.sent .system {
+    size: 16px;
 }
 /* Chat typing message */
 .typing.pull-left {
