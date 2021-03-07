@@ -547,7 +547,7 @@ div.header.yellow div.inner_content {
   border-bottom: 1px solid var(--color-grey-border-4);
 }
 .table > tbody > tr:nth-child(odd) {
-    background: var(--color-grey-table-1) !important;
+  background: var(--color-grey-table-1) !important;
 }
 /* Table row 2n+1 */
 .table > tbody > tr:nth-child(odd) > td {
@@ -555,7 +555,7 @@ div.header.yellow div.inner_content {
   border-bottom: 1px solid var(--color-grey-border-4);
 }
 .table > tbody > tr:nth-child(even) {
-    background: var(--color-grey-table-1) !important;
+  background: var(--color-grey-table-1) !important;
 }
 .table > tbody > tr > td.text-green {
   color: #3fb618 !important;
@@ -917,9 +917,103 @@ div.stats {
   background-color: var(--color-grey-bg-3);
   color: var(--color-grey-text-2);
 }
-/* Extra Stats */
-.stats .table-responsive .content .inner-content {
+.stats .table-responsive .content .inner_content {
   color: var(--color-grey-text-1);
+}
+.stats .table-responsive .content .inner_content .inner_stats {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+    /* grid-template-areas: 
+        "a b c d ."
+        "e f g h ."
+        "i j k l m"
+        "n o p . ."
+        "q r s . ."
+        "t u v . ."; */
+    grid-template-areas: 
+        ". a a b b c c d d ."
+        ". e e f f g g h h ."
+        "i i j j k k l l m m"
+        ". . n n o o p p . ."
+        ". . q q r r s s . ."
+        ". . t t u u v v . .";
+    grid-row-gap: 2px;
+}
+div.stat:nth-child(1) {
+    grid-area: a;
+}
+div.stat:nth-child(2) {
+    grid-area: b;
+}
+div.stat:nth-child(3) {
+    grid-area: c;
+}
+div.stat:nth-child(4) {
+    grid-area: d;
+}
+div.stat:nth-child(5) {
+    grid-area: e;
+}
+div.stat:nth-child(6) {
+    grid-area: f;
+}
+div.stat:nth-child(7) {
+    grid-area: g;
+}
+div.stat:nth-child(8) {
+    grid-area: h;
+}
+div.stat:nth-child(10) {
+    grid-area: i;
+}
+div.stat:nth-child(11) {
+    grid-area: j;
+}
+div.stat:nth-child(12) {
+    grid-area: k;
+}
+div.stat:nth-child(13) {
+    grid-area: l;
+}
+div.stat:nth-child(14) {
+    grid-area: m;
+}
+div.stat:nth-child(15) {
+    grid-area: n;
+}
+div.stat:nth-child(16) {
+    grid-area: o;
+}
+div.stat:nth-child(17) {
+    grid-area: p;
+}
+div.stat:nth-child(19) {
+    grid-area: q;
+}
+div.stat:nth-child(20) {
+    grid-area: r;
+}
+div.stat:nth-child(21) {
+    grid-area: s;
+}
+div.stat:nth-child(23) {
+    grid-area: t;
+}
+div.stat:nth-child(24) {
+    grid-area: u;
+}
+div.stat:nth-child(25) {
+    grid-area: v;
+}
+div.stat:nth-child(26) {
+    grid-area: w;
+}
+div.stat:nth-child(27) {
+    grid-area: x;
+}
+.stats .table-responsive .content .inner_content .inner_stats br {
+    order: 1;
 }
 div.stats div.content div.inner_stats div.stat p:first-of-type {
   color: var(--color-grey-text-2);
@@ -964,113 +1058,230 @@ h2 {
 }
 /* Mobile fixes */
 @media only screen and (max-width: 767px) {
-    /* allows ratio bar to disappear when scrolling down*/
-    .ratio-bar {
-        position: static !important;
-    }
-    /* Allows browsing forums */
-    #hoeapp-wrapper {
-        overflow-x: visible;
-    }
-    /* Torrent tables appearance */
-    #facetedSearch .table-responsive .table tbody tr:nth-child(even) td {
-        background-color: var(--color-grey-table-1) !important;
-    }
-    #facetedSearch .table-responsive .table tbody tr:nth-child(odd) td {
-        background-color: var(--color-grey-table-2) !important;
-    }
-    #facetedSearch .table-responsive .table tbody tr td {
-        display: inline-block !important;
-    }
-    /* Poster */
-    #facetedSearch .table-responsive .table tbody tr td:nth-of-type(1) {
-        width: 25% !important;
-        height: 100px !important;
-        float: left;
-    }
-    /* TV / Movie / Fanres Icon */
-    #facetedSearch .table-responsive .table tbody tr td:nth-of-type(2) {
-        width: 50% !important;
-        height: 50px !important;
-        float: left;
-    }
-    /* Type and Resolution */
-    #facetedSearch .table-responsive .table tbody tr td:nth-of-type(3) {
-        width: 50% !important;
-        height: 50px !important;
-        margin: 0;
-        padding: 0;
-        float: left;
-    }
-    #facetedSearch .table-responsive .table tbody tr td:nth-of-type(3) div {
-        margin: 4px 0;
-        height: 33%;
-        width: 50%;
-        display: inline-block;
-    }
-    /* Title and icons */
-    #facetedSearch .table-responsive .table tbody tr td:nth-of-type(4) {
-        width: 100% !important;
-        display: block !important;
-        float: left ;
-    }
-    /* Download button */
-    #facetedSearch .table-responsive .table tbody tr td:nth-of-type(5) {
-        width: 25% !important;
-        height: 50px !important;
-        margin: 0;
-        padding: 6px;
-    }
-    #facetedSearch .table-responsive .table tbody tr td:nth-of-type(5) a button {
-        width: 100% !important;
-        height: 100% !important;
-        margin: 4px 0;
-    }
-    /* Bookmark Button */
-    #facetedSearch .table-responsive .table tbody tr td:nth-of-type(6) {
-        width: 25% !important;
-        height: 50px !important;
-        margin: 0;
-        padding: 6px;
-    }
-    #facetedSearch .table-responsive .table tbody tr td:nth-of-type(6) span button {
-        width: 100% !important;
-        height: 100% !important;
-        margin: 4px 0;
-    }
-    /* Age */
-    #facetedSearch .table-responsive .table tbody tr td:nth-of-type(7) {
-        width: 30% !important;
-        height: 30px !important;
-        margin: 0;
-        float: left ;
-    }
-    /* Size */
-    #facetedSearch .table-responsive .table tbody tr td:nth-of-type(8) {
-        width: 25% !important;
-        height: 30px !important;
-        margin: 0;
-        float: left ;
-    }
-    /* Seeds */
-    #facetedSearch .table-responsive .table tbody tr td:nth-of-type(9) {
-        width: 10% !important;
-        height: 30px !important;
-        margin: 0;
-        float: left ;
-    }
-    /* Peers */
-    #facetedSearch .table-responsive .table tbody tr td:nth-of-type(10) {
-        width: 10% !important;
-        height: 30px !important;
-        margin: 0;
-        float: left ;
-    }
-    /* Snatched */
-    #facetedSearch .table-responsive .table tbody tr td:nth-of-type(11) {
-        width: 25% !important;
-        height: 30px !important;
-        margin: 0;
-        float: left ;
-    }
+  /* allows ratio bar to disappear when scrolling down*/
+  .ratio-bar {
+    position: static !important;
+  }
+  /* Allows scrolling sidenav */
+  #hoe-left-panel[hoe-position-type="fixed"] {
+    position: absolute;
+    top: 50px !important;
+  }
+  #hoeapp-container {
+    position: static;
+  }
+  /* Allows browsing forums */
+  #hoeapp-wrapper {
+    overflow-x: visible;
+  }
+  /* Extra Stats */
+  .stats .table-responsive .content .inner_content .inner_stats {
+    grid-template-areas: 
+        "a a b b"
+        "c c d d"
+        "e e f f"
+        "g g h h"
+        "i i j j"
+        "k k l l"
+        ". m m ."
+        "n n o o"
+        ". p p ."
+        "q q r r"
+        ". s s ."
+        "t t u u"
+        ". v v .";
+  }
+  div.stat:nth-child(1) {
+    border-top: 1px solid var(--color-grey-border-3);
+  }
+  div.stat:nth-child(2) {
+    border-top: 1px solid var(--color-grey-border-3);
+  }
+  div.stat:nth-child(3) {
+    border-bottom: 1px solid var(--color-grey-border-3);
+  }
+  div.stat:nth-child(4) {
+    border-bottom: 1px solid var(--color-grey-border-3);
+  }
+  div.stat:nth-child(7) {
+    border-bottom: 1px solid var(--color-grey-border-3);
+  }
+  div.stat:nth-child(8) {
+    border-bottom: 1px solid var(--color-grey-border-3);
+  }
+  div.stat:nth-child(14) {
+    border-bottom: 1px solid var(--color-grey-border-3);
+  }
+  div.stat:nth-child(17) {
+    border-bottom: 1px solid var(--color-grey-border-3);
+  }
+  div.stat:nth-child(21) {
+    border-bottom: 1px solid var(--color-grey-border-3);
+  }
+  /* Search filters */
+  form .form-group .col-sm-10 {
+    display: grid;
+    grid: auto / 50% 50%;
+    grid-row-gap: 2px;
+    text-align: left;
+    padding: 6px 0;
+  }
+  /* Torrent tables appearance */
+  #facetedSearch .table-responsive .table thead tr th:nth-child(1) {
+    display: none
+  }
+  #facetedSearch .table-responsive .table thead tr th:nth-child(2) {
+    display: none
+  }
+  #facetedSearch .table-responsive .table thead tr th:nth-child(3) {
+    display: none
+  }
+  #facetedSearch .table-responsive .table thead tr th:nth-child(5) {
+    display: none
+  }
+  #facetedSearch .table-responsive .table thead tr th:nth-child(6) {
+    display: none
+  }
+  #facetedSearch .table-responsive .table thead tr th:nth-child(7) .fas {
+    display: none
+  }
+  #facetedSearch .table-responsive .table thead tr th:nth-child(8) .fas {
+    display: none
+  }
+  #facetedSearch .table-responsive .table thead tr th:nth-child(9) .fas {
+    display: none
+  }
+  #facetedSearch .table-responsive .table thead tr th:nth-child(10) .fas {
+    display: none
+  }
+  #facetedSearch .table-responsive .table thead tr th:nth-child(11) .fas {
+    display: none
+  }
+  #facetedSearch .table-responsive .table tbody tr:nth-child(even) td {
+    background-color: var(--color-grey-table-1) !important;
+  }
+  #facetedSearch .table-responsive .table tbody tr:nth-child(odd) td {
+    background-color: var(--color-grey-table-2) !important;
+  }
+  #facetedSearch .table-responsive .table tbody tr td {
+    display: inline-block !important;
+  }
+  /* Poster */
+  #facetedSearch .table-responsive .table tbody tr td:nth-of-type(1) {
+    width: 25% !important;
+    height: 100px !important;
+    float: left;
+  }
+  /* TV / Movie / Fanres Icon */
+  #facetedSearch .table-responsive .table tbody tr td:nth-of-type(2) {
+    width: 50% !important;
+    height: 50px !important;
+    float: left;
+  }
+  /* Type and Resolution */
+  #facetedSearch .table-responsive .table tbody tr td:nth-of-type(3) {
+    width: 50% !important;
+    height: 50px !important;
+    margin: 0;
+    padding: 0;
+    float: left;
+  }
+  #facetedSearch .table-responsive .table tbody tr td:nth-of-type(3) div {
+    margin: 4px 0;
+    height: 33%;
+    width: 50%;
+    display: inline-block;
+  }
+  /* Title and icons */
+  #facetedSearch .table-responsive .table tbody tr td:nth-of-type(4) {
+    width: 100% !important;
+    display: block !important;
+    float: left;
+  }
+  /* Download Button */
+  #facetedSearch .table-responsive .table tbody tr td:nth-of-type(5) {
+    width: 25% !important;
+    height: 50px !important;
+    margin: 0;
+    padding: 6px;
+  }
+  /* Download Button button*/
+  #facetedSearch .table-responsive .table tbody tr td:nth-of-type(5) a button {
+    width: 100% !important;
+    height: 100% !important;
+    margin: 4px 0;
+  }
+  /* Bookmark Button */
+  #facetedSearch .table-responsive .table tbody tr td:nth-of-type(6) {
+    width: 25% !important;
+    height: 50px !important;
+    margin: 0;
+    padding: 6px;
+  }
+  /* Bookmark Button button*/
+  #facetedSearch
+    .table-responsive
+    .table
+    tbody
+    tr
+    td:nth-of-type(6)
+    span
+    button {
+    width: 100% !important;
+    height: 100% !important;
+    margin: 4px 0;
+  }
+  /* Age */
+  #facetedSearch .table-responsive .table tbody tr td:nth-of-type(7) {
+    width: 30% !important;
+    height: 30px !important;
+    margin: 0;
+    float: left;
+  }
+  /* Size */
+  #facetedSearch .table-responsive .table tbody tr td:nth-of-type(8) {
+    width: 25% !important;
+    height: 30px !important;
+    margin: 0;
+    float: left;
+  }
+  /* Seeds */
+  #facetedSearch .table-responsive .table tbody tr td:nth-of-type(9) {
+    width: 10% !important;
+    height: 30px !important;
+    margin: 0;
+    float: left;
+  }
+  /* Peers */
+  #facetedSearch .table-responsive .table tbody tr td:nth-of-type(10) {
+    width: 10% !important;
+    height: 30px !important;
+    margin: 0;
+    float: left;
+  }
+  /* Snatched */
+  #facetedSearch .table-responsive .table tbody tr td:nth-of-type(11) {
+    width: 25% !important;
+    height: 30px !important;
+    margin: 0;
+    float: left;
+  }
+  /* Buttons in e.g. mod queue */
+  .table-responsive .btn {
+      width: 100%;
+  }
+  /* Card layout */
+  /* Each card */
+  .card.is-torrent {
+      margin-bottom: 10px;
+      height: auto !important;
+  }
+  /* Card Header */
+  .card.is-torrent .card_head {
+      height: 100%;
+  }
+  /* Remove genres */
+  .card.is-torrent .card_body .body_description .genre-label {
+      display: none;
+  }
 }
