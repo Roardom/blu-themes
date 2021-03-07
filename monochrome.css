@@ -132,6 +132,8 @@ body {
 .sent .badge-user {
     background-color: transparent;
     box-shadow: none;
+    font-weight: bold;
+    font-size: 12px;
 }
 /* Chat message avatar */
 .sent .chat-user-image {
