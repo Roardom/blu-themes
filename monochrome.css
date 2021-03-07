@@ -530,10 +530,11 @@ ul.comments-list li {
     padding: 8px;
 }
 .well h3 {
-    background-color: var(--color-grey-bg-2);
+    background-color: transparent;
     margin: 0;
     padding: 12px;
     font-size: 13px;
+    font-weight: bold;
 }
 .well hr {
     margin: 0;
