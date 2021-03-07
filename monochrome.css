@@ -26,6 +26,8 @@
     --color-grey-text-3: #aaaaaa; /* Emphasized text */
     --color-grey-text-4: #696969; /* De-emphasized text */
     --color-grey-text-5: #cccccc; /* Code */
+    --color-grey-text-6: #d6d6d6; /* Form text */
+    --color-grey-text-7: #b6b6b6; /* Ratio Bar Text */
   
     --color-grey-border-1: #565656; 
     --color-grey-border-2: #464646; 
@@ -109,7 +111,9 @@ body {
   background-color: transparent;
   border: 0;
   box-shadow: none;
-  color: var(--color-grey-text-2);
+  color: var(--color-grey-text-7);
+  font-weight: 400;
+  text-shadow: none;
 }
 /* Theme color text */
 .fa-coins,
@@ -344,7 +348,7 @@ select option {
   border: 1px solid rgba(66, 70, 92, 0.61);
   border-radius: 3px;
   background-color: var(--color-grey-bg-2);
-  color: var(--color-grey-text-2)
+  color: var(--color-grey-text-7)
 }
 .text-bright {
   color: #ccc;
@@ -402,12 +406,25 @@ a.text-bright:hover {
 .panel-collapse > .panel-heading {
   background-color: #1b1b1b !important;
 }
-/* Encapsulates Torrent table */
+/* Encapsulates Panels */
 .container.box {
   background: var(--color-grey-bg-3);
-  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+  box-shadow: none;
   border-radius: 0;
   border: 1px solid var(--color-grey-border-3);
+}
+/* Torrents description */
+.torrent.container.box {
+  background: transparent;
+  box-shadow: none;
+  border-radius: 0;
+  border: 0;
+}
+/* Profile encapsulation */
+.container .block, .container .well {
+    border-radius: 0;
+    border: 0;
+    background-color: transparent;
 }
 .list-inline {
   color: inherit;
@@ -504,7 +521,7 @@ ul.comments-list li {
     background-color: var(--color-grey-bg-3);
     box-shadow: none;
     border-radius: 0;
-    padding: 0;
+    padding: 8px;
 }
 .well h3 {
     background-color: var(--color-grey-bg-2);
@@ -764,21 +781,7 @@ form .form-group div .badge-user label {
     border-radius: 0;
     background-color: var(--color-grey-bg-1);
     border: 1px solid var(--color-grey-border-1);
-}
-/* alert from torrent upload form / bon pool / rules */
-.alert-info, .alert-warning, .alert-danger {
-    border: 3px solid var(--color-grey-border-1);
-    color: var(--color-grey-text-2);
-}
-.alert h2 strong {
-    color: var(--color-grey-text-3);
-}
-/* Similar page */
-.movie-wrapper + .table-responsive .table thead {
-    background-color: var(--color-grey-bg-2);
-}
-.dark-th {
-    background-color: var(--color-grey-bg-1);
+    color: var(--color-grey-text-6)
 }
 /* NavBar Search placeholders */
 .form-control::placeholder {
@@ -797,6 +800,21 @@ form .form-group div .badge-user label {
 }
 .form-control > option {
   background-color: var(--color-grey-bg-1);
+}
+/* alert from torrent upload form / bon pool / rules */
+.alert-info, .alert-warning, .alert-danger {
+    border: 3px solid var(--color-grey-border-1);
+    color: var(--color-grey-text-2);
+}
+.alert h2 strong {
+    color: var(--color-grey-text-3);
+}
+/* Similar page */
+.movie-wrapper + .table-responsive .table thead {
+    background-color: var(--color-grey-bg-2);
+}
+.dark-th {
+    background-color: var(--color-grey-bg-1);
 }
 /* Gallery thumbnails */
 .thumbnail {
@@ -830,6 +848,16 @@ h1 {
 }
 h2 {
     color: var(--color-grey-text-2);
+}
+/* Panel Heading text */
+.alert > h2,
+.alert > h2 > strong,
+.movie-title > a,
+.panel > .panel-heading > div > h2,
+.panel > .panel-heading > div > h4,
+.panel > .panel-heading > h2,
+.panel > .panel-heading > h4 {
+    color: var(--color-grey-text-1);
 }
 /* Code */
 .page-content code {
