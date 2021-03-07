@@ -40,14 +40,6 @@
   --color-grey-table-3: #c7c7c7; /* Table row text */
   --color-grey-table-4: #292929; /* Table rows Details */
   --color-grey-table-5: #333333; /* Table rows Pinned */
-
-  --movie-overlay: radial-gradient(
-    circle at 20% 50%,
-    #000 5.46%,
-    rgba(21, 101, 192, 0.46)
-  );
-  --background-pipe: url(/img/pipes/blue.png);
-  --gradient-background: radial-gradient(at 30% top, #072e46 0%, #081c24 70%);
 }
 body {
   background-color: var(--color-dark-blue);
@@ -87,7 +79,7 @@ body {
 #hoeapp-wrapper,
 #main-content,
 .inner-content {
-  background-color: var(--color-dark-blue);
+  background-color: var(--color-grey-bg-4);
 }
 /* Left NavBar */
 #hoeapp-container[hoe-color-type="lpanel-bg5"].hoe-minimized-lpanel
@@ -231,6 +223,30 @@ ul.nav-tabs {
 .hoe-right-header .hoe-rheader-submenu > .dropdown-menu > li > a {
   background: var(--color-grey-bg-2);
 }
+/* SideNav Folders */
+#hoeapp-container[hoe-color-type="lpanel-bg5"] #hoe-left-panel .panel-list ul {
+  background: var(--color-grey-bg-3);
+}
+#hoeapp-container[hoe-color-type="lpanel-bg5"]
+  #hoe-left-panel
+  .panel-list
+  ul.hoe-sub-menu
+  li
+  > a {
+  background: var(--color-grey-bg-3);
+}
+#hoeapp-container[hoe-color-type="lpanel-bg5"].hoe-minimized-lpanel
+  #hoe-left-panel
+  .panel-list
+  > li.hoe-has-menu:focus
+  > a,
+#hoeapp-container[hoe-color-type="lpanel-bg5"].hoe-minimized-lpanel
+  #hoe-left-panel
+  .panel-list
+  > li.hoe-has-menu:hover
+  > a {
+  background: var(--color-grey-bg-3);
+}
 /* Blutopia logo background */
 .hoe-left-header {
   background: var(--color-grey-bg-2);
@@ -250,7 +266,7 @@ ul.nav-tabs {
   .panel-list
   > li
   > a {
-  border-top: 1px solid #393939;
+  border-top: 1px solid var(--color-grey-border-3);
 }
 .text-green {
   color: #3fb618;
@@ -359,12 +375,27 @@ select option {
   margin: 0 15px 15px;
 }
 .movie-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: var(--movie-overlay);
+  background: radial-gradient(
+      circle at 20% 50%,
+      #000 5.46%,
+      rgba(21, 101, 192, 0.46)
+    ),
+    linear-gradient(rgba(28, 31, 36, 0.25), rgba(28, 31, 36, 0.75), #1c1f24),
+    linear-gradient(
+      90deg,
+      rgba(28, 31, 36, 0) 70%,
+      rgba(28, 31, 36, 0.75) 100%,
+      #1c1f24
+    ),
+    linear-gradient(
+      270deg,
+      rgba(28, 31, 36, 0) 70%,
+      rgba(28, 31, 36, 0.75) 100%,
+      #1c1f24
+    ),
+    linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75));
+  z-index: 0;
+  filter: brightness(50%) grayscale(50%);
 }
 .footer-icon,
 .text-info {
@@ -437,11 +468,17 @@ a.text-bright:hover {
   background-color: #1b1b1b !important;
 }
 /* Encapsulates Panels */
-.container.box {
+/* .container.box {
   background: var(--color-grey-bg-3);
   box-shadow: none;
   border-radius: 0;
   border: 1px solid var(--color-grey-border-3);
+} */
+.container.box {
+  background: transparent;
+  box-shadow: none;
+  border-radius: 0;
+  border: 0;
 }
 /* Torrents description */
 .torrent.container.box {
@@ -454,8 +491,8 @@ a.text-bright:hover {
 .container .block,
 .container .well {
   border-radius: 0;
-  border: 0;
-  background-color: transparent;
+  border: 1px solid var(--color-grey-border-3);
+  background-color: var(--color-grey-bg-3);
 }
 .list-inline {
   color: inherit;
@@ -920,5 +957,3 @@ h2 {
   display: inline-block;
   grid: none;
 }
-
-
