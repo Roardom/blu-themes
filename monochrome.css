@@ -115,8 +115,32 @@ body {
   font-weight: 400;
   text-shadow: none;
 }
+.ratio-bar .container-fluid ul li:nth-of-type(3) span i {
+    color: #00bc8c !important;
+}
+.ratio-bar .container-fluid ul li:nth-of-type(4) span i {
+    color: #ff4373 !important;
+}
+.ratio-bar .container-fluid ul li:nth-of-type(5) span i {
+    color: #0096bc !important;
+}
+.ratio-bar .container-fluid ul li:nth-of-type(7) span i {
+    color: #00bc8c !important;
+}
+.ratio-bar .container-fluid ul li:nth-of-type(8) span i {
+    color: #ff4373 !important;
+}
+.ratio-bar .container-fluid ul li:nth-of-type(9) span i {
+    color: red !important;
+}
+.ratio-bar .container-fluid ul li:nth-of-type(10) span i {
+    color: #ffc00a !important;
+}
+.ratio-bar .container-fluid ul li:nth-of-type(11) span i {
+    color: #ffc00a !important;
+}
 /* Theme color text */
-.fa-coins,
+/* .fa-coins,
 .text-orange,
 .text-pink,
 .text-purple,
@@ -127,7 +151,7 @@ body {
 .text-gold,
 .text-red {
     color: var(--color-grey-text-2) !important;
-}
+} */
 /* Chat message name */
 .sent .badge-user {
     background-color: transparent;
@@ -803,7 +827,7 @@ form .form-group div .badge-user label {
 .form-control:focus {
   box-shadow: 0 0 0px var(--color-light-blue);
   border: 0px solid var(--color-light-blue);
-  color: var(--color-grey-text-2);
+  color: var(--color-grey-text-6);
 }
 .form-control > option {
   background-color: var(--color-grey-bg-1);
@@ -822,6 +846,9 @@ form .form-group div .badge-user label {
 }
 .dark-th {
     background-color: var(--color-grey-bg-1);
+}
+.movie-wrapper + .table-responsive .table thead tr th span {
+    color: var(--color-grey-text-1);
 }
 /* Gallery thumbnails */
 .thumbnail {
@@ -873,3 +900,10 @@ h2 {
     border-radius: 4px;
     color: var(--color-grey-text-3);
 }
+/* Modals */
+.modal-body .form-group .col-sm-10 {
+    display: inline-block;
+    grid: none;
+}
+
+
