@@ -134,6 +134,10 @@ body {
 .inner-content {
   background-color: var(--color-grey-bg-4);
 }
+/* Menu Button */ 
+#hoeapp-wrapper[hoe-device-type="phone"] .hoe-left-header .hoe-sidebar-toggle a::after {
+  color: var(--color-grey-text-1);
+}
 /* Left NavBar */
 #hoeapp-container[hoe-color-type="lpanel-bg5"].hoe-minimized-lpanel
   #hoe-left-panel {
@@ -1324,6 +1328,20 @@ h2 {
     text-align: left;
     padding: 0px 0;
   }
+  form .form-group .col-sm-2 {
+    width: 80%;
+    padding: 0;
+    margin: 2px auto;
+  }
+  form .form-group:nth-of-type(6) .col-sm-2 {
+      display: inline-block;
+    width: 40%;
+    padding: 0;
+    margin: 2px auto;
+  }
+  form .form-group .col-sm-2:nth-of-type(1) {
+      margin: 2px auto;
+  }
   /* Torrent tables appearance */
   #facetedSearch .table-responsive .table thead tr th:nth-child(1) {
     display: none;
@@ -1574,7 +1592,7 @@ h2 {
   /* Forum Name */
   .forum-categories .table thead tr td div.header div.inner_content h1,
   .forum-categories .table thead tr td div.header div.inner_content div {
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: bold;
     text-align: center;
     display: inline-block;
@@ -1596,6 +1614,10 @@ h2 {
   /* SubForum Link */
   .forum-categories .table tbody tr td:nth-of-type(2) span h4 a {
     color: var(--color-grey-text-3) !important;
+  }
+  /* SubForum Link Hover */
+  .forum-categories .table tbody tr td:nth-of-type(2) span h4 a:hover {
+    color: var(--color-grey-text-1) !important;
   }
   /* Forum Posts */
   .forum-categories .table tbody tr td:nth-of-type(3) {
