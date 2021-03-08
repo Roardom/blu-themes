@@ -795,6 +795,9 @@ details summary {
   .fonticon {
   text-shadow: none;
 }
+.wysibb .wysibb-text {
+    padding: 0;
+}
 /* Pagination */
 .pagination > .active > a,
 .pagination > .active > a:focus,
@@ -1148,6 +1151,7 @@ h2 {
   /* allows ratio bar to disappear when scrolling down*/
   .ratio-bar {
     position: static !important;
+    margin-left: 0;
   }
   /* Allows scrolling sidenav */
   #hoe-left-panel[hoe-position-type="fixed"] {
@@ -1389,3 +1393,5 @@ h2 {
     border: 0;
   }
 }
+
+
