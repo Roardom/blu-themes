@@ -1,32 +1,16 @@
 :root {
-  --color-light-blue: #64b5f6;
-  --color-light-green: #64b5f6;
-  --color-light-magenta: #64b5f6;
-  --color-light-purple: #64b5f6;
-  --color-400: #42a5f5;
-  --color-blue: #2196f3;
-  --color-green: #2196f3;
-  --color-yellow: #2196f3;
-  --color-magenta: #1e88e5;
-  --color-red: #1565c0;
-  --color-dark-green: #1565c0;
-  --color-A200: #448aff;
-  --color-A400: #2979ff;
-  --color-purple: #2962ff;
-  --color-dark-blue: #212121;
-  --color-dark-red: #181818;
+
   --color-grey-bg-1: #464646; /* Ratiobar */
   --color-grey-bg-2: #363636; /* Site banner */
   --color-grey-bg-3: #292929; /* Navbar */
   --color-grey-bg-4: #212121; /* Site background */
   --color-grey-bg-5: #181818; /* Chat background */
 
-  --color-grey-text-1: #d6d6d6; /* Main titles */
+  --color-grey-text-1: #d6d6d6; /* Main titles / Form Text / Highlighted Text */
   --color-grey-text-2: #a6a6a6; /* Regular text and subheadings */
   --color-grey-text-3: #aaaaaa; /* Emphasized text */
   --color-grey-text-4: #696969; /* De-emphasized text */
   --color-grey-text-5: #cccccc; /* Code */
-  --color-grey-text-6: #d6d6d6; /* Form text */
   --color-grey-text-7: #b6b6b6; /* Ratio Bar Text */
 
   --color-grey-border-1: #565656;
@@ -35,33 +19,102 @@
   --color-grey-border-4: #363636;
   --color-grey-border-5: #444444; /* pre border */
 
-  --color-grey-table-1: #2c2c2c; /* Table rows 2n */
-  --color-grey-table-2: #262626; /* Table rows 2n+1 */
+  --color-grey-table-1: #2c2c2c; /* Table rows even */
+  --color-grey-table-2: #262626; /* Table rows odd */
   --color-grey-table-3: #c7c7c7; /* Table row text */
   --color-grey-table-4: #292929; /* Table rows Details */
   --color-grey-table-5: #333333; /* Table rows Pinned */
+
+  --color-primary: var(--color-grey-bg-2);
+  --color-success: var(--color-grey-bg-2);
+  --color-info: var(--color-grey-bg-2);
+  --color-warning: var(--color-grey-bg-2);
+  --color-danger: var(--color-grey-bg-2);
+  --color-light-primary: var(--color-grey-bg-1);
+  --color-light-success: var(--color-grey-bg-1);
+  --color-light-info: var(--color-grey-bg-1);
+  --color-light-warning: var(--color-grey-bg-1);
+  --color-light-danger: var(--color-grey-bg-1);
+  --color-A200: var(--color-grey-text-2);
+  --color-A400: var(--color-grey-text-2);
+
+  --max-width-small: 100% !important;
+  --max-width-big: 1300px; /*calc(100% - 150px) !important; */
 }
 body {
-  background-color: var(--color-dark-blue);
+  background-color: var(--color-grey-bg-4);
 }
-.btn,
-.btn-danger,
-.btn-primary,
-.btn-info,
-.btn-success,
+.label-default {
+  background-color: #6f6f6f;
+}
+/* BBCode Buttons */
+.bbcode-spoiler-button,
+.btn-default {
+  background-color: var(--color-info);
+  background-image: none;
+}
+.bbcode-spoiler-button:hover,
+.btn-default:hover {
+  background-color: var(--color-light-info);
+  background-image: none;
+}
+/* Warning Button Colours */
 .btn-warning,
-.imgbb-button,
-.label-danger,
-.label-primary,
-.label-info,
-.label-success,
+.btn-warning:active,
 .label-warning {
+  background-color: var(--color-warning);
+  background-image: none;
+}
+.btn-warning:hover {
+  background-color: var(--color-light-warning);
+}
+/* Info Button Colours */
+.btn-info,
+.btn-info:active,
+.label-info {
+  background-color: var(--color-info);
+}
+.btn-info:hover {
+  background-color: var(--color-light-info);
+}
+/* Success Button Colours */
+.btn-success,
+.btn-success:active,
+.label-success {
+  background-color: var(--color-success);
+}
+.btn-success:hover {
+  background-color: var(--color-light-success);
+}
+/* Danger Button Colours */
+.btn-danger,
+.btn-danger:active,
+.label-danger {
+  background-color: var(--color-danger);
+}
+.btn-danger:hover {
+  background-color: var(--color-light-danger);
+}
+/* Primary Button Colours */
+.btn-primary,
+.btn-primary:active,
+.label-primary {
+  background-color: var(--color-primary);
+  color: var(--color-grey-text-2);
+}
+.btn-primary:hover {
+  background-color: var(--color-light-primary);
+  color: var(--color-grey-text-3);
+}
+.btn {
+  border: 1px solid var(--color-grey-border-2) !important;
+  color: var(--color-grey-text-2);
+  font-weight: normal;
+}
+.imgbb-button {
   background-color: var(--color-grey-bg-2) !important;
-  border: 1px solid var(--color-grey-border-3) !important;
   background-image: none;
   box-shadow: none;
-  color: var(--color-grey-text-3);
-  font-weight: 400;
 }
 .btn:active,
 .btn:active:focus,
@@ -69,12 +122,12 @@ body {
 .btn:active:hover:focus,
 .btn:focus,
 .btn:hover,
-.imgbb-button:hover,
-.btn-primary:hover {
+.imgbb-button:hover {
   background-color: var(--color-grey-bg-1) !important;
   background-image: none;
   box-shadow: none;
-  color: #ffffef;
+  border: 1px solid var(--color-grey-border-2) !important;
+  color: var(--color-grey-text-3);
 }
 #hoeapp-wrapper,
 #main-content,
@@ -100,7 +153,7 @@ body {
   margin-bottom: 0;
 }
 .ratio-bar .container-fluid {
-    max-width: none !important;
+  max-width: none !important;
 }
 .ratio-bar .badge-user,
 .badge-user,
@@ -194,12 +247,12 @@ h4 .badge-user,
   border-bottom: 0;
 }
 .nav-tabs > #active {
-  background-color: var(--color-dark-green);
+  background-color: var(--color-grey-bg-5);
 }
 .nav-tabs > li.active > a,
 .nav-tabs > li > a:hover {
   background-color: var(--color-grey-bg-5) !important;
-  border: 2px solid var(--color-grey-bg-5) !important;
+  border: 0px solid var(--color-grey-bg-5) !important;
 }
 .nav-tabs > li > a {
   background-color: var(--color-grey-bg-1);
@@ -379,7 +432,7 @@ h6 {
 }
 .progress-bar {
   background-color: var(--color-grey-1);
-  border-bottom: 0px solid var(--color-red) !important;
+  border-bottom: 0px solid var(--color-danger) !important;
 }
 select,
 select option {
@@ -543,9 +596,18 @@ div.header.yellow div.inner_content {
   background-color: transparent !important;
   background-image: none !important;
 }
+.col-sm-10 {
+  width: 100%;
+}
 .container-fluid {
-    max-width: 1300px;
+  max-width: var(--max-width-big);
+  margin: 0 auto;
+}
+@media screen and (max-width: 992px) {
+  .container-fluid {
+    max-width: var(--max-width-small);
     margin: 0 auto;
+  }
 }
 /* Tables */
 .table-responsive {
@@ -557,7 +619,16 @@ table {
   color: var(--color-grey-text-5);
   border: 0px solid var(--color-grey-border-5) !important;
   margin: 0 auto;
-  max-width: 1300px !important;
+  max-width: var(--max-width-big);
+}
+@media screen and (max-width: 992px) {
+  table {
+    background-color: var(--color-grey-bg-3);
+    color: var(--color-grey-text-5);
+    border: 0px solid var(--color-grey-border-5) !important;
+    margin: 0 auto;
+    max-width: var(--max-width-small);
+  }
 }
 table tbody tr {
   border-width: 0 1px 1px 2px;
@@ -589,27 +660,27 @@ table tbody tr {
 .table-bordered > tbody > tr > td {
   border: 0;
 }
-/* Table row 2n */
-.table > tbody > tr:nth-child(even) > td {
-  background: var(--color-grey-table-1) !important;
-  border-bottom: 1px solid var(--color-grey-border-4);
-}
+/* Table Row Odd */
 .table > tbody > tr:nth-child(odd) {
   background: var(--color-grey-table-1) !important;
 }
-/* Table row 2n+1 */
 .table > tbody > tr:nth-child(odd) > td {
+  background: var(--color-grey-table-1) !important;
+  border-bottom: 1px solid var(--color-grey-border-4);
+}
+/* Table Row Even */
+.table > tbody > tr:nth-child(even) > td {
   background: var(--color-grey-table-2) !important;
   border-bottom: 1px solid var(--color-grey-border-4);
 }
 .table > tbody > tr:nth-child(even) {
-  background: var(--color-grey-table-1) !important;
+  background: var(--color-grey-table-2) !important;
 }
 .table > tbody > tr > td.text-green {
   color: #3fb618 !important;
 }
 .table > tbody > tr > td.text-red {
-  color: var(--color-light-red) !important;
+  color: var(--color-light-danger) !important;
 }
 /* Forum messages */
 .topic .topic-new-post,
@@ -725,21 +796,25 @@ a.view-torrent:hover {
   font-weight: 400;
   font-size: 14px;
   text-decoration: none !important;
-  color: #3987cc !important;
-  -webkit-text-fill-color: #3987cc;
+  color: var(--color-grey-text-1) !important;
+  -webkit-text-fill-color: var(--color-grey-text-1);
 }
 /* Main Content */
 #main-content {
-    margin-top: 0px !important;
+  margin-top: 0px !important;
 }
 /* Breadcrumb */
 .breadcrumb {
   background-color: var(--color-grey-bg-2);
   border: 0;
   text-align: center;
+  width: 100%;
 }
 .breadcrumb a {
   color: var(--color-grey-text-4);
+}
+ol.breadcrumb {
+  display: inline-block;
 }
 /* Code blocks */
 pre {
@@ -750,6 +825,14 @@ pre {
 }
 details summary {
   white-space: normal;
+}
+/* Thread Title */
+.forum-categories .table tbody tr td.f-display-topic-title strong a {
+  color: var(--color-grey-text-3) !important;
+}
+/* Thread Title */
+.forum-categories .table tbody tr td.f-display-topic-title strong a:hover {
+  color: var(--color-grey-text-1) !important;
 }
 /* Labels under forum topics for mods */
 .topic-new-post .text-center .label {
@@ -763,6 +846,13 @@ details summary {
   padding: 6px 12px;
   margin-bottom: 8px;
   border: 0 !important;
+}
+/* Buttons at beginning of post */
+.topic .topic-info .label {
+  display: inline-block;
+  width: 140px;
+  padding: 6px 12px;
+  margin: 6px auto;
 }
 /* text editor */
 .wysibb {
@@ -796,7 +886,7 @@ details summary {
   text-shadow: none;
 }
 .wysibb .wysibb-text {
-    padding: 0;
+  padding: 0;
 }
 /* Pagination */
 .pagination > .active > a,
@@ -843,20 +933,20 @@ form .form-group .col-sm-10 {
   width: 90%;
 }
 form .form-group .col-sm-9 {
-    width: 90%;
+  width: 90%;
 }
 form .form-group .col-sm-2 {
-    width: calc((90% - 30px + 4px) / 5 - 4px);
-    padding: 0;
-    margin-left: 4px;
+  width: calc((90% - 30px + 4px) / 5 - 4px);
+  padding: 0;
+  margin-left: 4px;
 }
 form .form-group:nth-of-type(6) .col-sm-2 {
-    width: calc((90% - 30px + 4px) / 2 - 4px);
-    padding: 0;
-    margin-left: 4px;
+  width: calc((90% - 30px + 4px) / 2 - 4px);
+  padding: 0;
+  margin-left: 4px;
 }
 form .form-group .col-sm-2:nth-of-type(1) {
-    margin-left: 15px;
+  margin-left: 15px;
 }
 form .form-group div .badge-user {
   text-align: left;
@@ -871,10 +961,10 @@ form .form-group div .badge-user label {
   border: 1px solid var(--color-grey-border-5);
 }
 #facetedFilters .box .fatten-me {
-    margin: 0 auto !important;
+  margin: 0 auto !important;
 }
 #facetedFilters .from-group.fatten-me {
-    margin: 0;
+  margin: 0;
 }
 /* Minimal search bar */
 #facetedDefault .box .container {
@@ -903,13 +993,13 @@ form .form-group div .badge-user label {
   box-shadow: none;
   border: 1px solid var(--color-grey-border-3);
 }
-/* Search table rows 2n+1 */
-#facetedSearch .table > tbody > tr:nth-child(2n + 1) > td {
+/* Search Table Rows Odd */
+#facetedSearch .table > tbody > tr:nth-child(odd) > td {
   background: var(--color-grey-table-1) !important;
   border-bottom: 1px solid var(--color-grey-border-4);
 }
-/* Search table row 2n */
-#facetedSearch .table > tbody > tr:nth-child(2n) > td {
+/* Search Table Row Even */
+#facetedSearch .table > tbody > tr:nth-child(even) > td {
   background: var(--color-grey-table-2) !important;
   border-bottom: 1px solid var(--color-grey-border-4);
 }
@@ -957,7 +1047,7 @@ form .form-group div .badge-user label {
   border-radius: 0;
   background-color: var(--color-grey-bg-1);
   border: 1px solid var(--color-grey-border-1);
-  color: var(--color-grey-text-6);
+  color: var(--color-grey-text-1);
 }
 /* NavBar Search placeholders */
 .form-control::placeholder {
@@ -972,7 +1062,7 @@ form .form-group div .badge-user label {
 .form-control:focus {
   box-shadow: 0 0 0px var(--color-light-blue);
   border: 0px solid var(--color-light-blue);
-  color: var(--color-grey-text-6);
+  color: var(--color-grey-text-1);
 }
 .form-control > option {
   background-color: var(--color-grey-bg-1);
@@ -1143,8 +1233,29 @@ h2 {
 }
 /* Modals */
 .modal-body .form-group .col-sm-10 {
-  display: inline-block;
+  float: left;
   grid: none;
+  width: 83.333%;
+  text-align: unset;
+  padding: 0 15px;
+}
+.modal-body .form-group .col-sm-10 .btn {
+  width: 16.666%;
+}
+.modal-body .form-group .col-sm-2 {
+  width: 16.666%;
+}
+.modal-body .form-group {
+  margin: 0;
+  padding: 0;
+}
+.modal-body .form-group label:nth-of-type(1) {
+  padding: 0 15px;
+  margin: 0 !important;
+}
+.modal-body .form-group:nth-of-type(1) #title {
+  padding: 0;
+  margin: 0 !important;
 }
 /* Mobile fixes */
 @media only screen and (max-width: 767px) {
@@ -1160,16 +1271,6 @@ h2 {
   }
   #hoeapp-container {
     position: static;
-  }
-  /* Allows browsing forums */
-  #hoeapp-wrapper {
-    overflow-x: visible;
-  }
-  /* Mod forum labels */
-
-  .topic-new-post .text-center .label,
-  .topic-new-post .text-center .btn {
-    width: 50%;
   }
   /* Extra Stats */
   .stats .table-responsive .content .inner_content .inner_stats {
@@ -1254,10 +1355,10 @@ h2 {
   #facetedSearch .table-responsive .table thead tr th:nth-child(11) .fas {
     display: none;
   }
-  #facetedSearch .table-responsive .table tbody tr:nth-child(even) td {
+  #facetedSearch .table-responsive .table tbody tr:nth-child(odd) td {
     background-color: var(--color-grey-table-1) !important;
   }
-  #facetedSearch .table-responsive .table tbody tr:nth-child(odd) td {
+  #facetedSearch .table-responsive .table tbody tr:nth-child(even) td {
     background-color: var(--color-grey-table-2) !important;
   }
   #facetedSearch .table-responsive .table tbody tr td {
@@ -1392,6 +1493,199 @@ h2 {
   .panel-heading + .nav-tabs + .tab-content .tab-pane .table-responsive {
     border: 0;
   }
+  /* Forums */
+  /* Allows browsing forums */
+  #hoeapp-wrapper {
+    overflow-x: visible;
+  }
+  /* Mod forum labels */
+
+  .topic-new-post .text-center .label,
+  .topic-new-post .text-center .btn {
+    width: 50%;
+  }
+  /* Buttons at beginning of post */
+  .topic .topic-info .label {
+    display: block;
+    width: 50%;
+    padding: 6px 12px;
+    margin: 6px auto;
+  }
+  .forum-categories .table thead:nth-child(n) tr,
+  .forum-categories .table thead:nth-child(n) tr th {
+    background-color: var(--color-grey-bg-2) !important;
+  }
+  /*
+   ******************** Headers ****************
+   */
+  /* Icon Header, Latest Header, Icon Column, Forum Description */
+  .forum-categories .table thead:nth-of-type(3n) tr th:nth-child(1),
+  .forum-categories .table thead:nth-of-type(3n) tr th:nth-child(5),
+  .forum-categories .table tbody tr td:nth-child(1),
+  .forum-categories .table tbody tr td:nth-child(2) span:nth-child(2) {
+    display: none !important;
+  }
+  /* Forum, buttons, and [Name, Posts, Topics] Headers */
+  .forum-categories .table thead,
+  .forum-categories .table thead tr,
+  .forum-categories .table thead tr td {
+    display: inline-block;
+    width: 100%;
+    background-color: var(--color-grey-bg-2);
+  }
+  /* Forum Name */
+  .forum-categories .table thead tr td div.header,
+  .forum-categories .table thead tr td div.header div.inner_content {
+    position: static !important;
+    width: 100%;
+    display: inline-block;
+  }
+  /* Name Header */
+  .forum-categories .table thead:nth-of-type(3n) tr th:nth-child(2) {
+    width: 60%;
+  }
+  /* Posts Header */
+  .forum-categories .table thead:nth-of-type(3n) tr th:nth-child(3) {
+    width: 20%;
+  }
+  /* Topics Header */
+  .forum-categories .table thead:nth-of-type(3n) tr th:nth-child(4) {
+    width: 20%;
+  }
+  /*
+   ******************** SubForum Background ********
+   */
+  .forum-categories .table tbody tr td {
+    display: inline-block;
+    margin: 0;
+    float: left;
+  }
+  /* All SubForum Info Odd */
+  .forum-categories .table tbody tr:nth-child(odd) td {
+    background-color: var(--color-grey-table-1);
+  }
+  /* All SubForum Info Even */
+  .forum-categories .table tbody tr:nth-child(even) td {
+    background-color: var(--color-grey-table-2);
+  }
+  /*
+   ******************** SubForum Information ********
+   */
+  /* Forum Name */
+  .forum-categories .table thead tr td div.header div.inner_content h1,
+  .forum-categories .table thead tr td div.header div.inner_content div {
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    word-break: break-all;
+  }
+  /* SubForum Name Container*/
+  .forum-categories .table tbody tr td:nth-of-type(2) {
+    width: 60%;
+    height: auto;
+    display: flex;
+    align-items: center;
+  }
+  /* SubForum Name */
+  .forum-categories .table tbody tr td:nth-of-type(2) span h4 {
+    margin: 0;
+    padding: 2px;
+  }
+  /* SubForum Link */
+  .forum-categories .table tbody tr td:nth-of-type(2) span h4 a {
+    color: var(--color-grey-text-3) !important;
+  }
+  /* Forum Posts */
+  .forum-categories .table tbody tr td:nth-of-type(3) {
+    width: 20%;
+    height: 100%;
+  }
+  /* Forum Topics */
+  .forum-categories .table tbody tr td:nth-of-type(4) {
+    width: 20%;
+  }
+  /* Forum Last Post All Information */
+  .forum-categories .table tbody tr td:nth-of-type(5) {
+    width: 100% !important;
+    display: block !important;
+    float: left;
+  }
+  /* "Last message - author" icon authorname and "Topic >" Last Topic */
+  .forum-categories .table tbody tr td:nth-of-type(5) span:nth-of-type(1),
+  .forum-categories .table tbody tr td:nth-of-type(5) span:nth-of-type(2) {
+    visibility: hidden;
+  }
+  /* Last Author Link and Last Topic Link */
+  .forum-categories .table tbody tr td:nth-of-type(5) span:nth-of-type(1) a,
+  .forum-categories .table tbody tr td:nth-of-type(5) span:nth-of-type(2) a {
+    visibility: visible;
+    float: left;
+  }
+  /* Last Post Age */
+  .forum-categories .table tbody tr td:nth-of-type(5) span:nth-of-type(3) {
+    float: left;
+  }
+  /*
+   ***************** Within the SubForum ********
+   */
+  /* Thread Title Container */
+  .forum-categories .table tbody tr td.f-display-topic-title {
+    float: left;
+    word-break: break-all;
+    width: 100%;
+    display: block;
+  }
+  /* Thread Title Link Container */
+  .forum-categories .table tbody tr td.f-display-topic-title strong {
+    width: 100%;
+    float: none;
+    display: block;
+  }
+  /* Thread Title */
+  .forum-categories .table tbody tr td.f-display-topic-title strong a {
+    display: block;
+    word-break: break-all;
+    width: 100%;
+    color: var(--color-grey-text-3) !important;
+  }
+  /* Tags */
+  .forum-categories .table tbody tr td.f-display-topic-title span {
+    display: inline-block;
+    word-break: break-all;
+    padding: 3px;
+    margin: 3px;
+    width: 50%;
+    color: var(--color-grey-text-3) !important;
+  }
+  /* Thread Starter */
+  .forum-categories .table tbody tr td.f-display-topic-started {
+    display: inline-block;
+    float: left;
+    width: 40%;
+  }
+  /* Views / Posts */
+  .forum-categories .table tbody tr td.f-display-topic-stats {
+    display: inline-block;
+    float: right;
+    width: 50%;
+  }
+  /* Author and date of most recent post */
+  .forum-categories .table tbody tr td.f-display-topic-last-post {
+    display: inline-block;
+    float: right;
+    width: 50%;
+  }
+  /* Tidy up buttons */
+  .button-holder .button-left a {
+    width: 50%;
+    display: block;
+    margin: 3px auto;
+  }
+  /* Keep youtube videos small enough */
+  iframe {
+    max-width: 100%;
+    max-height: 50vw;
+  }
 }
-
-
