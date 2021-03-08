@@ -39,7 +39,7 @@
   --color-A400: var(--color-grey-text-2);
 
   --max-width-small: 100% !important;
-  --max-width-big: 1300px; /*calc(100% - 150px) !important; */
+  --max-width-big: calc(100% - 100px) !important;
 }
 body {
   background-color: var(--color-grey-bg-4);
