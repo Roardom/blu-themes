@@ -93,7 +93,14 @@ body {
 }
 /* RatioBar */
 .ratio-bar {
+  position: static !important;
   background-color: var(--color-grey-bg-1);
+  width: calc(100% - 50px);
+  margin-left: 50px;
+  margin-bottom: 0;
+}
+.ratio-bar .container-fluid {
+    max-width: none !important;
 }
 .ratio-bar .badge-user,
 .badge-user,
@@ -314,7 +321,18 @@ i.torrent-icon {
   box-shadow: none;
   background-color: var(--color-grey-bg-3);
 }
-
+/* Top uploaders table heading */
+.panel-heading
+  + .nav-tabs
+  + .tab-content
+  .tab-pane
+  .table-responsive
+  .table
+  thead
+  tr
+  th {
+  background-color: var(--color-grey-bg-5);
+}
 #l-footer {
   background-color: #1f1f1f;
 }
@@ -525,10 +543,40 @@ div.header.yellow div.inner_content {
   background-color: transparent !important;
   background-image: none !important;
 }
+.container-fluid {
+    max-width: 1300px;
+    margin: 0 auto;
+}
 /* Tables */
 .table-responsive {
   border: 1px solid var(--color-grey-border-3);
   color: var(--color-grey-table-3);
+}
+table {
+  background-color: var(--color-grey-bg-3);
+  color: var(--color-grey-text-5);
+  border: 0px solid var(--color-grey-border-5) !important;
+  margin: 0 auto;
+  max-width: 1300px !important;
+}
+table tbody tr {
+  border-width: 0 1px 1px 2px;
+  border-style: solid;
+  border-color: var(--color-grey-border-3);
+}
+.table-bordered > thead > tr > th {
+  border-width: 1px 0px;
+  border-style: solid;
+  border-color: var(--color-grey-border-2);
+}
+.table-bordered,
+.table-bordered > tbody > tr > td,
+.table-bordered > tbody > tr > th,
+.table-bordered > tfoot > tr > td,
+.table-bordered > tfoot > tr > th,
+.table-bordered > thead > tr > td,
+.table-bordered > thead > tr > th {
+  border: 1px solid var(--color-grey-border-3);
 }
 /* Table for torrent details */
 .panel .table > tbody > tr:nth-child(n) > td {
@@ -596,6 +644,7 @@ ul.comments-list li {
   box-shadow: none;
   border-radius: 0;
   padding: 8px;
+  margin: 8px 0 !important;
 }
 .well h3 {
   background-color: transparent;
@@ -609,12 +658,15 @@ ul.comments-list li {
   border-top: 0;
 }
 .well .form-group {
-  padding: 12px;
+  padding: 2px;
   margin-bottom: 0;
 }
-.well .form-group label {
+.well .form-group .control-label {
   color: var(--color-grey-text-3);
   font-size: 14px;
+  margin: 12px;
+  display: inline-block;
+  width: 100%;
 }
 .well .form-group select,
 .well .radio-inline {
@@ -676,6 +728,10 @@ a.view-torrent:hover {
   color: #3987cc !important;
   -webkit-text-fill-color: #3987cc;
 }
+/* Main Content */
+#main-content {
+    margin-top: 0px !important;
+}
 /* Breadcrumb */
 .breadcrumb {
   background-color: var(--color-grey-bg-2);
@@ -690,27 +746,23 @@ pre {
   background-color: var(--color-grey-bg-3);
   color: var(--color-grey-text-5);
   border: 1px solid var(--color-grey-border-5);
+  width: auto;
 }
-/* Tables */
-table {
-  background-color: var(--color-grey-bg-3);
-  color: var(--color-grey-text-5);
-  border: 0px solid var(--color-grey-border-5) !important;
-  margin: 0;
+details summary {
+  white-space: normal;
 }
-.table-bordered > thead > tr > th {
-  border-width: 1px 0px;
-  border-style: solid;
-  border-color: var(--color-grey-border-2);
+/* Labels under forum topics for mods */
+.topic-new-post .text-center .label {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 8px;
 }
-.table-bordered,
-.table-bordered > tbody > tr > td,
-.table-bordered > tbody > tr > th,
-.table-bordered > tfoot > tr > td,
-.table-bordered > tfoot > tr > th,
-.table-bordered > thead > tr > td,
-.table-bordered > thead > tr > th {
-  border: 1px solid var(--color-grey-border-3);
+/* Buttons under forum topics for mods */
+.topic-new-post .text-center .btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 8px;
+  border: 0 !important;
 }
 /* text editor */
 .wysibb {
@@ -769,6 +821,9 @@ table {
   background-color: var(--color-grey-bg-3);
   border: 1px solid var(--color-grey-border-3);
 }
+#result .table-responsive {
+  border: 0;
+}
 /* Search Filter Titles */
 .label-default {
   border: 0;
@@ -778,10 +833,27 @@ table {
 /* Search filter grid */
 form .form-group .col-sm-10 {
   display: grid;
-  grid: auto / 25% 25% 25% 25%;
-  grid-row-gap: 6px;
+  grid: auto / 16% 16% 16% 16% 16% 16%;
+  grid-row-gap: 2px;
   text-align: left;
-  padding: 6px 0;
+  padding: 2px 0;
+  width: 90%;
+}
+form .form-group .col-sm-9 {
+    width: 90%;
+}
+form .form-group .col-sm-2 {
+    width: calc((90% - 30px + 4px) / 5 - 4px);
+    padding: 0;
+    margin-left: 4px;
+}
+form .form-group:nth-of-type(6) .col-sm-2 {
+    width: calc((90% - 30px + 4px) / 2 - 4px);
+    padding: 0;
+    margin-left: 4px;
+}
+form .form-group .col-sm-2:nth-of-type(1) {
+    margin-left: 15px;
 }
 form .form-group div .badge-user {
   text-align: left;
@@ -794,6 +866,21 @@ form .form-group div .badge-user label {
   margin: 4px 0;
   border-radius: 3px;
   border: 1px solid var(--color-grey-border-5);
+}
+#facetedFilters .box .fatten-me {
+    margin: 0 auto !important;
+}
+#facetedFilters .from-group.fatten-me {
+    margin: 0;
+}
+/* Minimal search bar */
+#facetedDefault .box .container {
+  border: 0;
+  background-color: transparent;
+}
+#facetedDefault .box .container .form-group {
+  width: 100%;
+  max-width: none !important;
 }
 /* Torrent search cards */
 .card.is-torrent .card_head,
@@ -921,99 +1008,99 @@ div.stats {
   color: var(--color-grey-text-1);
 }
 .stats .table-responsive .content .inner_content .inner_stats {
-    display: grid;
-    grid-template-rows: auto;
-    grid-template-columns: auto;
-    /* grid-template-areas: 
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: auto;
+  /* grid-template-areas: 
         "a b c d ."
         "e f g h ."
         "i j k l m"
         "n o p . ."
         "q r s . ."
         "t u v . ."; */
-    grid-template-areas: 
-        ". a a b b c c d d ."
-        ". e e f f g g h h ."
-        "i i j j k k l l m m"
-        ". . n n o o p p . ."
-        ". . q q r r s s . ."
-        ". . t t u u v v . .";
-    grid-row-gap: 2px;
+  grid-template-areas:
+    ". a a b b c c d d ."
+    ". e e f f g g h h ."
+    "i i j j k k l l m m"
+    ". . n n o o p p . ."
+    ". . q q r r s s . ."
+    ". . t t u u v v . .";
+  grid-row-gap: 2px;
 }
 div.stat:nth-child(1) {
-    grid-area: a;
+  grid-area: a;
 }
 div.stat:nth-child(2) {
-    grid-area: b;
+  grid-area: b;
 }
 div.stat:nth-child(3) {
-    grid-area: c;
+  grid-area: c;
 }
 div.stat:nth-child(4) {
-    grid-area: d;
+  grid-area: d;
 }
 div.stat:nth-child(5) {
-    grid-area: e;
+  grid-area: e;
 }
 div.stat:nth-child(6) {
-    grid-area: f;
+  grid-area: f;
 }
 div.stat:nth-child(7) {
-    grid-area: g;
+  grid-area: g;
 }
 div.stat:nth-child(8) {
-    grid-area: h;
+  grid-area: h;
 }
 div.stat:nth-child(10) {
-    grid-area: i;
+  grid-area: i;
 }
 div.stat:nth-child(11) {
-    grid-area: j;
+  grid-area: j;
 }
 div.stat:nth-child(12) {
-    grid-area: k;
+  grid-area: k;
 }
 div.stat:nth-child(13) {
-    grid-area: l;
+  grid-area: l;
 }
 div.stat:nth-child(14) {
-    grid-area: m;
+  grid-area: m;
 }
 div.stat:nth-child(15) {
-    grid-area: n;
+  grid-area: n;
 }
 div.stat:nth-child(16) {
-    grid-area: o;
+  grid-area: o;
 }
 div.stat:nth-child(17) {
-    grid-area: p;
+  grid-area: p;
 }
 div.stat:nth-child(19) {
-    grid-area: q;
+  grid-area: q;
 }
 div.stat:nth-child(20) {
-    grid-area: r;
+  grid-area: r;
 }
 div.stat:nth-child(21) {
-    grid-area: s;
+  grid-area: s;
 }
 div.stat:nth-child(23) {
-    grid-area: t;
+  grid-area: t;
 }
 div.stat:nth-child(24) {
-    grid-area: u;
+  grid-area: u;
 }
 div.stat:nth-child(25) {
-    grid-area: v;
+  grid-area: v;
 }
 div.stat:nth-child(26) {
-    grid-area: w;
+  grid-area: w;
 }
 div.stat:nth-child(27) {
-    grid-area: x;
+  grid-area: x;
 }
 .stats .table-responsive .content .inner_content .inner_stats br {
-    order: 1;
+  order: 1;
 }
 div.stats div.content div.inner_stats div.stat p:first-of-type {
   color: var(--color-grey-text-2);
@@ -1074,22 +1161,28 @@ h2 {
   #hoeapp-wrapper {
     overflow-x: visible;
   }
+  /* Mod forum labels */
+
+  .topic-new-post .text-center .label,
+  .topic-new-post .text-center .btn {
+    width: 50%;
+  }
   /* Extra Stats */
   .stats .table-responsive .content .inner_content .inner_stats {
-    grid-template-areas: 
-        "a a b b"
-        "c c d d"
-        "e e f f"
-        "g g h h"
-        "i i j j"
-        "k k l l"
-        ". m m ."
-        "n n o o"
-        ". p p ."
-        "q q r r"
-        ". s s ."
-        "t t u u"
-        ". v v .";
+    grid-template-areas:
+      "a a b b"
+      "c c d d"
+      "e e f f"
+      "g g h h"
+      "i i j j"
+      "k k l l"
+      ". m m ."
+      "n n o o"
+      ". p p ."
+      "q q r r"
+      ". s s ."
+      "t t u u"
+      ". v v .";
   }
   div.stat:nth-child(1) {
     border-top: 1px solid var(--color-grey-border-3);
@@ -1124,38 +1217,38 @@ h2 {
     grid: auto / 50% 50%;
     grid-row-gap: 2px;
     text-align: left;
-    padding: 6px 0;
+    padding: 0px 0;
   }
   /* Torrent tables appearance */
   #facetedSearch .table-responsive .table thead tr th:nth-child(1) {
-    display: none
+    display: none;
   }
   #facetedSearch .table-responsive .table thead tr th:nth-child(2) {
-    display: none
+    display: none;
   }
   #facetedSearch .table-responsive .table thead tr th:nth-child(3) {
-    display: none
+    display: none;
   }
   #facetedSearch .table-responsive .table thead tr th:nth-child(5) {
-    display: none
+    display: none;
   }
   #facetedSearch .table-responsive .table thead tr th:nth-child(6) {
-    display: none
+    display: none;
   }
   #facetedSearch .table-responsive .table thead tr th:nth-child(7) .fas {
-    display: none
+    display: none;
   }
   #facetedSearch .table-responsive .table thead tr th:nth-child(8) .fas {
-    display: none
+    display: none;
   }
   #facetedSearch .table-responsive .table thead tr th:nth-child(9) .fas {
-    display: none
+    display: none;
   }
   #facetedSearch .table-responsive .table thead tr th:nth-child(10) .fas {
-    display: none
+    display: none;
   }
   #facetedSearch .table-responsive .table thead tr th:nth-child(11) .fas {
-    display: none
+    display: none;
   }
   #facetedSearch .table-responsive .table tbody tr:nth-child(even) td {
     background-color: var(--color-grey-table-1) !important;
@@ -1268,20 +1361,31 @@ h2 {
   }
   /* Buttons in e.g. mod queue */
   .table-responsive .btn {
-      width: 100%;
+    width: 100%;
   }
   /* Card layout */
   /* Each card */
   .card.is-torrent {
-      margin-bottom: 10px;
-      height: auto !important;
+    margin-bottom: 10px;
+    height: auto !important;
   }
   /* Card Header */
   .card.is-torrent .card_head {
-      height: 100%;
+    height: 100%;
   }
   /* Remove genres */
   .card.is-torrent .card_body .body_description .genre-label {
-      display: none;
+    display: none;
+  }
+  /* Prevent nav-tabs from top/bottom padding */
+  .panel .nav-tabs {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .panel .nav-tabs .col-md-6 {
+    margin-bottom: 0;
+  }
+  .panel-heading + .nav-tabs + .tab-content .tab-pane .table-responsive {
+    border: 0;
   }
 }
