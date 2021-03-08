@@ -348,6 +348,10 @@ i.torrent-icon {
   margin-top: 5px;
   padding-top: 10px;
 }
+/* Recenter that div */
+.col-md-offset-1 {
+    margin-left: 0;
+}
 /* Chat messages */
 .panel-chat > .panel-body > #frame > .content {
   background-color: var(--color-grey-bg-5);
