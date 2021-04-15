@@ -241,8 +241,8 @@ body {
 .ratio-bar {
   position: static !important;
   background-color: var(--color-grey-bg-1);
-  width: calc(100% - 50px);
-  margin-left: 50px;
+  /* width: calc(100% - 50px); */
+  /* margin-left: 50px; */
   margin-bottom: 0;
 }
 /* RatioBar */
