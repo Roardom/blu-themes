@@ -759,6 +759,11 @@ a.text-bright:hover {
   border-radius: 0;
   border: 0;
 }
+/* Torrents Page Buttons */
+.torrent.container.box .movie-wrapper + div .badge-user {
+  margin-left: 0;
+  margin-right: 0;
+}
 /* Profile encapsulation */
 .container .block,
 .container .well {
