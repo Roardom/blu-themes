@@ -367,9 +367,10 @@ h4 .badge-user,
 }
 /* PM Close Button */
 #frameTabs .button-right-small {
-  float: right;
-  height: 0;
-  margin-right: 10px;
+  width: 30px;
+  position: absolute;
+  top: -5px;
+  right: 0px;
 }
 #frameTabs .button-right-small div div {
   margin: 0;
@@ -404,10 +405,13 @@ h4 .badge-user,
   background-color: var(--color-grey-bg-1);
   color: var(--color-grey-text-2) !important;
   border: 0 !important;
+  white-space: nowrap;
 }
 /* Tab Link Container */
-.nav-tabs li {
+.nav-tabs > li {
   margin-bottom: 0;
+  display: table-cell;
+  float: none;
 }
 /* Nav-tabs below headers */
 .header + .container-fluid .nav-tabs {
