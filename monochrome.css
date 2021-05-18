@@ -354,6 +354,9 @@ h4 .badge-user,
   clear: both;
   display: table;
 }
+#frameFooter #frameWrap .width-75 {
+  width: 100%;
+}
 /* Chat Tab Background */
 #frameTabs div {
   display: inline-block;
