@@ -355,6 +355,7 @@ h4 .badge-user,
   display: table;
 }
 #frameFooter #frameWrap .width-75 {
+  height: none !important;
   width: 100%;
 }
 /* Chat Tab Background */
