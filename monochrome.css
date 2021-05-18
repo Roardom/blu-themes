@@ -368,6 +368,7 @@ h4 .badge-user,
 }
 #frameTabs {
   background-color: var(--color-grey-bg-2);
+  display: block;
 }
 /* PM Close Button */
 #frameTabs .button-right-small {
