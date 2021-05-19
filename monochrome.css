@@ -382,6 +382,16 @@ h4 .badge-user,
   height: auto !important;
   width: 100%;
 }
+#frameWrap i {
+  margin: 3px;
+}
+/* Fixes input box padding */
+#frameFooter {
+  padding: 0;
+}
+.message-input .row div {
+  padding: 0;
+}
 /* Fixes last messages being cut off */
 #chatbody #frame {
   height: auto;
