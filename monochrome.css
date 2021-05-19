@@ -752,6 +752,8 @@ a.text-bright:hover {
 /* Torrent Page Movie Background */
 .movie-overlay {
   background-color: transparent !important;
+}
+.movie-backdrop {
   filter: brightness(70%) contrast(0.6) blur(5px);
   clip-path: inset(5px round 15px);
   margin-top: -5px;
