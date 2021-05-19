@@ -580,6 +580,12 @@ i.torrent-icon {
 .panel-chat > .panel-heading h4 {
   font-size: 13px;
 }
+/* Allow buttons in panel heading titles */
+.panel-chat > .panel-heading h4::after {
+  content: "";
+  clear: both;
+  display:table;
+}
 /* NavTabs following panel headers */
 .panel-chat > .panel-heading + .nav-tabs {
   background-color: var(--color-grey-bg-2);
