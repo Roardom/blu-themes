@@ -805,6 +805,15 @@ a.text-bright:hover {
   width: calc(100% + 10px);
   height: calc(100% + 10px);
 }
+/* Mobile meta info fixes */
+@media only screen and (max-width: 767px) {
+  .movie-poster {
+    display:none;
+  }
+  .meta-info {
+    height: 80vh;
+  }
+}
 /* Torrent Page Movie Meta */
 .movie-wrapper .movie-bottom .badge-user {
   text-shadow: 1.3px 1.5px rgba(0,0,0,.8);
