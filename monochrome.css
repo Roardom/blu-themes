@@ -120,6 +120,8 @@ body {
   background-image: none;
   border: 0;
   padding: 8px 12px;
+  margin: 2px;
+  border-radius: 2px;
 }
 .btn:active,
 .btn:active:focus,
@@ -775,33 +777,8 @@ a.text-bright:hover {
   background: transparent !important;
 }
 .torrent-buttons a, .torrent-buttons button {
-  border: 0 !important;
-  border-radius: 4px;
-  font-weight: 700;
   padding: 10px 12px;
   margin-bottom: 0;
-  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3) !important;
-  transition: background 0.8s !important;
-}
-.torrent-buttons a:active, .torrent-buttons button:active,
-.torrent-buttons a:focus, .torrent-buttons button:focus,
-.torrent-buttons a:hover, .torrent-buttons button:hover,
-.torrent-buttons a:active:focus, .torrent-buttons button:active:focus,
-.torrent-buttons a:active:hover, .torrent-buttons button:active:hover,
-.torrent-buttons a:active:hover:focus, .torrent-buttons button:active:hover:focus {
-  padding: 10px 12px;
-  margin: 0 !important;
-  border: 0 !important;
-  outline: none;
-}
-.torrent-buttons a:active, .torrent-buttons button:active,
-.torrent-buttons a:active:hover, .torrent-buttons button:active:hover {
-  background-color: var(--color-grey-text-4) !important;
-  background-size: 100% !important;
-  transition: background 0s !important;
-}
-.torrent-buttons a:hover, .torrent-buttons button:hover {
-  background: var(--color-grey-bg-1) radial-gradient(circle, transparent 1%, var(--color-grey-bg-1) 1%) center/15000% !important;
 }
 /* Profile encapsulation */
 .container .block,
