@@ -133,6 +133,7 @@ body {
   background-color: var(--color-grey-bg-1) !important;
   background-image: none;
   color: var(--color-grey-text-3);
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
 }
 /* Large Buttons */
 .btn-lg:active,
