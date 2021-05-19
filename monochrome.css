@@ -1244,15 +1244,15 @@ details summary {
 .pagination > .active > span,
 .pagination > .active > span:focus,
 .pagination > .active > span:hover {
-  background-color: var(--color-grey-bg-4);
-  border: 1px solid var(--color-grey-border-3);
+  background-color: var(--color-grey-bg-2);
   margin-top: 0;
 }
 .pagination > li > a,
 .pagination > li > span {
-  background-color: var(--color-grey-bg-3);
-  border: 1px solid var(--color-grey-border-3);
+  background-color: transparent;
   color: var(--color-grey-text-2);
+  border-radius: 16px;
+  border: 0;
 }
 .pagination > .disabled > a,
 .pagination > .disabled > a:focus,
@@ -1260,8 +1260,14 @@ details summary {
 .pagination > .disabled > span,
 .pagination > .disabled > span:focus,
 .pagination > .disabled > span:hover {
+  background-color: transparent;
+}
+.pagination > li > a:focus,
+.pagination > li > a:hover,
+.pagination > li > span:focus,
+.pagination > li > span:hover {
   background-color: var(--color-grey-bg-3);
-  border: 1px solid var(--color-grey-border-3);
+  color: inherit;
 }
 #result .table-responsive {
   border: 0;
