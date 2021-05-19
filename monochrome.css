@@ -132,13 +132,16 @@ body {
 .btn:focus,
 .btn:hover,
 .imgbb-button:hover {
-  background-color: var(--color-grey-bg-1) !important;
+  background-color: var(--color-grey-bg-1);
   background-image: none;
   color: var(--color-grey-text-3);
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
   margin: 2px !important;
   transition: background 0.8s;
   outline: none;
+}
+.btn:active, .btn:active:hover, .btn:active:focus {
+  background-color: white !important;
 }
 /* Large Buttons */
 .btn-lg:active,
