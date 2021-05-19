@@ -791,14 +791,15 @@ a.text-bright:hover {
 .torrent-buttons a:active:hover:focus .torrent-buttons button:active:hover:focus {
   padding: 10px 12px;
   margin: 0;
+  border: 0 !important;
 }
 .torrent-buttons a:active .torrent-buttons button:active {
-  background-color: var(--color-grey-border-2) !important;
+  background-color: var(--color-grey-bg-1) !important;
   background-size: 100% !important;
   transition: background 0s !important;
 }
 .torrent-buttons a:hover .torrent-buttons button:hover {
-  background: var(--color-grey-border-2) radial-gradient(circle, transparent 1%, var(--color-grey-border-2) 1%) center/150000% !important;
+  background: var(--color-grey-border-2) radial-gradient(circle, transparent 1%, var(--color-grey-bg-1) 1%) center/15000% !important;
 }
 /* Profile encapsulation */
 .container .block,
