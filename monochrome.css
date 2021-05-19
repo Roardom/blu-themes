@@ -1251,7 +1251,7 @@ details summary {
 .pagination > li > span {
   background-color: transparent;
   color: var(--color-grey-text-2);
-  border-radius: 16px;
+  border-radius: 16px !important;
   border: 0;
 }
 .pagination > .disabled > a,
