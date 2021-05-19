@@ -184,6 +184,9 @@ body {
     color: var(--color-grey-text-2) !important;
 } */
 
+.decoda-code {
+  color: var(--color-grey-text-3);
+}
 /* Labels
 ============================================================================ */
 .label-success {
