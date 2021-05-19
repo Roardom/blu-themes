@@ -659,29 +659,6 @@ select option {
 .bbcode-quote {
   margin: 0 15px 15px;
 }
-.movie-overlay {
-  background: radial-gradient(
-      circle at 20% 50%,
-      #000 5.46%,
-      rgba(21, 101, 192, 0.46)
-    ),
-    linear-gradient(rgba(28, 31, 36, 0.25), rgba(28, 31, 36, 0.75), #1c1f24),
-    linear-gradient(
-      90deg,
-      rgba(28, 31, 36, 0) 70%,
-      rgba(28, 31, 36, 0.75) 100%,
-      #1c1f24
-    ),
-    linear-gradient(
-      270deg,
-      rgba(28, 31, 36, 0) 70%,
-      rgba(28, 31, 36, 0.75) 100%,
-      #1c1f24
-    ),
-    linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75));
-  z-index: 0;
-  filter: brightness(50%) grayscale(50%);
-}
 .footer-icon,
 .text-info {
   color: var(--color-400);
@@ -772,10 +749,25 @@ a.text-bright:hover {
   border-radius: 0;
   border: 0;
 }
+/* Torrent Page Movie Background */
+.movie-overlay {
+  background-color: transparent !important;
+  filter: brightness(70%) contrast(0.6) blur(5px);
+  clip-path: inset(5px round 15px);
+  margin-top: -5px;
+  margin-left: -5px;
+  width: calc(100% + 10px);
+  height: calc(100% + 10px);
+}
+/* Torrent Page Movie Meta */
+.movie-wrapper .movie-bottom .badge-user {
+  text-shadow: 1.3px 1.5px rgba(0,0,0,.8);
+  font-weight: 700;
+}
 /* Torrents Page Buttons */
-.torrent.container.box .movie-wrapper + div .badge-user {
-  margin-left: 0;
-  margin-right: 0;
+.torrent-buttons .button-overlay,
+.torrent-buttons .vibrant-overlay {
+  background: transparent !important;
 }
 /* Profile encapsulation */
 .container .block,
