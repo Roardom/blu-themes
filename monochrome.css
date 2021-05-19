@@ -812,6 +812,7 @@ a.text-bright:hover {
   }
   .meta-info {
     height: 80vh;
+    width: 100%;
   }
 }
 /* Torrent Page Movie Meta */
