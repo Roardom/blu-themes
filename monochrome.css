@@ -146,6 +146,19 @@ body {
   padding: 10px 16px;
   font-size: 18px;
 }
+/* Circle Buttons */
+.btn-circle:active,
+.btn-circle:active:focus,
+.btn-circle:active:hover,
+.btn-circle:active:hover:focus,
+.btn-circle:focus,
+.btn-circle:hover,
+.btn-circle:active {
+  width: auto;
+  height: auto;
+  padding: 10px;
+  font-size: 11px;
+}
 /* Text
 ============================================================================ */
 /* Theme color text */
