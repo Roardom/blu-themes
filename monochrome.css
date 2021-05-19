@@ -782,7 +782,6 @@ a.text-bright:hover {
   padding: 10px 12px;
   margin-bottom: 0;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3) !important;
-  outline: none;
   transition: background 0.8s !important;
 }
 .torrent-buttons a:active, .torrent-buttons button:active,
@@ -794,14 +793,16 @@ a.text-bright:hover {
   padding: 10px 12px;
   margin: 0 !important;
   border: 0 !important;
+  outline: none;
 }
-.torrent-buttons a:active, .torrent-buttons button:active {
-  background-color: var(--color-grey-bg-1) !important;
+.torrent-buttons a:active, .torrent-buttons button:active,
+.torrent-buttons a:active:hover, .torrent-buttons button:active:hover {
+  background-color: var(--color-grey-text-4) !important;
   background-size: 100% !important;
   transition: background 0s !important;
 }
 .torrent-buttons a:hover, .torrent-buttons button:hover {
-  background: var(--color-grey-border-2) radial-gradient(circle, transparent 1%, var(--color-grey-bg-1) 1%) center/15000% !important;
+  background: var(--color-grey-bg-1) radial-gradient(circle, transparent 1%, var(--color-grey-bg-1) 1%) center/15000% !important;
 }
 /* Profile encapsulation */
 .container .block,
