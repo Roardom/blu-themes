@@ -147,6 +147,7 @@ body {
   font-size: 18px;
 }
 /* Circle Buttons */
+.btn-circle,
 .btn-circle:active,
 .btn-circle:active:focus,
 .btn-circle:active:hover,
