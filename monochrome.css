@@ -824,6 +824,10 @@ a.text-bright:hover {
 .movie-wrapper .cast-item img {
   clip-path: inset(0 round 10px);
 }
+/* Fix poor colouring of meta text */
+.meta-info .text-orange {
+  color: var(--color-grey-text-7);
+}
 /* Torrents Page Buttons */
 .torrent-buttons .button-overlay,
 .torrent-buttons .vibrant-overlay {
