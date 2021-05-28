@@ -1437,19 +1437,12 @@ form .form-group div .badge-user label {
   background-color: transparent;
 }
 /* Pinned torrent colour */
-#facetedSearch .table-responsive .table tbody tr.success td {
+.table-responsive .table tbody tr.success td {
   background-color: var(--color-grey-table-5) !important;
 }
 /* Remove HR after default search */
 #facetedDefault .box hr {
   display: none;
-}
-/* Profile table */
-.table-striped tbody tr:nth-child(n) td {
-  background: var(--color-grey-table-4) !important;
-  border-width: 1px 0;
-  border-style: solid;
-  border-color: var(--color-grey-border-4);
 }
 /* Form colors */
 .form-control[disabled] {
