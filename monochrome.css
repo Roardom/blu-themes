@@ -388,6 +388,7 @@ h4 .badge-user,
 }
 #frameWrap i {
   margin: 3px;
+  cursor: pointer;
 }
 /* Fixes input box padding */
 #frameFooter {
