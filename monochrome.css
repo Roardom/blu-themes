@@ -657,12 +657,14 @@ hr {
 .message-unread .message-body {
   background-color: var(--color-grey-bg-3);
   border: 1px solid var(--color-grey-border-3);
+  color: var(--color-grey-text-2);
 }
 .message-read .message-headers,
 .message-sent .message-headers,
 .message-unread .message-headers {
   background-color: var(--color-grey-bg-2);
   border: 1px solid var(--color-grey-border-3);
+  color: var(--color-grey-text-2);
 }
 .message-read {
   border: 1px solid var;
