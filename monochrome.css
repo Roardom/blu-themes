@@ -1148,7 +1148,7 @@ ol.breadcrumb {
   display: inline-block;
 }
 /* Code blocks */
-pre {
+pre, .page-content pre {
   background-color: var(--color-grey-bg-3);
   color: var(--color-grey-text-5);
   border: 1px solid var(--color-grey-border-5);
@@ -1635,7 +1635,7 @@ h2 {
   color: var(--color-grey-text-1);
 }
 /* Code */
-.page-content code {
+code, .page-content code {
   background-color: var(--color-grey-bg-4);
   border: 1px solid var(--color-grey-border-3);
   border-radius: 4px;
