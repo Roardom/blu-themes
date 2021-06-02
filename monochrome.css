@@ -1149,14 +1149,14 @@ ol.breadcrumb {
 }
 /* Code blocks */
 pre, .page-content pre {
-  background-color: var(--color-grey-bg-4);
+  background-color: var(--color-grey-bg-3);
   border: 1px solid var(--color-grey-border-3);
   color: var(--color-grey-text-3);
   width: auto;
 }
 /* Code */
 code, .page-content code {
-  background-color: var(--color-grey-bg-4);
+  background-color: var(--color-grey-bg-3);
   border: 1px solid var(--color-grey-border-3);
   border-radius: 4px;
   color: var(--color-grey-text-3);
