@@ -1149,10 +1149,43 @@ ol.breadcrumb {
 }
 /* Code blocks */
 pre, .page-content pre {
-  background-color: var(--color-grey-bg-3);
-  color: var(--color-grey-text-5);
-  border: 1px solid var(--color-grey-border-5);
+  background-color: var(--color-grey-bg-4);
+  border: 1px solid var(--color-grey-border-3);
+  color: var(--color-grey-text-3);
   width: auto;
+}
+/* Code */
+code, .page-content code {
+  background-color: var(--color-grey-bg-4);
+  border: 1px solid var(--color-grey-border-3);
+  border-radius: 4px;
+  color: var(--color-grey-text-3);
+}
+/* Code within blocks */
+pre > code, .page-content pre > code {
+  border: none;
+}
+/* Blockquotes */
+.page-content > blockquote {
+  background-color: var(--color-grey-bg-3);
+  color: var(--color-grey-text-3);
+}
+/* Headings */
+h1 {
+  color: var(--color-grey-text-1);
+}
+h2 {
+  color: var(--color-grey-text-2);
+}
+/* Panel Heading text */
+.alert > h2,
+.alert > h2 > strong,
+.movie-title > a,
+.panel > .panel-heading > div > h2,
+.panel > .panel-heading > div > h4,
+.panel > .panel-heading > h2,
+.panel > .panel-heading > h4 {
+  color: var(--color-grey-text-1);
 }
 details summary {
   white-space: normal;
@@ -1611,35 +1644,6 @@ div.stats div.content div.inner_stats div.stat p:first-of-type {
 }
 div.stats div.content {
   color: var(--color-grey-text-4);
-}
-/* Blockquotes */
-.page-content > blockquote {
-  background-color: var(--color-grey-bg-3);
-  color: var(--color-grey-text-3);
-}
-/* Headings */
-h1 {
-  color: var(--color-grey-text-1);
-}
-h2 {
-  color: var(--color-grey-text-2);
-}
-/* Panel Heading text */
-.alert > h2,
-.alert > h2 > strong,
-.movie-title > a,
-.panel > .panel-heading > div > h2,
-.panel > .panel-heading > div > h4,
-.panel > .panel-heading > h2,
-.panel > .panel-heading > h4 {
-  color: var(--color-grey-text-1);
-}
-/* Code */
-code, .page-content code {
-  background-color: var(--color-grey-bg-4);
-  border: 1px solid var(--color-grey-border-3);
-  border-radius: 4px;
-  color: var(--color-grey-text-3);
 }
 /* Modals */
 .modal-body .form-group .col-sm-10 {
