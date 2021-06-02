@@ -1237,13 +1237,15 @@ details summary {
   border-right: 1px solid var(--color-grey-border-1);
 }
 /* Individual Button */
-.wysibb .wysibb-toolbar .wysibb-toolbar-container .wysibb-toolbar-btn {
+.wysibb .wysibb-toolbar .wysibb-toolbar-container .wysibb-toolbar-btn,
+.wysibb .wysibb-toolbar .wysibb-toolbar-container .wysibb-toolbar-btn.on {
   background-color: var(--color-grey-bg-1);
   padding: 0;
   margin: 0;
   border: 0;
 }
-.wysibb .wysibb-toolbar .wysibb-toolbar-container .wysibb-toolbar-btn:hover {
+.wysibb .wysibb-toolbar .wysibb-toolbar-container .wysibb-toolbar-btn:hover,
+.wysibb .wysibb-toolbar .wysibb-toolbar-container .wysibb-toolbar-btn.on:hover {
   padding: 0;
   margin: 0;
   border: 0;
@@ -1295,6 +1297,11 @@ details summary {
 .wysibb-body,
 .wysibb-text textarea {
   background-color: var(--color-grey-bg-3);
+}
+/* Wysibb Code */
+.wysibb code {
+  display: block;
+  width: calc(100% - 10px);
 }
 /* Pagination
 ============================================================================ */
