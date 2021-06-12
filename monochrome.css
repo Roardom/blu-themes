@@ -1678,6 +1678,24 @@ div.stats div.content {
   padding: 0;
   margin: 0 !important;
 }
+/* Modal Box */
+.modal-content {
+  background-color: var(--color-grey-bg-4);
+}
+/* Modal Content Border */
+.modal-header {
+  border-bottom: 0;
+}
+/* Table within models */
+.modal .table > thead > tr > th {
+  border-bottom: 0;
+}
+.modal .table > tbody > tr > td {
+  border-top: 0;
+}
+.modal-footer {
+  border-top: 0;
+}
 /* Mobile fixes */
 @media only screen and (max-width: 767px) {
   /* allows ratio bar to disappear when scrolling down*/
