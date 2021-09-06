@@ -1687,6 +1687,7 @@ div.stats div.content {
 /* Modal Box */
 .modal-content {
   background-color: var(--color-grey-bg-4);
+  color: var(--color-grey-text-2);
 }
 /* Modal Content Border */
 .modal-header {
