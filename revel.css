@@ -1,0 +1,4291 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Material+Icons);
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,700);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700);
+/* @import url(/carousel.css); */
+@import url(/wysibb.css);
+/* @import url(/font-awesome.css); */
+
+:root {
+  /* Colour Palette */
+
+  --color-1: rgb(52, 172, 224);
+  /* --color-2: rgba(46, 172, 197, 0.8) */
+
+  --color-highlight: var(--color-1);
+
+  --color-notifier: #99ffff; /* For notifications */
+
+  --max-width-small: 100% !important;
+  --max-width-big: calc(100% - 100px) !important;
+}
+
+/* Page */
+
+html {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  background: #1a1a1a;
+  color: #fff;
+  font-family: "Roboto";
+  font-size: 12px;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+}
+
+#hoeapp-wrapper {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 12px;
+}
+
+::before {
+  font-family: "Material Icons";
+  transition: color 0.1s ease-out;
+}
+
+*,
+::after,
+::before {
+  box-sizing: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Links
+---------------------------------------------------------------------------- */
+
+a {
+  text-decoration: none;
+  outline: 0;
+  transition: color 0.1s ease-out;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+a:hover {
+  color: #fff;
+}
+
+/* Header
+---------------------------------------------------------------------------- */
+
+/* Header container */
+#hoe-left-panel .nav {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  list-style: none;
+  text-align: center;
+}
+
+/* Header item */
+#hoe-left-panel .nav li {
+  flex-grow: 1;
+  padding: 0;
+}
+
+/* Header item link */
+#hoe-left-panel .nav > li > a {
+  display: block;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 400;
+  transition: none;
+}
+
+#hoe-left-panel .nav > li > a:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Header item colours */
+
+/* Navigation label */
+#hoe-left-panel .nav > li:nth-of-type(1),
+#hoe-left-panel .nav > li:nth-of-type(1) > ul {
+  display: none;
+}
+
+/* Home */
+#hoe-left-panel .nav > li:nth-of-type(2),
+#hoe-left-panel .nav > li:nth-of-type(2) > ul {
+  background: #1c7ce0;
+}
+
+/* Torrents */
+#hoe-left-panel .nav > li:nth-of-type(3),
+#hoe-left-panel .nav > li:nth-of-type(3) > ul {
+  background: #1e74d8;
+}
+
+/* Publish */
+#hoe-left-panel .nav > li:nth-of-type(4),
+#hoe-left-panel .nav > li:nth-of-type(4) > ul {
+  background: #206dcf;
+}
+
+#hoe-left-panel .nav > li:nth-of-type(4) > a > .menu-text {
+  display: none;
+}
+
+#hoe-left-panel .nav > li:nth-of-type(4) > a > span:after {
+  content: "Upload";
+}
+
+/* Mediahub */
+#hoe-left-panel .nav > li:nth-of-type(5),
+#hoe-left-panel .nav > li:nth-of-type(5) > ul {
+  background: #2165c7;
+}
+
+/* Requests */
+#hoe-left-panel .nav > li:nth-of-type(6),
+#hoe-left-panel .nav > li:nth-of-type(6) > ul {
+  background: #225ebe;
+}
+
+/* Playlists */
+#hoe-left-panel .nav > li:nth-of-type(7),
+#hoe-left-panel .nav > li:nth-of-type(7) > ul {
+  background: #2257b6;
+}
+
+/* Subtitles */
+#hoe-left-panel .nav > li:nth-of-type(8),
+#hoe-left-panel .nav > li:nth-of-type(8) > ul {
+  background: #224fad;
+}
+
+/* Graveyard */
+#hoe-left-panel .nav > li:nth-of-type(9),
+#hoe-left-panel .nav > li:nth-of-type(9) > ul {
+  background: #2248a5;
+}
+
+/* Gallery */
+#hoe-left-panel .nav > li:nth-of-type(10),
+#hoe-left-panel .nav > li:nth-of-type(10) > ul {
+  background: #22419c;
+  display: none;
+}
+
+/* Extra stats */
+#hoe-left-panel .nav > li:nth-of-type(11),
+#hoe-left-panel .nav > li:nth-of-type(11) > ul {
+  background: #223a94;
+}
+
+#hoe-left-panel .nav > li:nth-of-type(11) .menu-text {
+  display: none;
+}
+
+#hoe-left-panel .nav > li:nth-of-type(11) span:after {
+  content: "Stats";
+}
+
+/* Polls */
+#hoe-left-panel .nav > li:nth-of-type(12),
+#hoe-left-panel .nav > li:nth-of-type(12) > ul {
+  background: #21338b;
+}
+
+/* Bon store */
+#hoe-left-panel .nav > li:nth-of-type(13),
+#hoe-left-panel .nav > li:nth-of-type(13) > ul {
+  background: #202c83;
+  display: none;
+}
+
+/* Forums */
+#hoe-left-panel .nav > li:nth-of-type(14),
+#hoe-left-panel .nav > li:nth-of-type(14) > ul {
+  background: #1f257a;
+}
+
+/* Rules */
+#hoe-left-panel .nav > li:nth-of-type(15),
+#hoe-left-panel .nav > li:nth-of-type(15) > ul {
+  background: #1d1e72;
+}
+
+/* Faq */
+#hoe-left-panel .nav > li:nth-of-type(16),
+#hoe-left-panel .nav > li:nth-of-type(16) > ul {
+  background: #1b176a;
+}
+
+/* RSS */
+#hoe-left-panel .nav > li:nth-of-type(17),
+#hoe-left-panel .nav > li:nth-of-type(17) > ul {
+  background: #190f61;
+  display: none;
+}
+
+/* Discord */
+#hoe-left-panel .nav > li:nth-of-type(18),
+#hoe-left-panel .nav > li:nth-of-type(18) > ul {
+  background: #170759;
+}
+
+#hoe-left-panel .nav > li:nth-of-type(18) .menu-text {
+  display: none;
+}
+
+#hoe-left-panel .nav > li:nth-of-type(18) span:after {
+  content: "Chat";
+}
+
+/* Staff dashboard */
+#hoe-left-panel .nav > li:nth-of-type(19),
+#hoe-left-panel .nav > li:nth-of-type(19) > ul {
+  background: #150051;
+}
+
+#hoe-left-panel .nav > li:nth-of-type(19) .menu-text {
+  display: none;
+}
+
+#hoe-left-panel .nav > li:nth-of-type(19) span:after {
+  content: "Staff";
+}
+
+/* Header item corners */
+#hoe-left-panel .nav > li:nth-of-type(2) {
+  border-top-left-radius: 4px;
+}
+
+#hoe-left-panel .nav > li:last-of-type {
+  border-top-right-radius: 4px;
+}
+
+/* Header item submenus */
+#hoe-left-panel .nav > li > ul {
+  display: none;
+}
+
+#hoe-left-panel .nav > li:hover > ul {
+  display: block;
+  text-align: left;
+  padding-left: 0;
+  list-style-type: none;
+  position: absolute;
+  z-index: 100;
+}
+
+/* Header item submenu items */
+#hoe-left-panel .nav > li:hover > ul > li > a {
+  display: block;
+  height: 38px;
+  width: 205px;
+  padding: 0 12px;
+  line-height: 38px;
+  text-transform: uppercase;
+  font-size: 11px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: none;
+}
+
+#hoe-left-panel .nav > li:hover > ul > li:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Header notifications 
+---------------------------------------------------------------------------- */
+.notify {
+  position: absolute;
+  /* right: 11px; */
+  top: 10px;
+}
+
+.notify .point {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  margin: 11px;
+  border-radius: 50%;
+  background-color: var(--color-notifier);
+}
+
+.notify .heartbit {
+  animation: heartbit 1s ease-out infinite;
+  border-radius: 70px;
+  height: 30px;
+  position: absolute;
+  /* right: -12px; */
+  /* top: -29px; */
+  width: 30px;
+  z-index: 10;
+  border: 3px solid var(--color-notifier);
+}
+
+@keyframes heartbit {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  25% {
+    transform: scale(0.1);
+    opacity: 0.1;
+  }
+  50% {
+    transform: scale(0.5);
+    opacity: 0.3;
+  }
+  75% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+/* Left NavBar
+---------------------------------------------------------------------------- */
+
+/* Left navbar items */
+.left-navbar li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Left navbar item links */
+.left-navbar li a:hover {
+  color: #fff;
+}
+
+/* Inbox */
+.hoe-right-header .left-navbar li:nth-of-type(1) a::before {
+  content: "\e158";
+}
+
+/* Notifications */
+.hoe-right-header .left-navbar li:nth-of-type(2) a::before {
+  content: "\e7f4";
+}
+
+/* Articles */
+.hoe-right-header .left-navbar li:nth-of-type(3) a::before {
+  content: "\ef42";
+}
+
+/* Tickets / helpdesk */
+.hoe-right-header .left-navbar li:nth-of-type(4) a::before {
+  content: "\ef73";
+}
+
+/* Mod queue */
+.hoe-right-header .left-navbar li:nth-of-type(5) a::before {
+  content: "\e896";
+}
+
+/* Icon size */
+.hoe-right-header .left-navbar li a::before {
+  font-size: 21px;
+}
+
+/* Menus togle (Blutopia logo)
+---------------------------------------------------------------------------- */
+
+.hoe-right-header > .hoe-sidebar-toggle:before {
+  content: "BLU";
+  font-family: inherit;
+  font-size: 44px;
+  font-weight: 700;
+  padding: 6px 0 6px 6px;
+  display: inline-block;
+}
+.hoe-right-header > .hoe-sidebar-toggle:after {
+  content: "TOPIA";
+  font-size: 44px;
+  font-weight: 400;
+  padding: 6px 6px 6px 0;
+  display: inline-block;
+}
+
+/* -------------------------------------------------------------------------
+   Right NavBar
+---------------------------------------------------------------------------- */
+
+.right-navbar {
+  display: flex;
+}
+
+/* Right navbar items */
+.right-navbar > li {
+  list-style-type: none;
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; */
+  color: rgba(255, 255, 255, 0.7);
+  transition: color 0.1s ease-out;
+  position: relative;
+}
+
+.right-navbar > li:hover {
+  color: #fff;
+}
+
+/* Right NavBar Profile
+---------------------------------------------------------------------------- */
+
+.right-navbar .hoe-header-profile:hover {
+  background: rgba(66, 66, 66, 0.95);
+}
+
+/* Profile dropdown */
+.right-navbar .hoe-header-profile > a {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+
+/* Profile image */
+.right-navbar .hoe-header-profile > a img {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+}
+
+.right-navbar .hoe-header-profile ul {
+  display: none;
+}
+
+/* Profile dropdown */
+.right-navbar .hoe-header-profile:hover ul {
+  display: inline-block;
+  text-align: left;
+  padding-left: 0;
+  margin-top: 70px;
+  margin-left: -150px;
+  list-style-type: none;
+  background: rgba(66, 66, 66, 0.95);
+}
+
+/* Profile dropdown item links */
+.right-navbar .hoe-header-profile:hover ul li a {
+  display: inline-block;
+  padding: 12px;
+  width: 200px;
+  text-transform: uppercase;
+  font-size: 11px;
+  transition: none;
+}
+
+.right-navbar .hoe-header-profile:hover ul li:hover a:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Right NavBar Search AKA Quicksearch
+---------------------------------------------------------------------------- */
+
+/* Search icon */
+.right-navbar > li:nth-of-type(1) {
+  height: 100%;
+  margin-right: 0 !important;
+}
+
+.right-navbar > li:nth-of-type(1)::before {
+  content: "\e8b6";
+  font-size: 21px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+
+.right-navbar > li:nth-of-type(1):hover {
+  background: rgba(66, 66, 66, 0.95);
+}
+
+/* Search bars */
+.right-navbar > li:nth-of-type(1) > div {
+  display: none !important;
+}
+
+/* Search container */
+.right-navbar > li:nth-of-type(1):hover > div {
+  display: block !important;
+  text-align: left;
+  list-style-type: none;
+  padding: 12px 0;
+  margin: 70px 0 0 -150px;
+  height: auto !important;
+  width: 200px !important;
+  background: rgba(66, 66, 66, 0.95);
+}
+
+/* Individual search bar container */
+.right-navbar > li:nth-of-type(1):hover > div > div > div {
+  position: static;
+  padding: 6px 12px;
+  margin-bottom: 0 !important;
+}
+
+/* Search input box */
+.right-navbar > li:nth-of-type(1):hover input {
+  display: inline-block;
+  border: 0;
+  outline: none;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+  background: inherit;
+  height: 28px;
+  width: 100% !important;
+}
+
+.right-navbar > li:nth-of-type(1):hover input:focus {
+  border-bottom: 2px solid var(--color-highlight);
+  text-transform: unset;
+}
+
+/* Search result items container */
+.right-navbar > li:nth-of-type(1):hover > div > div:nth-of-type(2) {
+  background-color: rgba(66, 66, 66, 0.95) !important;
+  width: 300px;
+  margin-left: -200px !important;
+  margin-top: -132px !important;
+  padding: 0 !important;
+}
+
+.right-navbar > li:nth-of-type(1):hover > div > div:nth-of-type(2) > div {
+  margin-bottom: 0 !important;
+}
+
+/* Search results item */
+.right-navbar > li:nth-of-type(1):hover > div > div:nth-of-type(2) > div > div {
+  background: rgba(66, 66, 66, 0.95);
+  padding: 0;
+  height: auto !important;
+  width: 100%;
+  font-size: 12px;
+  font-weight: 300;
+  display: block;
+}
+
+.right-navbar
+  > li:nth-of-type(1):hover
+  > div
+  > div:nth-of-type(2)
+  > div
+  > div
+  p,
+.right-navbar
+  > li:nth-of-type(1):hover
+  > div
+  > div:nth-of-type(2)
+  > div
+  > div
+  > div,
+.right-navbar
+  > li:nth-of-type(1):hover
+  > div
+  > div:nth-of-type(2)
+  > div
+  > div
+  img {
+  height: auto !important;
+}
+
+/* Search result posters */
+.right-navbar > li:nth-of-type(1):hover > div > div:nth-of-type(2) img {
+  display: none;
+}
+
+.right-navbar > li:nth-of-type(1):hover > div > div:nth-of-type(2) > div:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.right-navbar
+  > li:nth-of-type(1):hover
+  > div
+  > div:nth-of-type(2)
+  > div:hover
+  > div {
+  background-color: transparent;
+}
+
+/* Ratiobar
+---------------------------------------------------------------------------- */
+
+.ratio-bar ul {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+/* Ratio */
+.ratio-bar ul li:nth-of-type(5) a::before {
+  content: "\e8e5";
+}
+
+/* Seeding */
+.ratio-bar ul li:nth-of-type(7) a::before {
+  content: "\f182";
+}
+
+/* Leeching */
+.ratio-bar ul li:nth-of-type(8) a::before {
+  content: "\f181";
+}
+
+/* Warnings */
+.ratio-bar ul li:nth-of-type(9) a::before {
+  content: "\e001";
+}
+
+/* Bon */
+.ratio-bar ul li:nth-of-type(10) a::before {
+  content: "\e8e0";
+  color: rgba(255, 228, 38, 0.7);
+}
+
+/* Freeleech Tokens */
+.ratio-bar ul li:nth-of-type(11) a::before {
+  content: "\e8d0";
+}
+
+.ratio-bar ul li:nth-of-type(1),
+.ratio-bar ul li:nth-of-type(2),
+.ratio-bar ul li:nth-of-type(5) a span,
+.ratio-bar ul li:nth-of-type(7) a span,
+.ratio-bar ul li:nth-of-type(8) a span,
+.ratio-bar ul li:nth-of-type(9) a span,
+.ratio-bar ul li:nth-of-type(10) a span,
+.ratio-bar ul li:nth-of-type(11) a span {
+  display: none;
+}
+
+.ratio-bar ul li a::before {
+  font-size: 21px;
+  margin-right: 3px;
+}
+
+.ratio-bar ul li > span {
+  display: flex;
+  align-items: center;
+}
+
+/* Header reordering
+---------------------------------------------------------------------------- */
+
+#main-content,
+#hoe-left-panel {
+  display: contents;
+}
+
+#hoeapp-container {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "ratio-bar"
+    "sidenav";
+}
+
+.ratio-bar {
+  grid-area: ratio-bar;
+}
+
+#hoe-left-panel .nav {
+  grid-area: sidenav;
+}
+
+.left-navbar,
+.right-navbar {
+  display: contents;
+}
+
+.hoe-right-header {
+  display: grid;
+  grid-template-columns: auto 50px 50px 50px 50px 50px 1fr 50px 50px;
+  grid-template-rows: 70px;
+  grid-template-areas: "home inbox notifs articles tickets modq . search profile";
+}
+
+.hoe-right-header > .hoe-sidebar-toggle {
+  grid-area: home;
+}
+
+.left-navbar li:nth-of-type(1) {
+  grid-area: inbox;
+}
+
+.left-navbar li:nth-of-type(2) {
+  grid-area: notifs;
+}
+
+.left-navbar li:nth-of-type(3) {
+  grid-area: articles;
+}
+
+.left-navbar li:nth-of-type(4) {
+  grid-area: tickets;
+}
+
+.left-navbar li:nth-of-type(5) {
+  grid-area: modq;
+}
+
+.right-navbar li:nth-of-type(1) {
+  grid-area: search;
+}
+
+.right-navbar li:nth-of-type(2) {
+  grid-area: profile;
+}
+
+/* ============================================================================
+ Page Elements
+============================================================================ */
+
+/* Panels
+---------------------------------------------------------------------------- */
+.panel {
+  width: 100%;
+  margin-bottom: 2px;
+  background: #2b2b2b;
+}
+
+.panel-body {
+  padding: 12px;
+}
+
+.panel-heading,
+.breadcrumb {
+  height: 38px;
+  padding: 0 12px;
+  line-height: 38px;
+  font-size: 11px;
+  font-weight: 400;
+  text-transform: uppercase;
+  white-space: nowrap;
+  background: #232323;
+}
+
+/* Blocks
+---------------------------------------------------------------------------- */
+
+/* Remove linebreak at end of block */
+.block br:last-child {
+  display: none;
+}
+
+.block {
+  margin-bottom: 2px;
+}
+
+/* Wells
+---------------------------------------------------------------------------- */
+.well {
+  background: #2e2e2e;
+  margin-bottom: 2px;
+  padding: 12px;
+}
+
+/* Hide horizontal rule in wells */
+.well hr {
+  display: none;
+}
+
+/* Well header */
+.well h3 {
+  font-size: 11px;
+  text-transform: uppercase;
+  font-weight: 400;
+  border-top: 2px solid #1a1a1a;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  height: 38px;
+  line-height: 38px;
+  white-space: nowrap;
+  overflow: hidden;
+  background: #232323;
+  margin: 12px -12px 12px -12px;
+  padding-left: 8px;
+}
+
+/* First well header */
+.well > h3:first-child {
+  border-top: 0;
+  margin-top: -12px;
+}
+
+/* Well labels */
+.well label {
+  margin-top: 12px;
+  display: inline-block;
+}
+
+/* Headers
+---------------------------------------------------------------------------- */
+.header {
+  display: none;
+}
+
+/* Profile headers */
+.container > .block > h3 {
+  padding-left: 8px;
+  font-size: 11px;
+  text-transform: uppercase;
+  font-weight: 400;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  height: 38px;
+  line-height: 38px;
+  white-space: nowrap;
+  overflow: hidden;
+  background: #232323;
+}
+
+/* Breadcrumbs
+---------------------------------------------------------------------------- */
+
+.breadcrumb {
+  list-style-type: none;
+  font-size: 13px;
+  text-align: center;
+  margin-bottom: 2px;
+}
+
+.breadcrumb li {
+  display: inline-block;
+}
+
+.breadcrumb li:not(.breadcrumb li:first-of-type) a span::before {
+  content: " / ";
+}
+
+/* User Badge 
+---------------------------------------------------------------------------- */
+.badge-user {
+  font-weight: 400;
+}
+
+/* Emojis 
+---------------------------------------------------------------------------- */
+
+#frame .content .messages ul li.sent img.joypixels,
+.joypixels {
+  height: 3ex;
+  line-height: normal;
+  margin: -0.5ex 5px;
+  padding: 0;
+  min-height: 14px;
+  min-width: 14px;
+  width: 3ex;
+  display: inline-block;
+}
+
+/* Panel collapse
+---------------------------------------------------------------------------- */
+.panel-collapse .panel-heading a:after {
+  font-family: "Glyphicons Halflings", sans-serif;
+  content: "î„”";
+  float: right;
+  color: grey;
+}
+
+.panel-collapse .panel-heading.collapsed a:after {
+  content: "î‚€";
+}
+
+.panel-collapse .panel-heading:hover {
+  cursor: pointer;
+}
+
+.collapse {
+  display: none;
+}
+
+.collapse.in {
+  display: block;
+}
+
+tr.collapse.in {
+  display: table-row;
+}
+
+tbody.collapse.in {
+  display: table-row-group;
+}
+
+/* Tooltips
+---------------------------------------------------------------------------- */
+
+.tooltip {
+  position: absolute;
+  z-index: 1070;
+  display: block;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.428571429;
+  line-break: auto;
+  text-align: left;
+  text-align: start;
+  text-decoration: none;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: normal;
+  word-break: normal;
+  word-spacing: normal;
+  word-wrap: normal;
+  white-space: normal;
+  font-size: 12px;
+  filter: alpha(opacity=0);
+  opacity: 0;
+}
+.tooltip.in {
+  filter: alpha(opacity=90);
+  opacity: 0.9;
+}
+.tooltip.top {
+  padding: 5px 0;
+  margin-top: -3px;
+}
+.tooltip.right {
+  padding: 0 5px;
+  margin-left: 3px;
+}
+.tooltip.bottom {
+  padding: 5px 0;
+  margin-top: 3px;
+}
+.tooltip.left {
+  padding: 0 5px;
+  margin-left: -3px;
+}
+.tooltip.top .tooltip-arrow {
+  bottom: 0;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px 5px 0;
+  border-top-color: #000;
+}
+.tooltip.top-left .tooltip-arrow {
+  right: 5px;
+  bottom: 0;
+  margin-bottom: -5px;
+  border-width: 5px 5px 0;
+  border-top-color: #000;
+}
+.tooltip.top-right .tooltip-arrow {
+  bottom: 0;
+  left: 5px;
+  margin-bottom: -5px;
+  border-width: 5px 5px 0;
+  border-top-color: #000;
+}
+.tooltip.right .tooltip-arrow {
+  top: 50%;
+  left: 0;
+  margin-top: -5px;
+  border-width: 5px 5px 5px 0;
+  border-right-color: #000;
+}
+.tooltip.left .tooltip-arrow {
+  top: 50%;
+  right: 0;
+  margin-top: -5px;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #000;
+}
+.tooltip.bottom .tooltip-arrow {
+  top: 0;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 0 5px 5px;
+  border-bottom-color: #000;
+}
+.tooltip.bottom-left .tooltip-arrow {
+  top: 0;
+  right: 5px;
+  margin-top: -5px;
+  border-width: 0 5px 5px;
+  border-bottom-color: #000;
+}
+.tooltip.bottom-right .tooltip-arrow {
+  top: 0;
+  left: 5px;
+  margin-top: -5px;
+  border-width: 0 5px 5px;
+  border-bottom-color: #000;
+}
+
+.tooltip-inner {
+  max-width: 200px;
+  padding: 3px 8px;
+  color: #fff;
+  text-align: center;
+  background-color: #000;
+  border-radius: 4px;
+}
+
+.tooltip-arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+}
+
+/* Back to top
+---------------------------------------------------------------------------- */
+.back-to-top {
+  cursor: pointer;
+  position: fixed;
+  bottom: 90px;
+  right: 30px;
+  display: none;
+  border-radius: 50%;
+  padding: 15px;
+  font-size: 10px;
+  opacity: 0.7;
+  z-index: 9999;
+}
+
+.back-to-top:before {
+  content: "\e5d8";
+}
+
+/* Back to down
+---------------------------------------------------------------------------- */
+.back-to-down {
+  cursor: pointer;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: none;
+  border-radius: 50%;
+  padding: 15px;
+  font-size: 10px;
+  opacity: 0.7;
+  z-index: 9999;
+}
+
+.back-to-down:before {
+  content: "\e5db";
+}
+
+/* Alert panels
+---------------------------------------------------------------------------- */
+.alert {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  margin: 0 0 2px 0;
+  padding: 8px 12px;
+  text-align: center;
+  font-weight: 400;
+  background: #2b2b2b;
+}
+
+.alert a {
+  color: #fff;
+}
+
+.alert:nth-of-type(1) {
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  background: linear-gradient(to right, #1c7ce0, #150051);
+}
+
+/* Inputs
+---------------------------------------------------------------------------- */
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 6px 8px;
+  /* margin: 2px; */
+  border-radius: 1px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.7);
+  background-color: inherit;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.8px;
+  height: auto;
+  width: auto;
+  line-height: 23px;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+.btn:active {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Dropdowns */
+.dropdown {
+  position: relative;
+}
+
+.dropdown.open > .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu:not(.right-navbar .hoe-header-profile ul) {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  min-width: 160px;
+  text-align: left;
+  list-style-type: none;
+  background: #2b2b2b;
+  background-clip: padding-box;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+}
+
+.dropdown-menu li {
+  position: static;
+}
+
+.dropdown-menu li a {
+  padding: 5px 8px;
+  font-weight: 400;
+}
+
+.dropdown-menu li:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Selects */
+select {
+  text-decoration: none;
+  border-radius: 1px;
+  display: inline-block;
+  background: inherit;
+  color: #fff;
+  padding: 0 8px;
+  outline: none;
+  border-radius: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  height: 34px;
+  transition: all 0.1s ease-out;
+}
+
+/* Text inputs */
+input:not([type="checkbox"]):not([type="radio"]) {
+  text-decoration: none;
+  border-radius: 1px;
+  display: inline-block;
+  background: inherit;
+  color: #fff;
+  padding: 0 8px;
+  outline: none;
+  border-radius: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  height: 34px;
+  transition: all 0.1s ease-out;
+}
+
+input:focus:not([type="checkbox"]):not([type="radio"]) {
+  border-color: var(--color-highlight);
+}
+
+/* Radios */
+input[type="radio"] {
+  margin-right: 4px;
+}
+
+/* Button Holder */
+.container > .button-holder,
+.container > .block > .button-holder,
+.container-fluid > .block > .button-holder {
+  background: #2b2b2b;
+  margin-bottom: 2px;
+  display: flex;
+  align-items: center;
+  height: 38px;
+  line-height: 38px;
+}
+
+/* Button holder left and right */
+.container > .button-holder > .button-left,
+.container > .button-holder > .button-right,
+.container > .button-holder > .button-left-small,
+.container > .button-holder > .button-right-small,
+.container > .button-holder > .button-left-large,
+.container > .button-holder > .button-right-large,
+.container > .button-holder > .button-left-increased,
+.container > .button-holder > .button-right-increased,
+.container > .button-holder > .button-left-decreased,
+.container > .button-holder > .button-right-decreased,
+.container > .block > .button-holder > .button-left,
+.container > .block > .button-holder > .button-right,
+.container > .block > .button-holder > .button-left-small,
+.container > .block > .button-holder > .button-right-small,
+.container > .block > .button-holder > .button-left-large,
+.container > .block > .button-holder > .button-right-large,
+.container > .block > .button-holder > .button-left-increased,
+.container > .block > .button-holder > .button-right-increased,
+.container > .block > .button-holder > .button-left-decreased,
+.container > .block > .button-holder > .button-right-decreased,
+.container > .block > .button-holder > .text-center,
+.container-fluid > .button-holder > .button-left,
+.container-fluid > .button-holder > .button-right,
+.container-fluid > .button-holder > .button-left-small,
+.container-fluid > .button-holder > .button-right-small,
+.container-fluid > .button-holder > .button-left-large,
+.container-fluid > .button-holder > .button-right-large,
+.container-fluid > .button-holder > .button-left-increased,
+.container-fluid > .button-holder > .button-right-increased,
+.container-fluid > .button-holder > .button-left-decreased,
+.container-fluid > .button-holder > .button-right-decreased,
+.container-fluid > .block > .button-holder > .button-left,
+.container-fluid > .block > .button-holder > .button-right,
+.container-fluid > .block > .button-holder > .button-left-small,
+.container-fluid > .block > .button-holder > .button-right-small,
+.container-fluid > .block > .button-holder > .button-left-large,
+.container-fluid
+  > .block
+  > .button-holder
+  > .button-right-large
+  .container-fluid
+  > .block
+  > .button-holder
+  > .button-left-increased,
+.container-fluid > .block > .button-holder > .button-right-increased,
+.container-fluid > .block > .button-holder > .button-left-decreased,
+.container-fluid > .block > .button-holder > .button-right-decreased {
+  display: contents;
+}
+
+/* Button holder buttons */
+.container > .button-holder a,
+.container > .button-holder button,
+.container > .button-holder form,
+.container > .button-holder .badge-user,
+.container > .block > .button-holder a,
+.container > .block > .button-holder button,
+.container > .block > .button-holder form,
+.container > .block > .button-holder .badge-user,
+.container-fluid > .button-holder a,
+.container-fluid > .button-holder button,
+.container-fluid > .button-holder form,
+.container-fluid > .button-holder .badge-user,
+.container-fluid > .block > .button-holder a,
+.container-fluid > .block > .button-holder button,
+.container-fluid > .block > .button-holder form,
+.container-fluid > .block > .button-holder .badge-user {
+  flex-grow: 1;
+  padding: 0;
+  transition: background 0.1s ease-out;
+  display: block;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  border-radius: 0;
+  background-color: transparent;
+  box-shadow: none;
+  line-height: inherit;
+}
+
+.container > .button-holder a:hover,
+.container > .block > .button-holder a:hover,
+.container-fluid > .button-holder a:hover,
+.container-fluid > .block > .button-holder a:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+/* Last button in left button holder */
+.container > .button-holder > .button-left .btn:last-child,
+.container > .button-holder > .button-left-small .btn:last-child,
+.container > .button-holder > .button-left-large .btn:last-child,
+.container > .button-holder > .button-left-increased .btn:last-child,
+.container > .button-holder > .button-left-decreased .btn:last-child,
+.container > .block > .button-holder > .button-left .btn:last-child,
+.container > .block > .button-holder > .button-left-small .btn:last-child,
+.container > .block > .button-holder > .button-left-large .btn:last-child,
+.container > .block > .button-holder > .button-left-increased .btn:last-child,
+.container > .block > .button-holder > .button-left-decreased .btn:last-child,
+.container-fluid > .button-holder > .button-left .btn:last-child,
+.container-fluid > .button-holder > .button-left-small .btn:last-child,
+.container-fluid > .button-holder > .button-left-large .btn:last-child,
+.container-fluid > .button-holder > .button-left-increased .btn:last-child,
+.container-fluid > .button-holder > .button-left-decreased .btn:last-child,
+.container-fluid > .block > .button-holder > .button-left .btn:last-child,
+.container-fluid > .block > .button-holder > .button-left-small .btn:last-child,
+.container-fluid > .block > .button-holder > .button-left-large .btn:last-child,
+.container-fluid
+  > .block
+  > .button-holder
+  > .button-left-increased
+  .btn:last-child,
+.container-fluid
+  > .block
+  > .button-holder
+  > .button-left-decreased
+  .btn:last-child {
+  border-right: 2px solid #1a1a1a;
+}
+
+/* Horizontal rule after button */
+.button-holder + hr {
+  display: none;
+}
+
+/* Labels */
+label {
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Multi-line code (pre) */
+pre {
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.1);
+  border: 1px solid #444;
+  padding: 8px;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/* Code */
+code {
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/* Linebreaks
+---------------------------------------------------------------------------- */
+
+.container-fluid ~ br {
+  display: none;
+}
+
+.table-responsive br {
+  display: none;
+}
+
+/* ============================================================================
+ Chatbox
+============================================================================ */
+
+/* Chatbox name */
+#chatbody #frameHeader .button-left {
+  float: left;
+}
+
+/* Chatbox header and tabs
+---------------------------------------------------------------------------- */
+
+/* Systembot and user count */
+#chatbody #frameHeader .button-right {
+  float: right;
+}
+#chatbody #frameHeader .button-right a {
+  margin: 0 2px;
+}
+
+/* Fullscreen button */
+#chatbody #frameHeader #panel-fullscreen i:before {
+  content: "\e5d0";
+  font-style: normal !important;
+}
+
+/* X button to close PMs */
+#frameTabs .button-right-small {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 38px;
+  color: rgba(255, 255, 255, 0.7);
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.1s ease-out;
+}
+
+#frameTabs .button-right-small:hover {
+  background: rgb(70, 70, 70);
+}
+
+#frameTabs .button-right-small:before {
+  content: "\e5cd";
+}
+
+/* Chat tabs container */
+#frameTabs {
+  margin-bottom: 0;
+}
+
+/* Chat tabs */
+#frameTabs .nav-tabs {
+  overflow-x: auto;
+  margin-bottom: 0;
+}
+
+/* Individual chat tabs */
+#frameTabs li {
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+#frameTabs li:hover {
+  background: rgb(70, 70, 70);
+}
+
+/* Chat tab with new message indicator */
+.nav-tabs a i.text-success:after {
+  content: "⬤";
+  animation: blinker 1s linear infinite;
+  color: green;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Chat messages
+---------------------------------------------------------------------------- */
+
+/* Chat message container */
+#chatbody .messages {
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column-reverse;
+  height: 40vh;
+  background-color: #232323;
+  border-width: 2px 0;
+  border-style: solid;
+  border-color: rgb(70, 70, 70);
+  padding: 0 0 10px 10px;
+  scrollbar-color: #1a1a1a transparent;
+}
+
+/* Chat message list */
+#chatbody .messages > ul {
+  list-style-type: none;
+}
+
+/* Individual chat messages */
+.sent {
+  font-size: 14px;
+  height: auto;
+  word-wrap: break-word;
+  display: grid;
+  grid-template-columns: minmax(100px, auto) 16px 16px 30px 1fr auto;
+  grid-template-areas: "username pm gift avatar message timestamp";
+}
+
+@media screen and (max-width: 480px) {
+  .sent {
+    grid-template-columns: 30px auto 16px 16px 1fr auto;
+    grid-template-areas:
+      "avatar username pm gift . timestamp"
+      ". message message message message message";
+  }
+}
+
+/* Chat message username */
+.sent > h4 {
+  /* display: inline;
+  vertical-align: middle; */
+  display: contents !important;
+}
+
+/* Move sparkles on username */
+.sent > h4 > span[style*='url("/img/sparkels.gif")'] {
+  background-image: none !important;
+}
+.sent > h4 > span[style*='url("/img/sparkels.gif")'] > a {
+  background-image: url("https://blutopia.xyz/img/sparkels.gif");
+}
+
+/* Chat message body */
+.sent > h4 + div {
+  grid-area: message;
+  display: flex;
+  align-items: center;
+}
+
+/* Chat message username */
+.sent > h4 span:first-child {
+  grid-area: username;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: right;
+  padding-right: 4px;
+}
+
+@media screen and (max-width: 480px) {
+  .sent > h4 span:first-child {
+    flex-direction: row;
+  }
+}
+
+/* Chat message timestamp */
+.sent > h4 > span:last-child {
+  font-weight: 300;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  grid-area: timestamp;
+}
+
+.sent h4 span:last-child:before {
+  content: "[";
+  font-family: inherit;
+}
+
+.sent h4 span:last-child:after {
+  content: "]";
+}
+
+/* Bot message username */
+.sent > a[href="/users/System"] + h4 {
+  display: none !important;
+  line-height: 1.5;
+}
+
+/* Bot message body */
+.sent > a[href="/users/System"] + h4 + div > div > div:before {
+  content: "* ";
+}
+
+.sent > a[href="/users/System"] + h4 + div {
+  padding: 0;
+  font-weight: 300;
+  opacity: 75%;
+  font-size: 0.8;
+}
+
+/* Avatars */
+.sent > a:first-child {
+  grid-area: avatar;
+  display: flex;
+  align-items: center;
+}
+.sent img.chat-user-image {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border-width: 0.5px !important;
+  vertical-align: middle;
+  margin: 1px;
+  padding: 0;
+}
+
+/* Posted images */
+.sent img,
+#frameFooter .wysibb .wysibb-body img {
+  max-height: calc(40vh - 40px);
+  max-width: calc(40vh - 40px);
+  padding: 10px;
+}
+
+/* Delete message icon */
+.sent .fa-times:before {
+  content: "\e5cd";
+  font-style: normal;
+  color: red;
+}
+
+/* PM message icon */
+.sent > h4 > a:nth-of-type(1) {
+  grid-area: pm;
+  display: flex;
+  align-items: center;
+}
+.sent .fa-envelope:before {
+  content: "\e158";
+  font-style: normal;
+}
+
+/* Gift bon icon */
+.sent > h4 > a:nth-of-type(2) {
+  grid-area: gift;
+  display: flex;
+  align-items: center;
+}
+.sent .fa-gift:before {
+  content: "\e8f6";
+  font-style: normal;
+}
+
+/* Chatbox Footer
+---------------------------------------------------------------------------- */
+
+#frameFooter {
+  padding: 2px 0 0 0 !important;
+}
+
+/* Notification icon */
+#frameWrap .fa-bell:before {
+  font-style: normal;
+}
+
+#frameWrap .fa-bell-slash:before {
+  content: "\e7f6";
+}
+
+/* Status and typing indicators */
+#frameWrap > div,
+#frameWrap > div > div {
+  height: auto !important;
+  width: 100%;
+}
+
+#frameWrap > div {
+  padding-bottom: 2px !important;
+}
+
+#frameWrap > div > div {
+  display: flex;
+}
+
+/* Typing indicators */
+.typing.pull-left {
+  order: 1;
+  margin-left: auto;
+  line-height: 25.5px;
+}
+
+/* Audio enable/disable */
+#frameWrap > div > div > div:nth-last-child(2) {
+  order: 2;
+  margin-left: auto;
+  line-height: 25.5px;
+}
+
+/* Status indicators */
+#frameWrap > div > div > div:last-child {
+  order: 3;
+}
+
+#frameWrap i {
+  margin: 3px;
+  cursor: pointer;
+}
+
+#frameWrap .fa:before {
+  font-size: 14px;
+  font-style: normal;
+}
+
+/* Fixes status options */
+#frameFooter div::after,
+#frameFooter #frameWrap::after,
+#frameFooter #frameWrap div::after,
+#frameFooter #frameWrap div div::after,
+#frameFooter #frameWrap div div div::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Featured carousel (home page)
+---------------------------------------------------------------------------- */
+
+.featured-header {
+  display: flex;
+}
+.featured-header .dots {
+  align-items: center;
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-end;
+  padding-left: 10px;
+}
+
+.featured-header .dot {
+  background: #fff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 8px;
+  width: 8px;
+  margin: 0 5px;
+  padding: 5px;
+}
+
+.featured-header .dot--active {
+  background: #5cb579;
+}
+
+#myCarousel img {
+  width: 100%;
+}
+
+.keen-slider {
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+
+.keen-slider__slide {
+  height: 200px;
+  max-width: 100%;
+  min-width: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.movie-image {
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+.movie-image > .backdrop {
+  max-height: 200px;
+}
+
+.movie-card {
+  position: absolute;
+  height: 100%;
+  width: 65%;
+  padding-left: 0;
+  top: 0;
+  right: 0;
+}
+
+.fade-img {
+  right: 0;
+}
+
+.fade-card {
+  display: none;
+}
+
+.fade-img,
+.fade-card {
+  background-image: linear-gradient(90deg, transparent, #212120);
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 20px;
+}
+
+.movie-content {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-color: #212120;
+  padding: 20px;
+  background-color: #2b2b2b;
+}
+
+.movie-content .movie-header {
+  margin-bottom: 20px;
+}
+
+.movie-content .movie-desc {
+  color: hsla(0, 100%, 0.5);
+  font-weight: 300;
+  margin-bottom: 20px;
+  max-width: 700px;
+}
+
+.movie-content .movie-info {
+  font-weight: 400;
+  font-size: 10px;
+  letter-spacing: 1px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.movie-content .movie-title {
+  margin-bottom: 4px;
+}
+
+.movie-content .movie-badges br {
+  margin-bottom: 2px;
+}
+
+/* Modals
+---------------------------------------------------------------------------- */
+
+/* .modal-dialog {
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+  max-width: 480px;
+} */
+
+/* Modal title and close */
+/* .modal-dialog .modal-header {
+  display: grid;
+  grid-template-columns: 1fr 40px;
+  grid-template-areas: "title close";
+  background-color: #232323;
+  font-size: 14px;
+  font-weight: 700;
+  align-items: center;
+} */
+
+/* Modal title */
+/* .modal-dialog .modal-title {
+  grid-area: title;
+  padding: 12px;
+}
+
+.modal-dialog .modal-header p {
+  font-size: 14px !important;
+  font-weight: 400;
+  padding: 12px;
+} */
+
+/* Modal close */
+/* .modal-dialog .close {
+  grid-area: close;
+  background: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  height: 100%;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.modal-dialog .close span {
+  line-height: 1;
+  font-size: 22px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.modal-dialog .close:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+} */
+
+/* Modal buttons */
+/* .modal-dialog .modal-body > div:last-child {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+} */
+
+/* Modal body */
+/* .modal-dialog .modal-body {
+  padding: 12px 24px;
+} */
+
+/* Modal body items */
+/* .modal-dialog
+  .modal-body
+  > .form-group:not(.modal-dialog .modal-body > .form-group:first-child) {
+  padding-top: 6px;
+}
+
+.modal-dialog .modal-body > .form-group {
+  display: flex;
+  flex-direction: row;
+}
+
+.modal-dialog textarea {
+  background-color: #2b2b2b;
+  padding: 6px;
+  outline: none;
+  border-radius: 5px;
+  border: 1.5px solid rgba(255, 255, 255, 0.1);
+}
+
+.modal-dialog form {
+  width: 100%;
+}
+
+.modal-dialog .modal-body > .form-group label {
+  padding-right: 12px;
+} */
+
+/* Modal footer */
+/* .modal-footer {
+  display: contents;
+}
+
+.modal-footer button.close {
+  font-size: 0;
+}
+
+.modal-footer button.close:before {
+  content: "×";
+  font-size: 22px;
+  grid-area: close;
+} */
+
+.modal-open {
+  overflow: hidden;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  display: none;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+}
+.modal.fade .modal-dialog {
+  transform: translate(0, -25%);
+  transition: transform 0.3s ease-out;
+}
+.modal.in .modal-dialog {
+  transform: translate(0, 0);
+}
+
+.modal-open .modal {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.modal-dialog {
+  position: relative;
+  width: auto;
+  margin: 10px;
+}
+
+.modal-content {
+  position: relative;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #999;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+  outline: 0;
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  background-color: #000;
+}
+.modal-backdrop.fade {
+  filter: alpha(opacity=0);
+  opacity: 0;
+}
+.modal-backdrop.in {
+  filter: alpha(opacity=50);
+  opacity: 0.5;
+}
+
+.modal-header {
+  padding: 15px;
+  border-bottom: 1px solid #e5e5e5;
+}
+.modal-header:before,
+.modal-header:after {
+  display: table;
+  content: " ";
+}
+.modal-header:after {
+  clear: both;
+}
+
+.modal-header .close {
+  margin-top: -2px;
+}
+
+.modal-title {
+  margin: 0;
+  line-height: 1.428571429;
+}
+
+.modal-body {
+  position: relative;
+  padding: 15px;
+}
+
+.modal-footer {
+  padding: 15px;
+  text-align: right;
+  border-top: 1px solid #e5e5e5;
+}
+.modal-footer:before,
+.modal-footer:after {
+  display: table;
+  content: " ";
+}
+.modal-footer:after {
+  clear: both;
+}
+.modal-footer .btn + .btn {
+  margin-bottom: 0;
+  margin-left: 5px;
+}
+.modal-footer .btn-group .btn + .btn {
+  margin-left: -1px;
+}
+.modal-footer .btn-block + .btn-block {
+  margin-left: 0;
+}
+
+.modal-scrollbar-measure {
+  position: absolute;
+  top: -9999px;
+  width: 50px;
+  height: 50px;
+  overflow: scroll;
+}
+
+@media (min-width: 768px) {
+  .modal-dialog {
+    width: 600px;
+    margin: 30px auto;
+  }
+
+  .modal-content {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  }
+
+  .modal-sm {
+    width: 300px;
+  }
+}
+@media (min-width: 992px) {
+  .modal-lg {
+    width: 900px;
+  }
+}
+
+/* Nav tabs
+---------------------------------------------------------------------------- */
+
+.nav-tabs {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  height: 38px;
+  line-height: 38px;
+
+  background-color: #2b2b2b;
+  margin-bottom: 2px;
+}
+
+.nav-tabs li {
+  flex-grow: 1;
+  padding: 0;
+  transition: background 0.1s ease-out;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.nav-tabs li.active {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.nav-tabs li a {
+  display: block;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  font-size: 11px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.nav-tabs li.active a {
+  color: var(--color-highlight);
+}
+.nav-tabs + .tab-content > div:not(.active) {
+  display: none;
+}
+
+/* Titles
+---------------------------------------------------------------------------- */
+
+#main-content > .container h1.title,
+#main-content > .container .page-title,
+.topic.container > h2 {
+  display: none;
+}
+
+/* Tables
+---------------------------------------------------------------------------- */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #2b2b2b;
+}
+
+th {
+  position: relative;
+  height: 38px;
+  padding: 0 12px;
+  line-height: 38px;
+  font-size: 11px;
+  font-weight: 400;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  background: #232323;
+  text-align: left;
+  border: none;
+}
+
+tr {
+  border: solid rgba(255, 255, 255, 0.03);
+  border-width: 0 0 1px 0;
+}
+
+table tr:nth-of-type(2n) {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+td,
+th {
+  border: none;
+  padding: 5px 8px;
+  text-align: left;
+}
+
+/* ----------------------------------------------------------------------------
+ Forums
+---------------------------------------------------------------------------- */
+
+/* Categories
+---------------------------------------------------------------------------- */
+
+/* Category */
+.forum-categories > table > tbody {
+  border-bottom: 2px solid #1a1a1a;
+}
+
+/* Search button */
+
+.box.container
+  > .button-holder
+  > .button-right
+  > form[action$="/forums/search"]
+  button {
+  display: none;
+}
+
+/* Forum search input */
+.box.container
+  > .button-holder
+  > .button-right
+  > form[action$="/forums/search"]
+  input {
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.7);
+  border-width: 0 0 1px 0;
+}
+
+/* Categories - Headers
+---------------------------------------------------------------------------- */
+
+.forum-categories .header {
+  display: initial !important;
+}
+/* Category header container */
+.forum-categories > table > thead:nth-of-type(3n + 1) {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  height: 38px;
+  line-height: 38px;
+  white-space: nowrap;
+  overflow: hidden;
+  background: #232323;
+  text-transform: uppercase;
+}
+
+/* Category header container */
+.forum-categories > table > thead > tr > td {
+  padding: 0 12px;
+}
+
+/* Category header */
+.forum-categories > table > thead h1 {
+  font-size: 11px;
+  font-weight: 400;
+}
+
+/* Category "View All" */
+.forum-categories > table > thead:nth-of-type(3n + 2) {
+  display: none;
+}
+
+/* Category topic columns headers "Name Posts topics Latest" */
+.forum-categories > table > thead:nth-of-type(3n) th {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  height: 26px;
+  line-height: 26px;
+  font-size: 10px;
+  font-weight: 400;
+  background: rgba(0, 0, 0, 0.1212);
+  padding: 0 12px;
+}
+
+.forum-categories > table > thead:nth-of-type(3n) tr {
+  display: grid;
+  /* grid-template-columns: 2% 20% auto 7% 7%; */
+  grid-template-areas: "image forum latest topics posts";
+}
+
+/* Category topic column "Image" */
+.forum-categories > table > thead:nth-of-type(3n) th:nth-of-type(1) {
+  grid-area: image;
+  padding: 0;
+}
+
+/* Category topic column "Name" */
+.forum-categories > table > thead:nth-of-type(3n) th:nth-of-type(2) {
+  grid-area: forum;
+}
+
+/* Category topic column "Posts" */
+.forum-categories > table > thead:nth-of-type(3n) th:nth-of-type(3) {
+  grid-area: posts;
+}
+
+/* Category topic column "Topics" */
+.forum-categories > table > thead:nth-of-type(3n) th:nth-of-type(4) {
+  grid-area: topics;
+}
+
+/* Category topic column "Latest" */
+.forum-categories > table > thead:nth-of-type(3n) th:nth-of-type(5) {
+  grid-area: latest;
+}
+
+/* Categories - Body
+---------------------------------------------------------------------------- */
+
+.forum-categories > table > tbody {
+  display: grid;
+}
+/* Category topics */
+.forum-categories > table > tbody > tr {
+  width: 100%;
+  display: subgrid;
+  /* grid-template-columns: 2% 20% 64% 7% 7%; */
+  grid-template-areas: "image forum latest topics posts";
+}
+
+/* Forum image */
+.forum-categories > table > tbody > tr > td:nth-child(1) {
+  grid-area: image;
+}
+
+.forum-categories > table > tbody > tr > td:nth-child(1) img {
+  width: 14px;
+  height: 14px;
+}
+
+/* Forum name */
+.forum-categories > table > tbody > tr > td:nth-child(2) {
+  grid-area: forum;
+}
+
+.forum-categories > table > tbody > tr > td:nth-child(2) h4 {
+  font-weight: 400;
+}
+
+/* Forum summary */
+.forum-categories > table > tbody > tr > td:nth-child(2) > span:nth-child(2) {
+  display: none;
+}
+
+/* Forum post count */
+.forum-categories > table > tbody > tr > td:nth-child(3) {
+  grid-area: posts;
+}
+
+/* Forum topic count */
+.forum-categories > table > tbody > tr > td:nth-child(4) {
+  grid-area: topics;
+}
+
+/* Forum latest post */
+.forum-categories > table > tbody > tr > td:nth-child(5) {
+  grid-area: latest;
+  display: grid;
+  grid-template-columns: auto max-content max-content;
+  grid-template-areas: "topic author timestamp";
+}
+
+/* Categories - Latest posts
+---------------------------------------------------------------------------- */
+
+/* Forum latest post linebreaks */
+.forum-categories > table > tbody > tr > td:nth-child(5) br {
+  display: none;
+}
+
+/* Forum latest post author */
+.forum-categories > table > tbody > tr > td:nth-child(5) span:nth-of-type(1) {
+  grid-area: author;
+  padding-right: 4px;
+}
+
+.forum-categories
+  > table
+  > tbody
+  > tr
+  > td:nth-child(5)
+  > span:nth-of-type(1):before {
+  content: "by ";
+  font-family: inherit;
+}
+
+.forum-categories
+  > table
+  > tbody
+  > tr
+  > td:nth-child(5)
+  span:nth-of-type(1)
+  > span,
+.forum-categories
+  > table
+  > tbody
+  > tr
+  > td:nth-child(5)
+  span:nth-of-type(2)
+  > span {
+  display: none;
+}
+
+/* Forum latest post topic */
+.forum-categories > table > tbody > tr > td:nth-child(5) span:nth-of-type(2) {
+  grid-area: topic;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 300px;
+  white-space: nowrap;
+}
+
+/* Forum latest post timestamp */
+.forum-categories > table > tbody > tr > td:nth-child(5) span:nth-of-type(3) {
+  grid-area: timestamp;
+}
+
+/* Thread
+---------------------------------------------------------------------------- */
+.post {
+  background: #2b2b2b;
+  margin-bottom: 2px;
+}
+
+/* Header */
+.post .head,
+.post .likes {
+  height: 38px;
+  padding: 0 12px;
+  line-height: 38px;
+  font-size: 11px;
+  font-weight: 400;
+  text-transform: uppercase;
+  white-space: nowrap;
+  background: #232323;
+}
+
+/* Time and permalink */
+.post .head {
+  grid-area: header;
+}
+
+/* Avatar */
+.post aside {
+  grid-area: avatar;
+}
+
+/* Avatar image */
+.post aside img {
+  width: 150px;
+}
+
+/* Avatar info/buttons */
+.post aside > p,
+.post aside > span {
+  display: flex;
+  justify-content: center;
+  margin: 3px;
+}
+
+/* Post buttons */
+.post aside > span button {
+  background: transparent;
+  padding: 3px;
+  margin: 3px;
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.post aside > span button:hover {
+  background: rgb(70, 70, 70);
+}
+
+.post aside > p:nth-of-type(4) span:first-of-type {
+  margin-right: 8px;
+}
+
+/* Post content */
+.post article {
+  grid-area: content;
+  padding: 12px;
+}
+
+/* Post signature */
+.post .post-signature {
+  grid-area: signature;
+  padding: 12px;
+  text-align: center;
+}
+
+/* Post likes */
+.post .likes {
+  grid-area: likes;
+  text-align: right;
+  font-size: 17px;
+}
+
+/* Thumbs up */
+.post .likes > span > div:nth-of-type(1) > a:before {
+  content: "\e8dc";
+}
+
+/* Thumbs down */
+.post .likes > span > div:nth-of-type(2) > a:before {
+  content: "\e8db";
+}
+
+/* Thumbs up and down */
+.post .likes > span > div > a:hover:before {
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Thumbs up and down tooltips */
+.post .likes > span > div > .tooltip {
+  display: none !important;
+}
+
+/* Whole post */
+.post .profil {
+  display: grid;
+  grid-template-columns: 150px 1fr 100px;
+  grid-template-rows: 38px 1fr auto;
+  grid-template-areas:
+    "header header likes"
+    "avatar content content"
+    "avatar signature signature";
+}
+
+/* Topic info */
+.topic-info {
+  margin: 12px 0;
+}
+
+/* Topic info statistics */
+.topic-info > .label {
+  float: right;
+  padding-right: 10px;
+}
+
+/* Line break after topic info */
+.topic-info + br {
+  display: none;
+}
+
+/* Line break after post */
+.post + br {
+  display: none;
+}
+
+/* Moderation system */
+.topic-new-post > div:first-of-type {
+  text-align: center;
+}
+
+.topic-new-post > div:first-of-type h3 {
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
+
+/* ============================================================================
+ Torrent page
+============================================================================ */
+
+#torrent-page {
+  max-width: 1000px;
+  width: 100% !important;
+}
+
+#meta-info,
+.meta-general,
+.torrent-general,
+.torrent-controls,
+.torrent-audits,
+.torrent-mediainfo,
+.torrent-description,
+.torrent-subtitles,
+.torrent-tip-jar,
+.torrent-recommendations,
+#comments {
+  max-width: 1000px;
+}
+
+/* General Info
+---------------------------------------------------------------------------- */
+
+.torrent-general .pull-right {
+  float: right;
+}
+
+.torrent-general .clearfix:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Meta info
+---------------------------------------------------------------------------- */
+
+.movie-wrapper {
+  background-color: #2b2b2b;
+  display: grid;
+  grid-template-columns: 105px 1fr 140px 100px;
+  grid-template-areas:
+    "poster title cast tags"
+    "poster summary cast studio"
+    "poster details1 cast studio"
+    "poster details2 cast studio";
+  width: 100%;
+  border-bottom: 2px solid #1a1a1a;
+  grid-area: w;
+}
+
+/* Unwrap containers */
+.movie-wrapper .meta-info,
+.movie-wrapper .movie-top,
+.movie-wrapper .movie-bottom,
+.movie-wrapper .season-details {
+  display: contents;
+}
+
+/* Movie overlay */
+.movie-overlay {
+  display: none;
+}
+
+/* Movie poster */
+.movie-poster {
+  width: 100%;
+  grid-area: poster;
+}
+
+.movie-wrapper img {
+  width: 100%;
+  display: block;
+}
+
+/* Category label */
+.tags {
+  grid-area: tags;
+  text-align: center;
+  font-weight: 700;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 8px;
+}
+
+/* Studio */
+.movie-right {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  grid-area: studio;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+/* Backdrop */
+.movie-backdrop {
+  display: none;
+}
+
+/* Title */
+.movie-heading {
+  grid-area: title;
+  padding: 8px;
+}
+
+.movie-heading a {
+  color: #fff;
+}
+
+.movie-heading a:hover {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.movie-heading span {
+  font-size: 18px !important;
+}
+
+/* Summary */
+.movie-overview {
+  grid-area: summary;
+  padding: 0 8px;
+}
+
+/* Details (imdb, tmdb, director, trailer, genres) */
+.movie-wrapper .movie-details:nth-of-type(1),
+.movie-wrapper .season-details:nth-of-type(1) {
+  display: details1;
+  padding: 0 8px;
+}
+
+/* Details (status, runtime, ratings) */
+.movie-wrapper .movie-details:nth-of-type(2),
+.movie-wrapper .season-details:nth-of-type(2) {
+  grid-area: details2;
+  padding: 0 8px;
+}
+
+/* Details (imdb, tmdb, director, trailer, genres) */
+.movie-wrapper .movie-details:nth-of-type(1) span,
+.movie-wrapper .season-details:nth-of-type(1) span,
+.movie-wrapper .movie-details:nth-of-type(2) span,
+.movie-wrapper .season-details:nth-of-type(2) span {
+  padding-right: 12px;
+  font-weight: 400;
+}
+
+/* Cast */
+.movie-wrapper .cast-list {
+  display: flex;
+  flex-direction: column;
+  grid-area: cast;
+  text-align: left;
+}
+
+.movie-wrapper .cast-list:before {
+  content: "Cast";
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 8px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.movie-wrapper .cast-item {
+  padding: 0 8px;
+  max-width: initial !important;
+}
+
+.movie-wrapper .cast-item img {
+  display: none;
+}
+
+/* Title
+---------------------------------------------------------------------------- */
+
+/* Torrent title */
+#meta-info > h1 {
+  text-align: center;
+  margin: 12px 0 !important;
+}
+
+/* Padding above title */
+#meta-info > div:nth-of-type(2) {
+  display: none;
+}
+
+/* Torrent buttons
+---------------------------------------------------------------------------- */
+
+.meta-wrapper > .torrent-buttons {
+  grid-area: b;
+}
+
+.meta-wrapper > .torrent-buttons > .button-block {
+  border-bottom: 2px solid #1a1a1a;
+  display: flex;
+  align-items: center;
+  background: #2b2b2b;
+}
+
+.meta-wrapper > .torrent-buttons > .button-block .btn {
+  flex-grow: 1;
+  text-align: center;
+  margin: 0;
+  height: 100%;
+}
+
+.meta-wrapper > .torrent-buttons > .button-overlay,
+.meta-wrapper > .torrent-buttons > .vibrant-overlay {
+  display: none;
+}
+
+/* Rename "Show Files" to "Files" */
+.meta-wrapper > .torrent-buttons > .button-block > a:nth-of-type(3) > i,
+.meta-wrapper > .torrent-buttons > .button-block > a:nth-of-type(3) {
+  font-size: 0;
+  letter-spacing: 0;
+}
+
+.meta-wrapper > .torrent-buttons > .button-block > a:nth-of-type(3):after {
+  content: "Files";
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-align: center;
+  margin: 4px;
+  height: 100%;
+  display: inline-block;
+}
+
+/* Mediainfo
+---------------------------------------------------------------------------- */
+
+/* Container for general, video, and audio */
+.mediainfo-main {
+  display: flex !important;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Filename */
+.mediainfo-filename {
+  font-weight: 700;
+}
+
+/* General, audio and video */
+.mediainfo-main > div {
+  margin-right: 24px;
+  display: flex !important;
+  width: auto !important;
+  display: flex;
+  flex-direction: column;
+}
+
+/* General, audio and video labels */
+.mediainfo-main > div > .text-bold {
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+/* General, audio and video, subtitle and encoding settings icons */
+.mediainfo-main > div > .text-bold img,
+.mediainfo-subtitles > .text-bold img,
+.mediainfo-encode-settings > .text-bold img {
+  display: none;
+}
+
+/* General */
+.mediainfo-general {
+  text-align: right !important;
+  flex: 5 0 auto;
+  width: auto;
+  max-width: 20%;
+}
+
+/* Video tracks */
+.mediainfo-video {
+  text-align: right !important;
+  flex: 5 0 auto;
+  max-width: 25%;
+}
+
+/* Audio tracks */
+.mediainfo-audio {
+  flex-shrink: 1;
+  margin-left: 12px;
+  margin-right: 0;
+}
+
+/* Audio track names */
+.mediainfo-audio > div:nth-of-type(3n + 3) {
+  overflow-wrap: break-word;
+  display: block;
+  text-indent: -12px;
+}
+
+/* Track numbering */
+.mediainfo-video > div:nth-of-type(6n + 2),
+.mediainfo-audio > div:nth-of-type(3n + 2) {
+  display: none;
+}
+
+/* Track dividers */
+.mediainfo-video > div:nth-of-type(6n + 2),
+.mediainfo-audio > div:nth-of-type(3n + 4) {
+  display: none;
+}
+
+/* Mediainfo key portion of key-value pair */
+.mediainfo-main u {
+  text-decoration: none;
+  font-weight: 400 !important;
+  float: left;
+  padding-right: 1ch;
+}
+
+/* Linebreaks */
+.torrent-mediainfo br {
+  display: block;
+}
+
+/* Description
+---------------------------------------------------------------------------- */
+
+.torrent-description .panel-body br {
+  display: block;
+}
+
+/* Users assume 1280 pixels wide for maximum width screenshot comparisons */
+/* min-width is 1000 pixels, so scale by 1000/1280 or 0.78125 */
+.torrent-description > div > table {
+  transform: scale(0.78125);
+  transform-origin: center top;
+  margin: 0 -140px;
+  width: 1280px;
+  height: auto;
+}
+
+/* Counter above scaling effect */
+.torrent-description span,
+.torrent-description .panel-body {
+  font-size: 128%;
+  max-width: 1280px;
+  overflow-wrap: normal;
+  white-space: normal;
+  word-break: break-word;
+}
+
+/* Subtitles
+---------------------------------------------------------------------------- */
+
+.torrent-subtitles h4.text-danger {
+  padding: 12px;
+}
+
+/* Tip jar
+---------------------------------------------------------------------------- */
+
+/* Define a tip amount */
+.torrent-tip-jar input[name="tip"] {
+  width: 120px !important;
+}
+
+/* Tip amount and quick amounts container */
+.torrent-tip-jar form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* tip amount and quick amounts */
+.torrent-tip-jar form > div,
+.torrent-tip-jar form > span,
+.torrent-tip-jar form > .btn {
+  flex-grow: 1;
+}
+
+.torrent-tip-jar td div:nth-of-type(2) > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: inherit;
+}
+
+/* Recommended
+---------------------------------------------------------------------------- */
+
+.torrent-recommendations .scroller {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  padding-bottom: 0 !important;
+}
+
+.torrent-recommendations .scroller:empty:before {
+  content: "No recommendations available";
+  font-family: inherit;
+  display: inline-block;
+}
+
+.torrent-recommendations img {
+  max-width: 115px;
+}
+
+.torrent-recommendations .item {
+  padding: 4px;
+}
+
+.torrent-recommendations a > div:last-of-type {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Comments
+---------------------------------------------------------------------------- */
+
+/* Comments list */
+.comments-list {
+  list-style-type: none;
+}
+
+/* Comment container */
+.comments-list > li {
+  margin: 6px 60px 6px 0;
+  padding: 8px;
+  border-left: 0 !important;
+  min-height: 64px;
+}
+
+/* Comment */
+.comments-list .media-body {
+  display: grid;
+  grid-template-columns: 58px 1fr;
+  grid-template-areas:
+    "avatar username"
+    "avatar date"
+    "avatar comment"
+    ". comment";
+}
+
+/* Avatars */
+.comments-list > li > div > a.pull-left {
+  height: 100%;
+  grid-area: avatar;
+}
+.img-avatar-48 {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
+/* Username */
+.comments-list > li > div > strong {
+  grid-area: username;
+}
+
+/* Date posted */
+.comments-list > li > div > span {
+  grid-area: date;
+}
+
+.comments-list > li > div > span em {
+  font-style: normal;
+  color: #ccc;
+}
+
+.comments-list > li > div > div {
+  grid-area: comment;
+  padding: 16px 0;
+}
+
+/* ============================================================================
+ Torrents search
+============================================================================ */
+
+#torrent-list-table {
+  min-width: 1000px;
+  max-width: calc(100% - 100px);
+}
+
+/* Torrent search rows
+---------------------------------------------------------------------------- */
+
+/* Featured torrents */
+#torrent-list-table tr.success {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+#torrent-list-table tr {
+  border-bottom: none;
+}
+
+/* Torrent search headers
+---------------------------------------------------------------------------- */
+
+#torrent-list-table th {
+  text-align: center;
+}
+
+#torrent-list-table th.torrent-listings-overview {
+  text-align: left;
+}
+
+/* Table header "Size" */
+th.torrent-listings-size::before {
+  content: "Size";
+  font-family: inherit;
+}
+
+/* Table header "Seeders" */
+th.torrent-listings-seeders::before {
+  content: "\e2c6";
+  font-size: 14px;
+}
+
+/* Table header "Leechers" */
+th.torrent-listings-leechers::before {
+  content: "\e2c4";
+  font-size: 14px;
+}
+
+/* Table header "Completed" */
+th.torrent-listings-completed::before {
+  content: "\f091";
+  font-size: 14px;
+}
+
+/* Table header "Created At" */
+th.torrent-listings-age > div {
+  display: none;
+}
+
+th.torrent-listings-age::before {
+  content: "\e88c";
+  font-size: 14px;
+}
+
+/* Torrent search data cells 
+---------------------------------------------------------------------------- */
+
+/* Table data cells */
+#torrent-list-table > tbody > tr > td {
+  padding: 0 3px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+/* Poster */
+td.torrent-listings-poster,
+td.torrent-listings-poster img {
+  width: 34px;
+  display: block;
+  border-bottom: none;
+}
+
+#torrent-list-table > tbody > tr > td.torrent-listings-poster {
+  padding: 0;
+}
+
+/* Category/Type/Resolution */
+td.torrent-listings-format {
+  min-width: 55px;
+}
+
+/* Category/Type/Resolution items */
+td.torrent-listings-format span {
+  font-size: 12px !important;
+  font-weight: 400;
+}
+
+/* Resolution */
+td.torrent-listings-format div:nth-of-type(2) {
+  padding-top: 0 !important;
+}
+
+/* Download icon */
+
+td.torrent-listings-download button:before {
+  height: 100%;
+  content: "\e884";
+}
+
+/* TMDB logo */
+td.torrent-listings-tmdb img {
+  display: none;
+}
+
+td.torrent-listings-tmdb a {
+  display: block;
+}
+/* Torrent search name and overview data cell
+---------------------------------------------------------------------------- */
+
+#torrent-list-table td.torrent-listings-overview {
+  text-align: left;
+}
+
+/* Name */
+td.torrent-listings-overview > a {
+  font-size: 13px !important;
+  font-weight: 700;
+  display: block;
+}
+
+/* Uploader */
+td.torrent-listings-overview span:nth-of-type(1) {
+  font-size: 11px;
+}
+
+td.torrent-listings-overview span:nth-of-type(1):before {
+  content: "Uploaded by ";
+  font-family: inherit;
+}
+
+/* Thanks and comments */
+td.torrent-listings-overview span:nth-of-type(2),
+td.torrent-listings-overview span:nth-of-type(3) {
+  display: none;
+}
+
+/* All tags icons */
+td.torrent-listings-overview i {
+  font-style: normal;
+  float: right;
+  margin: 0 2px;
+}
+
+/* Internal */
+.torrent-listings-internal i:before {
+  content: "\e663";
+}
+
+/* Personal */
+.torrent-listings-personal i:before {
+  content: "\ea4d";
+}
+
+/* Stream optimized */
+.torrent-listings-stream-optimized i:before {
+  content: "\e037";
+  color: red;
+}
+
+/* Featured */
+.torrent-listings-featured i:before {
+  content: "\e65f";
+  color: pink;
+}
+
+/* Double upload */
+.torrent-listings-double-upload i:before,
+.torrent-listings-global-double-upload i:before,
+.torrent-listings-special-double-upload i:before {
+  content: "\ea50";
+  color: green;
+  transform: rotate(-90deg);
+  display: inline-block;
+}
+
+/* Freeleech */
+.torrent-listings-freeleech i:before,
+.torrent-listings-personal-freeleech,
+.torrent-listings-freeleech-token i:before,
+.torrent-listings-special-freeleech i:before,
+.torrent-listings-global-freeleech i:before {
+  content: "\f06f";
+  color: gold;
+}
+
+/* Hot */
+.torrent-listings-hot i:before {
+  content: "\ef55";
+  color: orange;
+}
+
+/* Sticky */
+.torrent-listings-sticky i:before {
+  content: "\f10d";
+  color: black;
+}
+
+/* High speeds */
+.torrent-listings-high-speed i:before {
+  content: "\e9e4";
+  color: red;
+}
+
+/* SD */
+.torrent-listings-sd i:before {
+  content: "\e9dd";
+  color: orange;
+}
+
+/* Bumped */
+.torrent-listings-bumped i:before {
+  content: "\f0fb";
+  color: gold;
+}
+
+/* Only show one freeleech icon */
+.torrent-listings-freeleech ~ .torrent-listings-personal-freeleech,
+.torrent-listings-freeleech ~ .torrent-listings-freeleech-token,
+.torrent-listings-freeleech ~ .torrent-listings-featured,
+.torrent-listings-freeleech ~ .torrent-listings-special-freeleech,
+.torrent-listings-freeleech ~ .torrent-listings-global-freeleech,
+.torrent-listings-personal-freeleech ~ .torrent-listings-freeleech-token,
+.torrent-listings-personal-freeleech ~ .torrent-listings-featured,
+.torrent-listings-personal-freeleech ~ .torrent-listings-special-freeleech,
+.torrent-listings-personal-freeleech ~ .torrent-listings-global-freeleech,
+.torrent-listings-freeleech-token ~ .torrent-listings-featured,
+.torrent-listings-freeleech-token ~ .torrent-listings-special-freeleech,
+.torrent-listings-freeleech-token ~ .torrent-listings-global-freeleech,
+.torrent-listings-featured ~ .torrent-listings-special-freeleech,
+.torrent-listings-featured ~ .torrent-listings-global-freeleech,
+.torrent-listings-special-freeleech ~ .torrent-listings-global-freeleech {
+  display: none;
+}
+
+/* Only show one double upload icon */
+.torrent-listings-double-upload ~ .torrent-listings-global-double-upload,
+.torrent-listings-double-upload ~ .torrent-listings-special-double-upload,
+.torrent-listings-global-double-upload
+  ~ .torrent-listings-special-double-upload {
+  display: none;
+}
+
+/* Hide sticky icon */
+.torrent-listings-sticky {
+  display: none;
+}
+
+/* Torrent Search Action Bar
+---------------------------------------------------------------------------- */
+
+/* Action bar */
+.torrent-listings-action-bar {
+  /* display: grid;
+  grid-template-columns: auto 4px auto auto auto 1fr auto;
+  grid-template-areas: "publish . cards categories groupings . rss"; */
+  background: #2b2b2b;
+  margin-bottom: 2px;
+  display: flex;
+  align-items: center;
+  height: 38px;
+  line-height: 38px;
+  width: 100%;
+}
+
+/* Action bar buttons */
+.torrent-listings-action-bar > .btn {
+  flex-grow: 1;
+  padding: 0;
+  transition: background 0.1s ease-out;
+  display: block;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  border-radius: 0;
+  background-color: transparent;
+  box-shadow: none;
+  line-height: inherit;
+}
+
+.torrent-listings-action-bar > .btn:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+/* Seperators between publish button, view type and rss */
+.torrent-listings-action-bar .btn:nth-of-type(1),
+.torrent-listings-action-bar .btn:nth-of-type(4) {
+  border-right: 2px solid #1a1a1a;
+}
+
+/* Advanced search filters
+---------------------------------------------------------------------------- */
+
+#torrent-list-search {
+  padding: 6px !important;
+  border-radius: 0 !important;
+  background-color: #232323;
+}
+
+/* Search name */
+#torrent-list-search > div > div:first-child > div > input {
+  width: 100%;
+}
+
+/* Advanced search button */
+#torrent-list-search > div > div:first-child > div:last-child {
+  display: none;
+}
+
+#torrent-advanced-search {
+  display: grid !important;
+  grid-template-columns: repeat(8, 1fr);
+  grid-column-gap: 2px;
+  grid-template-areas:
+    "description description mediainfo   mediainfo keywords  keywords   uploader  quantity"
+    "TMDB        IMDB        TVDB        MAL       playlist  collection startyear endyear"
+    "categories  types       resolutions genres    buffs     tags       extras    health";
+}
+
+/* Search rows */
+#torrent-advanced-search > div {
+  display: contents;
+}
+
+/* Text input containers */
+#torrent-list-search .row > .form-group,
+.adv-search-description.form-group,
+.adv-search-mediainfo.form-group,
+.adv-search-keywords.form-group,
+.adv-search-uploader.form-group,
+.adv-search-tmdb.form-group,
+.adv-search-imdb.form-group,
+.adv-search-tvdb.form-group,
+.adv-search-mal.form-group,
+.adv-search-startYear.form-group,
+.adv-search-endYear.form-group,
+.adv-search-playlist.form-group,
+.adv-search-collection.form-group {
+  margin-bottom: 2px !important;
+}
+
+.adv-search-description input,
+.adv-search-mediainfo input,
+.adv-search-keywords input,
+.adv-search-uploader input,
+.adv-search-tmdb input,
+.adv-search-imdb input,
+.adv-search-tvdb input,
+.adv-search-mal input,
+.adv-search-startYear input,
+.adv-search-endYear input,
+.adv-search-playlist input,
+.adv-search-collection input {
+  width: 100%;
+}
+
+.adv-search-description label,
+.adv-search-mediainfo label,
+.adv-search-keywords label,
+.adv-search-uploader label,
+.adv-search-tmdb label,
+.adv-search-imdb label,
+.adv-search-tvdb label,
+.adv-search-mal label,
+.adv-search-startYear label,
+.adv-search-endYear label,
+.adv-search-playlist label,
+.adv-search-collection label {
+  display: none;
+}
+
+/* Checkbox items */
+.adv-search-categories,
+.adv-search-types,
+.adv-search-resolutions,
+.adv-search-genres,
+.adv-search-buffs,
+.adv-search-tags,
+.adv-search-extra,
+.adv-search-health {
+  display: flex;
+  flex-direction: column;
+  height: 115px;
+  overflow-y: auto;
+  scrollbar-color: #1a1a1a #232323;
+  width: 100%;
+  padding: 0 2px;
+}
+
+/* Checkbox column titles */
+.adv-search-categories > label,
+.adv-search-types > label,
+.adv-search-resolutions > label,
+.adv-search-genres > label,
+.adv-search-buffs > label,
+.adv-search-tags > label,
+.adv-search-extra > label,
+.adv-search-health > label {
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 4px;
+  text-align: center;
+}
+
+/* Checkbox labels */
+.adv-search-categories > span,
+.adv-search-types > span,
+.adv-search-resolutions > span,
+.adv-search-genres > span,
+.adv-search-buffs > span,
+.adv-search-tags > span,
+.adv-search-extra > span,
+.adv-search-health > span,
+.adv-search-categories > span > label,
+.adv-search-types > span > label,
+.adv-search-resolutions > span > label,
+.adv-search-genres > span > label,
+.adv-search-buffs > span > label,
+.adv-search-tags > span > label,
+.adv-search-extra > span > label,
+.adv-search-health > span > label {
+  display: block !important;
+  cursor: pointer;
+}
+
+.adv-search-categories > span > label:hover,
+.adv-search-types > span > label:hover,
+.adv-search-resolutions > span > label:hover,
+.adv-search-genres > span > label:hover,
+.adv-search-buffs > span > label:hover,
+.adv-search-tags > span > label:hover,
+.adv-search-extra > span > label:hover,
+.adv-search-health > span > label:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 12px 17px 2px rgba(0, 0, 0, 0.14),
+    0 5px 22px 4px rgba(0, 0, 0, 0.12), 0 7px 8px -4px rgba(0, 0, 0, 0.2);
+  color: #fff;
+}
+
+/* Quantity pagination */
+.adv-search-quantity select {
+  width: 100%;
+}
+
+.adv-search-quantity > label {
+  display: none;
+}
+
+/* Description */
+.adv-search-description {
+  grid-area: description;
+}
+
+/* Mediainfo */
+.adv-search-mediainfo {
+  grid-area: mediainfo;
+}
+
+/* Keywords */
+.adv-search-keywords {
+  grid-area: keywords;
+}
+
+/* Uploader */
+.adv-search-uploader {
+  grid-area: uploader;
+}
+
+/* Tmdb */
+.adv-search-tmdb {
+  grid-area: TMDB;
+}
+
+/* Imdb */
+.adv-search-imdb {
+  grid-area: IMDB;
+}
+
+/* Tvdb */
+.adv-search-tvdb {
+  grid-area: TVDB;
+}
+
+/* Mal */
+.adv-search-mal {
+  grid-area: MAL;
+}
+
+/* Start year */
+.adv-search-startYear {
+  grid-area: startyear;
+}
+
+/* End year */
+.adv-search-endYear {
+  grid-area: endyear;
+}
+
+/* Playlist */
+.adv-search-playlist {
+  grid-area: playlist;
+}
+
+/* Collection */
+.adv-search-collection {
+  grid-area: collection;
+}
+
+/* Categories */
+.adv-search-categories {
+  grid-area: categories;
+}
+
+/* Types */
+.adv-search-types {
+  grid-area: types;
+}
+
+/* Resolutions */
+.adv-search-resolutions {
+  grid-area: resolutions;
+}
+
+/* Genres */
+.adv-search-genres {
+  grid-area: genres;
+}
+
+/* Buffs */
+.adv-search-buffs {
+  grid-area: buffs;
+}
+
+/* Tags */
+.adv-search-tags {
+  grid-area: tags;
+}
+
+/* Extras */
+.adv-search-extra {
+  grid-area: extras;
+}
+
+/* Health */
+.adv-search-health {
+  grid-area: health;
+}
+
+/* Quantity */
+.adv-search-quantity {
+  grid-area: quantity;
+}
+
+/* Search listings activity indicator
+---------------------------------------------------------------------------- */
+.torrent-listings-seeding.btn,
+.torrent-listings-leeching.btn,
+.torrent-listings-incomplete.btn,
+.torrent-listings-complete.btn {
+  width: auto;
+  height: auto;
+  line-height: 1;
+  padding: 0;
+  float: right;
+}
+/* Seeding */
+.torrent-listings-seeding:before {
+  content: "\e5d8";
+  color: green;
+}
+
+/* Leeching */
+.torrent-listings-leeching:before {
+  content: "\e5db";
+  color: orange;
+}
+
+/* Incomplete */
+.torrent-listings-incomplete:before {
+  content: "\e028";
+  color: orange;
+}
+
+/* Complete */
+.torrent-listings-complete:before {
+  content: "\e8db";
+  color: red;
+}
+
+/* Search listings legend
+---------------------------------------------------------------------------- */
+
+/* Legend container */
+.torrent-listings-legend {
+  margin-top: 2px;
+}
+
+.torrent-listings-legend > div {
+  display: flex;
+  justify-content: center;
+}
+
+.torrent-listings-legend > div > strong,
+.torrent-listings-legend > div > button.btn {
+  padding: 2px;
+}
+
+/* Search listings stats
+---------------------------------------------------------------------------- */
+
+/* Torrents stats */
+.torrent-listings-stats {
+  padding: 8px;
+  color: #b3b3b3;
+}
+
+.torrent-listings-stats strong {
+  font-weight: 400;
+}
+
+/* Pagination 
+---------------------------------------------------------------------------- */
+
+.pagination {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  font-weight: 400;
+  justify-content: right;
+  width: 100%;
+  height: 38px;
+  background-color: #232323;
+  border-top: 2px solid #1a1a1a;
+}
+
+/* Pagination item container */
+.pagination li {
+  cursor: pointer;
+  padding: 0 7px;
+  flex-grow: 1;
+}
+
+.pagination li:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.pagination li.active {
+  color: var(--color-highlight);
+}
+
+.pagination li.disabled {
+  cursor: default;
+}
+
+/* Page links */
+.pagination a,
+.pagination span {
+  width: 100%;
+  height: 100%;
+  line-height: 38px;
+  text-align: center;
+  display: inline-block;
+}
+
+/* Linebreak following pagination */
+.pagination + br {
+  display: none;
+}
+
+/* Showing x to y of z results */
+.pagination ~ span {
+  padding: 8px;
+  float: left;
+  color: #b3b3b3;
+}
+
+/* Torrent listings pagination */
+.torrent-listings-pagination nav {
+  overflow: hidden;
+}
+
+/* ============================================================================
+ User's Private Pages
+============================================================================ */
+
+/* User profile page
+---------------------------------------------------------------------------- */
+
+.container > .block > .button-holder + .button-holder + .header {
+  display: initial;
+}
+
+.container > .block > .button-holder + .button-holder + .header ~ div li {
+  list-style-type: none;
+}
+
+/* Avatar */
+.container > .block > .button-holder + .button-holder + .header .content img {
+  width: 60px;
+  margin-right: auto;
+}
+
+/* Header (name, rank, registration date)*/
+.container > .block > .button-holder + .button-holder + .header .content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 60px;
+  background-color: #2b2b2b;
+  margin-bottom: 2px;
+}
+
+.container > .block > .button-holder + .button-holder + .header .content > div {
+  display: contents;
+}
+
+/* Name and icons */
+.container
+  > .block
+  > .button-holder
+  + .button-holder
+  + .header
+  .content
+  > div:nth-child(2)
+  h2 {
+  flex-grow: 1;
+  text-align: left;
+  font-size: 32px !important;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-right: 2px solid #1a1a1a;
+  height: 100%;
+  padding: 0 12px;
+}
+
+/* Status indicator */
+.container
+  > .block
+  > .button-holder
+  + .button-holder
+  + .header
+  .content
+  > div:nth-child(2)
+  h2
+  > i,
+.container
+  > .block
+  > .button-holder
+  + .button-holder
+  + .header
+  .content
+  > div:nth-child(2)
+  h2
+  > a {
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+  padding: 0 3px;
+}
+
+/* Ranks and registration date */
+.container
+  > .block
+  > .button-holder
+  + .button-holder
+  + .header
+  .content
+  > div:nth-child(2)
+  h4 {
+  flex-grow: 1;
+  text-align: center;
+  font-size: 16px;
+  border-right: 2px solid #1a1a1a;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+}
+
+/* Online icon */
+.container
+  > .block
+  > .button-holder
+  + .button-holder
+  + .header
+  h2
+  .text-red.fa-circle:before {
+  content: "\ef4a";
+  color: red;
+  font-style: normal;
+}
+
+/* Online icon */
+.container
+  > .block
+  > .button-holder
+  + .button-holder
+  + .header
+  h2
+  .text-green.fa-circle:before {
+  content: "\ef4a";
+  color: green;
+  font-style: normal;
+}
+
+/* PM icon */
+.container
+  > .block
+  > .button-holder
+  + .button-holder
+  + .header
+  h2
+  .fa-envelope:before {
+  content: "\e158";
+  font-style: normal;
+}
+
+/* Gift bon icon */
+.container
+  > .block
+  > .button-holder
+  + .button-holder
+  + .header
+  h2
+  .fa-gift:before {
+  content: "\e8f6";
+  font-style: normal;
+}
+
+/* Warning icon */
+.container
+  > .block
+  > .button-holder
+  + .button-holder
+  + .header
+  h2
+  .fa-exclamation-circle:before {
+  content: "\e001";
+  font-style: normal;
+  color: orange;
+}
+
+/* Watched icon */
+.container
+  > .block
+  > .button-holder
+  + .button-holder
+  + .header
+  h2
+  .fa-eye:before {
+  content: "\e8f4";
+  font-style: normal;
+  color: orange;
+}
+
+/* Staff note icon */
+.container
+  > .block
+  > .button-holder
+  + .button-holder
+  + .header
+  .fa-comment:before {
+  content: "\f1fc";
+  font-style: normal;
+  color: orange;
+}
+
+/* Followers and achievements*/
+.profile-footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  overflow-x: auto;
+}
+
+.profile-footer img {
+  margin: 0 6px;
+}
+
+/* Follower avatars */
+.profile-footer.followers img {
+  border-radius: 50%;
+}
+
+/* User's Private Torrent Search
+---------------------------------------------------------------------------- */
+.form-torrent-search {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #2b2b2b;
+  padding: 6px;
+  border-bottom: 2px solid #1a1a1a;
+}
+
+/* Search input containers */
+.form-torrent-search > div {
+  flex-grow: 1;
+  padding: 2px;
+}
+
+/* Search text inputs */
+.form-torrent-search input[type="text"],
+.form-torrent-search select {
+  width: 100%;
+}
+
+/* Search checkboxes */
+.form-torrent-search input[type="checkbox"] {
+  margin-left: 6px;
+}
+
+/* Search input labels */
+.form-torrent-search > div > label {
+  display: none;
+}
+
+/* Cross X icon */
+#userFilter .fa-times:before {
+  color: red;
+  content: "\e5cd";
+  font-style: normal;
+}
+
+/* Checkmark icon */
+#userFilter .fa-check:before {
+  color: green;
+  content: "\e5ca";
+  font-style: normal;
+}
+
+/* "Yes" table columns */
+#userFilter td.text-green:not(.badge-extra) {
+  font-size: 0;
+}
+
+#userFilter td.text-green:not(.badge-extra):before {
+  color: green;
+  content: "\e5ca";
+  font-size: 12px;
+}
+
+/* "No" table columns */
+#userFilter td.text-red:not(.badge-extra) {
+  font-size: 0;
+}
+
+#userFilter td.text-red:not(.badge-extra):before {
+  color: red;
+  content: "\e5cd";
+  font-size: 12px;
+}
+
+#userFilter {
+  min-width: 100%;
+  margin-left: calc(50% - 50vw + 50px);
+  margin-right: calc(50% - 50vw + 50px);
+  display: flex;
+  justify-content: center;
+}
+
+#userFilter > div > table {
+  width: auto;
+}
+
+/* /user/torrents page
+---------------------------------------------------------------------------- */
+
+/* Make boolean columns narrower */
+#userFilter[view="history"] thead > tr > th:nth-of-type(3),
+#userFilter[view="history"] thead > tr > th:nth-of-type(4),
+#userFilter[view="history"] thead > tr > th:nth-of-type(11),
+#userFilter[view="history"] thead > tr > th:nth-of-type(12),
+#userFilter[view="history"] thead > tr > th:nth-of-type(13) {
+  writing-mode: vertical-lr;
+  line-height: 1;
+  padding: 3px;
+}
+
+#userFilter[view="history"] tbody > tr > td:nth-of-type(3),
+#userFilter[view="history"] tbody > tr > td:nth-of-type(4),
+#userFilter[view="history"] tbody > tr > td:nth-of-type(11),
+#userFilter[view="history"] tbody > tr > td:nth-of-type(12),
+#userFilter[view="history"] tbody > tr > td:nth-of-type(13) {
+  padding: 3px;
+}
+
+/* /user/uploads page
+---------------------------------------------------------------------------- */
+
+/* Download button  */
+#userFilter[view="uploads"] tr td:first-child button {
+  padding: 0;
+  background: transparent;
+  height: auto;
+  width: auto;
+  box-shadow: none;
+  line-height: 1;
+  font-size: 16px;
+}
+
+#userFilter[view="uploads"] tr td:first-child button:before {
+  content: "\f090";
+}
+
+/* Settings page
+---------------------------------------------------------------------------- */
+
+/* Hide inactive tab */
+#basetabs ~ .tab-content > div:not(.active) {
+  display: none;
+}
+
+/* Hide linebreak after tabs */
+#basetabs + br,
+.tab-content > br:first-child {
+  display: none;
+}
+
+/* Settings buttons */
+#other_tab .button-holder,
+#request_tab .button-holder,
+#torrent_tab .button-holder,
+#profile_tab .button-holder,
+#forum_tab .button-holder,
+#follower_tab .button-holder,
+#achievement_tab .button-holder,
+#account_tab .button-holder,
+#following_tab .button-holder,
+#subscription_tab .button-holder,
+#forum_tab .button-holder,
+#request_tab .button-holder,
+#torrent_tab .button-holder,
+#bon_tab .button-holder,
+#mention_tab .button-holder {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: left;
+  padding: 4px 0;
+}
+
+#other_tab .button-holder > .button-right,
+#request_tab .button-holder > .button-right,
+#torrent_tab .button-holder > .button-right,
+#profile_tab .button-holder > .button-right,
+#forum_tab .button-holder > .button-right,
+#follower_tab .button-holder > .button-right,
+#achievement_tab .button-holder > .button-right,
+#account_tab .button-holder > .button-right,
+#following_tab .button-holder > .button-right,
+#subscription_tab .button-holder > .button-right,
+#forum_tab .button-holder > .button-right,
+#request_tab .button-holder > .button-right,
+#torrent_tab .button-holder > .button-right,
+#bon_tab .button-holder > .button-right,
+#mention_tab .button-holder > .button-right {
+  margin-right: 12px;
+}
+
+#other_tab .button-holder label,
+#request_tab .button-holder label,
+#torrent_tab .button-holder label,
+#profile_tab .button-holder label,
+#forum_tab .button-holder label,
+#follower_tab .button-holder label,
+#achievement_tab .button-holder label,
+#account_tab .button-holder label,
+#following_tab .button-holder label,
+#subscription_tab .button-holder label,
+#forum_tab .button-holder label,
+#request_tab .button-holder label,
+#torrent_tab .button-holder label,
+#bon_tab .button-holder label,
+#mention_tab .button-holder label {
+  margin: 0;
+}
+
+/* ----------------------------------------------------------------------------
+ Mediahub
+---------------------------------------------------------------------------- */
+
+/* Mediahub entry
+---------------------------------------------------------------------------- */
+
+/* Header */
+.header.mediahub {
+  display: block;
+}
+
+.header.mediahub h1 {
+  display: none;
+}
+
+/* Mediahub content */
+.header.mediahub .content {
+  background: #2b2b2b;
+  padding: 12px;
+}
+
+/* Mediahub title */
+.header.mediahub .content > h3 {
+  padding: 16px 12px;
+  text-align: center;
+}
+
+/* Mediahub items */
+.header.mediahub .content .blocks {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header.mediahub .content .blocks > a {
+  padding: 12px;
+  text-align: center;
+}
+
+.header.mediahub .content .blocks > a:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.header.mediahub .content .blocks > a > div {
+  background: transparent !important;
+}
+
+/* TMDB logos */
+.header.mediahub h6 {
+  text-align: center;
+}
+.header.mediahub h6 + img {
+  display: block;
+  margin: 12px auto;
+}
+
+/* ----------------------------------------------------------------------------
+ Cards view
+---------------------------------------------------------------------------- */
+
+/* Card */
+.card.is-torrent {
+  height: 200px !important;
+  width: 480px;
+  padding: 0;
+  margin: 10px;
+  float: left;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: 200px;
+  grid-template-areas: "poster body";
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+    0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+
+/* Poster */
+.card.is-torrent img {
+  height: 200px;
+  display: block;
+  /* border-top-left-radius: 12px; */
+  /* border-bottom-left-radius: 12px; */
+}
+
+/* "Torrents Matched" and studio */
+.card_head {
+  display: none;
+}
+
+/* Card info container*/
+.card_body {
+  display: contents;
+}
+
+.body_poster {
+  grid-area: poster;
+}
+
+/* Card non-poster info */
+.body_description {
+  grid-area: body;
+  background-color: #2b2b2b;
+  height: 100%;
+  width: 100%;
+  /* border-top-right-radius: 12px; */
+  /* border-bottom-right-radius: 12px; */
+  box-shadow: 0 0 15px #232323;
+  clip-path: inset(0 0 0 -15px);
+}
+
+/* Title and release date */
+.description_title {
+  height: 38px;
+  padding: 0 12px;
+  line-height: 38px;
+  font-size: 11px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  background-color: #232323;
+  width: 100%;
+  display: inline-block;
+  /* border-top-right-radius: 12px; */
+}
+
+/* Title */
+.description_title > a {
+  height: 38px;
+  width: 100%;
+  line-height: 38px;
+  font-weight: 700;
+  display: inline-block;
+}
+
+/* Date released */
+.description_title span {
+  float: right;
+  margin-right: 12px;
+}
+
+/* Plot */
+.description_plot {
+  padding: 12px;
+  height: 162px;
+  overflow-y: auto;
+  scrollbar-color: #1a1a1a transparent;
+}
+
+/* Genres */
+.genre-label {
+  margin: 12px 12px 0 12px;
+  font-weight: 400;
+}
+
+/* ----------------------------------------------------------------------------
+ Footer
+---------------------------------------------------------------------------- */
+
+#l-footer {
+  border-top: 2px solid #2b2b2b;
+  border-bottom: 2px solid #2b2b2b;
+  padding: 12px 0;
+  margin: 12px 0;
+  background-image: none !important;
+}
+
+#l-footer .container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#l-footer ul {
+  list-style-type: none;
+}
+
+.subfooter {
+  text-align: center;
+}
