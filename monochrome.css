@@ -424,6 +424,10 @@ h4 .badge-user,
 #frame > .content {
   background-color: var(--color-grey-bg-5);
 }
+/* Entire Content background */
+#frame > .content .messages ul {
+  max-height: calc(70vh - 42.85px);
+}
 /* Entire Message */
 #frame .content .messages ul li.sent {
   border-bottom: 1px dashed var(--color-grey-border-3);
