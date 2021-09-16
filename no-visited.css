@@ -1,3 +1,7 @@
 a.view-torrent:visited {
   color: inherit !important;
 }
+
+#vue + .mobile-hide + div {
+  display: none;
+}
