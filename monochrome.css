@@ -359,6 +359,7 @@ h4 .badge-user,
   font-size: 16px;
   display: inline-block;
   color: var(--color-grey-text-5);
+  word-break: break-word;
 }
 /* System Message Header */
 .sent a[href="/users/System"] + h4 {
