@@ -610,8 +610,9 @@ i.torrent-icon {
 /* Panels */
 .panel {
   border: 1px solid var(--color-grey-border-3);
-  border-radius: 0;
-  box-shadow: none;
+  border-radius: 4px;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
   background-color: var(--color-grey-bg-3);
 }
 /* Main page container shadow */
