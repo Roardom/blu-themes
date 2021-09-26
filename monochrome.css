@@ -649,16 +649,6 @@ hr {
 #l-footer {
   background-color: #1f1f1f;
 }
-/* Comment Section
-============================================================================ */
-#comments .panel {
-  background-color: transparent !important;
-  border: 0;
-}
-#comments .panel > .panel-heading {
-  background-color: transparent !important;
-  border: 0;
-}
 /* Notifications
 ============================================================================ */
 .notify .point {
@@ -914,6 +904,12 @@ div.header.yellow div.inner_content {
 ============================================================================ */
 #comments .panel {
   box-shadow: none;
+  background-color: transparent !important;
+  border: 0;
+}
+#comments .panel > .panel-heading {
+  background-color: transparent !important;
+  border: 0;
 }
 #comments .panel-body {
   padding: 0;
