@@ -213,6 +213,13 @@ body {
 .inner-content {
   background-color: var(--color-grey-bg-4);
 }
+/* Main Content */
+#main-content {
+  margin-top: 0 !important;
+}
+#main-content > .container-fluid > .block {
+  box-shadow: none;
+}
 /* Menu Button */
 #hoeapp-wrapper[hoe-device-type="phone"]
   .hoe-left-header
@@ -1394,10 +1401,6 @@ a.view-torrent:hover {
   text-decoration: none !important;
   color: var(--color-grey-text-1) !important;
   -webkit-text-fill-color: var(--color-grey-text-1);
-}
-/* Main Content */
-#main-content {
-  margin-top: 0px !important;
 }
 /* Breadcrumb */
 .breadcrumb {
