@@ -349,11 +349,13 @@ h4 .badge-user,
   font-size: 14px;
 }
 /* Avatar */
+#frame .content .messages ul li.sent a,
 #frame .content .messages ul li.sent img.chat-user-image {
   height: 1.1em;
   width: 1.1em;
   border: 0 !important;
   margin-top: 0.1em;
+  position: static;
 }
 /* Age */
 #frame .content .messages ul li.sent h4 .text-muted {
@@ -364,15 +366,22 @@ h4 .badge-user,
 }
 /* Message Header */
 .sent h4 {
-  display: inline;
+  display: inline !important;
   margin: 0;
+  background: transparent;
 }
 /* Message Text */
 .sent .text-bright {
   font-size: 16px;
-  display: inline-block;
+  display: inline-block !important;
   color: var(--color-grey-text-5);
   word-break: break-word;
+  background-color: transparent;
+  margin: 0 !important;
+}
+.sent > div:not(.system):before {
+  border-right-width: 0;
+  border-top-width: 0;
 }
 /* System Message Header */
 .sent a[href="/users/System"] + h4 {
@@ -450,7 +459,6 @@ h4 .badge-user,
 #frame .content .messages ul li.sent {
   border-bottom: 1px dashed var(--color-grey-border-3);
 }
-
 /* Navigation tabs
 ============================================================================ */
 /* Tab Container */
