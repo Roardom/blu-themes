@@ -1842,7 +1842,8 @@ div.stats div.content {
       display: block;
   }
   /* Prevents hiding of expanded left NavBar */
-  #hoeapp-container[hoe-color-type="lpanel-bg5"]:not(.hoe-minimized-lpanel) {
+  body[hoe-navigation-type="vertical-compact"]
+    #hoeapp-container:not(.hoe-minimized-lpanel):not(.hoe-minimized-lpanel) {
     visibility: visible;
   }
   /* Extra Stats */
