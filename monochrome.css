@@ -270,6 +270,11 @@ body[hoe-navigation-type="vertical-compact"]
   background: var(--color-grey-bg-2);
   border: 0 0 0 10px solid var(--color-grey-border-1);
 }
+/* Mobile Top NavBar */
+#hoeapp-wrapper[hoe-device-type="phone"] .hoe-right-header .icon-circle {
+  border: 0;
+  padding: 7px 12px !important;
+}
 /* RatioBar
 ============================================================================ */
 
