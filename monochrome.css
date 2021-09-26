@@ -623,10 +623,11 @@ i.torrent-icon {
 .container > .box,
 .container > .well,
 .well {
-  box-shadow: none !important;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);;
   background-color: var(--color-grey-bg-3);
-  border: 1px solid var(--color-grey-border-3);
-  border-radius: 0;
+  border: 0;
+  border-radius: 4px;
 }
 /* Horizontal Rules */
 hr {
@@ -852,9 +853,11 @@ a.text-bright:hover {
 /* Profile encapsulation */
 .container .block,
 .container .well {
-  border-radius: 0;
-  border: 1px solid var(--color-grey-border-3);
+  border-radius: 4px;
+  border: 0;
   background-color: var(--color-grey-bg-3);
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 }
 .list-inline {
   color: inherit;
@@ -1361,7 +1364,9 @@ form[action*="change_settings"] .control-label + .radio-inline {
 .block {
   background-color: var(--color-grey-bg-4);
   border: 0px;
-  box-shadow: none;
+  border-radius: 4px;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 }
 /* Title for Active/seeds/torrents/etc */
 div.block div.inner_content {
@@ -1373,8 +1378,8 @@ div.block div.inner_content h1 {
 /* Filters for Active/seeds/torrents/etc */
 .block .container {
   background-color: var(--color-grey-bg-3);
-  border: 1px solid var(--color-grey-border-3);
-  border-radius: 0px;
+  border: 0;
+  border-radius: 4px;
   width: 100%;
 }
 /* links */
