@@ -934,13 +934,19 @@ div.header.yellow div.inner_content {
 }
 /* Comment list item */
 .comments-list > li {
-  border-left: 0 !important;
+  border-left-width: 0 !important;
   margin-top: 4px;
   border-radius: 4px;
   box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
   background-color: var(--color-grey-bg-2) !important;
   color: var(--color-grey-text-2);
+}
+/* Nested comments/quotes */
+.comments-list .comments-list > li,
+.topic-posts .post .comments-list > li {
+  border-left-width: 5px !important;
+  border-left-color: var(--color-grey-border-1) !important;
 }
 /* Comment container */
 .comments-list .media-body {
