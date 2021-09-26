@@ -974,11 +974,11 @@ div.header.yellow div.inner_content {
   grid-area: date;
 }
 /* Comment delete */
-.comments-list > li > div > a:nth-last-of-type(2) {
+.comments-list > li > div > a[href*="/delete/"] {
   grid-area: delete;
 }
 /* Comment edit */
-.comments-list > li > div > a:nth-last-of-type(1) {
+.comments-list > li > div > a[data-toggle="modal"] {
   grid-area: edit;
 }
 /* Comment text */
@@ -986,16 +986,16 @@ div.header.yellow div.inner_content {
   grid-area: comment;
 }
 /* Comment edit/delete buttons */
-.comments-list > li > div > a:nth-last-of-type(2),
-.comments-list > li > div > a:nth-last-of-type(1) {
+.comments-list > li > div > a[href*="/delete/"],
+.comments-list > li > div > a[data-toggle="modal"] {
   width: 30px;
   height: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.comments-list > li > div > a:nth-last-of-type(2) > i,
-.comments-list > li > div > a:nth-last-of-type(1) > i {
+.comments-list > li > div > a[href*="/delete/"] > i,
+.comments-list > li > div > a[data-toggle="modal"] > i {
   width: 30px;
   height: 30px;
   font-size: 16px;
@@ -1003,8 +1003,8 @@ div.header.yellow div.inner_content {
   align-items: center;
   justify-content: center;
 }
-.comments-list > li > div > a:nth-last-of-type(2) > i:hover,
-.comments-list > li > div > a:nth-last-of-type(1) > i:hover {
+.comments-list > li > div > a[href*="/delete/"] > i:hover,
+.comments-list > li > div > a[data-toggle="modal"] > i:hover {
   border-radius: 50%;
   background-color: rgba(0, 0, 0, 0.3);
   cursor: pointer;
