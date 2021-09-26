@@ -31,10 +31,10 @@
   margin: 4px 12px 0 48px;
 }
 /* Message text */
-.sent > div {
+.sent .text-bright {
   display: block !important;
   border-bottom-right-radius: 15px;
-  background-color: var(--color-grey-bg-2);
+  background-color: var(--color-grey-bg-2) !important;
   padding: 0 12px 4px 8px !important;
   margin: 0 12px 4px 48px !important;
 }
