@@ -1088,27 +1088,177 @@ table tbody tr {
 .table > tbody > tr > td.text-red {
   color: var(--color-light-danger) !important;
 }
-/* Forum messages */
-.topic .topic-new-post,
+/* Forum messages
+============================================================================ */
+/* Each message */
+.topic-posts > div > .block {
+  border-radius: 4px;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  border: 0;
+  margin: 0 0 4px;
+  padding: 12px;
+}
+/* Gap between each message */
+.topic-posts > div + br {
+  display: none;
+}
+/* New post */
+.topic .topic-new-post {
+  background: transparent;
+}
+/* Post container */
 .profil {
   background: var(--color-grey-bg-3);
+  padding: 0;
+  display: grid;
+  grid-template-columns: 150px 1fr auto;
+  grid-template-areas:
+    "userinfo timestamp likes"
+    "userinfo content content"
+    "userinfo signature signature"
+    "userinfo tips tips";
 }
+/* Post timestamp */
+.topic .topic-posts .post .head {
+  color: var(--color-grey-text-4);
+  background-color: transparent;
+  box-shadow: none;
+  grid-area: timestamp;
+  text-align: left;
+}
+/* Forum post content */
 .topic .topic-posts .post article.post-content {
   color: var(--color-grey-text-2);
+  grid-area: content;
+  padding: 0;
+  margin-top: 12px;
 }
+/*Forum post tips */
 .topic .topic-posts .post .post-signature {
   border-top: 1px solid var(--color-grey-border-3);
+  grid-area: tips;
+  margin-top: 0;
 }
+/* Post post signature */
+.topic .topic-posts .post .likes + .post-signature {
+  grid-area: signature;
+}
+/* Post user info */
 .topic .topic-posts .post aside.post-info {
   border: 0;
-  background-color: var(--color-grey-bg-3);
+  background-color: transparent;
+  grid-area: userinfo;
+  width: auto;
+  min-width: auto;
+  padding: 0;
+  margin-top: 0;
 }
-.head {
-  background-color: var(--color-grey-bg-2);
-  box-shadow: none;
+/* Post avatar */
+.topic .topic-posts .post aside.post-info > .post-info-image {
+  border: 0;
+  border-radius: 50%;
+  padding: 0;
+  width: 75px;
+  margin: 0 auto 8px auto;
+  /* grid-area: avatar; */
 }
-.profil {
-  padding: 0 0 1em 0;
+/* Quote/Edit/Delete post button */
+.topic .topic-posts .post aside.post-info > span > button,
+.topic .topic-posts .post aside.post-info > span > a > button {
+  font-size: 0;
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 900;
+}
+/* Quote post button */
+.topic .topic-posts .post aside.post-info > span > button:after {
+  font-size: 13px;
+  content: "\f10d";
+}
+/* Edit post button */
+.topic
+  .topic-posts
+  .post
+  aside.post-info
+  > span
+  > a:nth-of-type(1)
+  > button:after {
+  font-size: 13px;
+  content: "\f040";
+}
+/* Delete post button */
+.topic
+  .topic-posts
+  .post
+  aside.post-info
+  > span
+  > a:nth-of-type(2)
+  > button:after {
+  font-size: 13px;
+  content: "\f1f8";
+}
+/* Likes */
+.topic .topic-posts .post .likes {
+  grid-area: likes;
+  background: transparent;
+  width: auto;
+}
+.topic .topic-posts .post .likes > span > div {
+  cursor: pointer;
+}
+/* Permalink */
+a.permalink {
+  font-size: 0;
+}
+a.permalink:before {
+  font-family: "Font Awesome 5 Pro";
+  font-size: 16px;
+  font-weight: 900;
+  content: "\f0c1";
+}
+@media only screen and (max-width: 767px) {
+  /* Post container */
+  .profil {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "userinfo"
+      "timestamp"
+      "content"
+      "signature"
+      "tips"
+      "likes";
+  }
+  /* Post user info */
+  .topic .topic-posts .post aside.post-info > p {
+    width: calc(100% - 43px - 75px - 12px - 12px);
+    margin: 0 auto;
+  }
+  .topic .topic-posts .post aside.post-info .post-info-image {
+    position: absolute;
+    left: 0;
+    top: 12px;
+  }
+  .topic .topic-posts .post aside.post-info > span {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  /* Timestamp */
+  .topic .topic-posts .post .head {
+    text-align: center;
+    border-bottom: 1px solid var(--color-grey-border-3);
+  }
+  /* Post content */
+  .topic .topic-posts .post article.post-content {
+    margin-bottom: 12px;
+  }
+  /* Likes */
+  .likes {
+    position: static;
+    margin: 0 auto;
+  }
 }
 /* Form Selectors / Radio Buttons / Layout
 ============================================================================ */
