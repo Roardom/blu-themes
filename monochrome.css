@@ -224,17 +224,18 @@ body {
 #hoeapp-container[hoe-color-type="lpanel-bg5"].hoe-minimized-lpanel
   #hoe-left-panel {
   background: var(--color-grey-bg-3);
-  visibility: visible;
 }
 /* Hides the left NavBar before it minimizes */
-#hoeapp-container[hoe-color-type="lpanel-bg5"]:not(.hoe-minimized-lpanel) {
+body[hoe-navigation-type="vertical-compact"]
+  #hoeapp-container:not(.hoe-minimized-lpanel) {
   visibility: hidden;
 }
-/* Hide Menu expnanding icon */
-.hoe-sidebar-toggle {
-    display: none;
-}
 /* Left NavBar Icons and folders*/
+#hoeapp-container[hoe-color-type="lpanel-bg5"] #hoe-left-panel,
+#hoeapp-container[hoe-color-type="lpanel-bg5"]
+  #hoe-left-panel
+  .panel-list
+  > .nav-level:first-child,
 #hoeapp-container[hoe-color-type="lpanel-bg5"]
   #hoe-left-panel
   .panel-list
