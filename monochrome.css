@@ -909,7 +909,100 @@ div.header.yellow div.inner_content {
     margin: 0 auto;
   }
 }
-/* Tables */
+/* Comments
+============================================================================ */
+#comments .panel {
+  box-shadow: none;
+}
+#comments .panel-body {
+  padding: 0;
+}
+.comments-list > li > .media-body {
+  width: auto;
+}
+
+/* Comment list item */
+.comments-list > li {
+  border-left: 0 !important;
+  margin-top: 4px;
+  border-radius: 4px;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}
+/* Comment container */
+.comments-list .media-body {
+  display: grid;
+  grid-template-columns: 58px auto 1fr 30px 30px;
+  grid-template-areas:
+    "avatar anonymous username edit delete"
+    "avatar date date edit delete"
+    "avatar comment comment comment comment"
+    ". comment comment comment comment";
+}
+/* Comment avatar */
+.comments-list > li > div > a.pull-left {
+  display: contents;
+}
+.comments-list > li > div > a.pull-left img {
+  grid-area: avatar;
+}
+.comments-list > li > div > a.pull-left strong {
+  grid-area: anonymous;
+  padding-right: 0.5ch;
+}
+.img-avatar-48 {
+  border-radius: 50%;
+}
+/* Comment anonymous username */
+.comments-list > li > div > a[href*="/users/"] {
+  grid-area: username;
+}
+/* Comment username */
+.comments-list > li > div > strong {
+  grid-area: username;
+}
+/* Comment date */
+.comments-list > li > div > span {
+  grid-area: date;
+}
+/* Comment delete */
+.comments-list > li > div > a:nth-last-of-type(2) {
+  grid-area: delete;
+}
+/* Comment edit */
+.comments-list > li > div > a:nth-last-of-type(1) {
+  grid-area: edit;
+}
+/* Comment text */
+.comments-list > li > div > div {
+  grid-area: comment;
+}
+/* Comment edit/delete buttons */
+.comments-list > li > div > a:nth-last-of-type(2),
+.comments-list > li > div > a:nth-last-of-type(1) {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.comments-list > li > div > a:nth-last-of-type(2) > i,
+.comments-list > li > div > a:nth-last-of-type(1) > i {
+  width: 30px;
+  height: 30px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.comments-list > li > div > a:nth-last-of-type(2) > i:hover,
+.comments-list > li > div > a:nth-last-of-type(1) > i:hover {
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+/* Tables
+============================================================================ */
 .table-responsive {
   /* border: 1px solid var(--color-grey-border-3); */
   color: var(--color-grey-table-3);
