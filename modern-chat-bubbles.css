@@ -57,6 +57,11 @@
     (100vw - 100px - 50px - 30px - 30px - 2px - 10px - 48px) / 2 - 50%
   );
 }
+@media only screen and (max-width: 767px) {
+  .sent > a[href="/users/System"] + h4 + .system {
+    left: calc((100vw - 30px - 30px - 2px - 10px - 48px) / 2 - 50%);
+  }
+}
 /* Message triangle tip */
 .sent > div:not(.system):before {
   content: "";
