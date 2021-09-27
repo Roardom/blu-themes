@@ -1163,7 +1163,8 @@ table {
   background: var(--color-grey-bg-3);
   padding: 0;
   display: grid;
-  grid-template-columns: 150px 1fr auto;
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: auto 1fr auto auto;
   grid-template-areas:
     "userinfo timestamp likes"
     "userinfo content content"
@@ -1177,19 +1178,24 @@ table {
   box-shadow: none;
   grid-area: timestamp;
   text-align: left;
+  padding: 0 0 36px 12px;
+  border-bottom: 1px solid var(--color-grey-border-3);
 }
 /* Forum post content */
 .topic .topic-posts .post article.post-content {
   color: var(--color-grey-text-2);
   grid-area: content;
-  padding: 0;
-  margin-top: 12px;
+  margin-top: 0;
+  padding: 12px 0 12px 12px;
+  height: 100%;
+  width: 100%;
+  border-bottom: 1px solid var(--color-grey-border-3);
 }
 /*Forum post tips */
 .topic .topic-posts .post .post-signature {
-  border-top: 1px solid var(--color-grey-border-3);
   grid-area: tips;
   margin-top: 0;
+  border-width: 0;
 }
 /* Post post signature */
 .topic .topic-posts .post .likes + .post-signature {
@@ -1198,12 +1204,16 @@ table {
 /* Post user info */
 .topic .topic-posts .post aside.post-info {
   border: 0;
+  border-radius: 0;
   background-color: transparent;
   grid-area: userinfo;
-  width: auto;
+  width: 160px;
   min-width: auto;
   padding: 0;
   margin-top: 0;
+  padding: 0 12px 0 0;
+  border-right: 1px solid var(--color-grey-border-3);
+  margin-right: 12px;
 }
 /* Post avatar */
 .topic .topic-posts .post aside.post-info > .post-info-image {
@@ -1254,6 +1264,9 @@ table {
   background: transparent;
   width: auto;
 }
+.topic .topic-posts .post .likes i:before {
+  font-size: 20px;
+}
 .topic .topic-posts .post .likes > span > div {
   cursor: pointer;
 }
@@ -1280,6 +1293,10 @@ a.permalink:before {
       "likes";
   }
   /* Post user info */
+  .topic .topic-posts .post aside.post-info {
+    width: 100%;
+    border-width: 0;
+  }
   .topic .topic-posts .post aside.post-info > p {
     width: calc(100% - 43px - 75px - 12px - 12px);
     margin: 0 auto;
