@@ -20,6 +20,7 @@
   height: 40px;
   width: 40px;
   border: 2px !important;
+  position: absolute;
 }
 /* Message header */
 .sent > h4 {
