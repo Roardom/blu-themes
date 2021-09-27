@@ -710,6 +710,7 @@ h4,
 h5,
 h6 {
   color: var(--color-grey-text-1);
+  word-break: break-word;
 }
 /* Progress Bars
 ============================================================================ */
