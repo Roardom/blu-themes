@@ -458,6 +458,8 @@ h4 .badge-user,
 /* Entire Message */
 #frame .content .messages ul li.sent {
   border-bottom: 1px dashed var(--color-grey-border-3);
+  width: 100%;
+  max-width: 100%;
 }
 /* Navigation tabs
 ============================================================================ */
