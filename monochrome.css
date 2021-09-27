@@ -368,7 +368,7 @@ h4 .badge-user,
 .sent h4 {
   display: inline !important;
   margin: 0;
-  background: transparent;
+  background-color: transparent !important;
 }
 /* Message Text */
 .sent .text-bright {
@@ -376,7 +376,7 @@ h4 .badge-user,
   display: inline-block !important;
   color: var(--color-grey-text-5);
   word-break: break-word;
-  background-color: transparent;
+  background-color: transparent !important;
   margin: 0 !important;
 }
 .sent > div:not(.system):before {
