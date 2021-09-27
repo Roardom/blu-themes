@@ -19,10 +19,10 @@
   --color-grey-border-5: #444444; /* pre border */
 
   --color-grey-table-1: #2c2c2c; /* Table rows even */
-  --color-grey-table-2: #262626; /* Table rows odd */
+  --color-grey-table-2: rgba(255, 255, 255, 0.05); /* Table rows odd */
   --color-grey-table-3: #c7c7c7; /* Table row text */
   --color-grey-table-4: #292929; /* Table rows Details */
-  --color-grey-table-5: #333333; /* Table rows Pinned */
+  --color-grey-table-5: rgba(255, 255, 255, 0.1); /* Table rows Pinned */
 
   --color-notifier: #2ecc71; /* For notifications */
 
@@ -517,12 +517,6 @@ h4 .badge-user,
   50% {
     opacity: 0;
   }
-}
-/* Uploader Ranks (Should be under Tables)
-============================================================================ */
-
-.tab-pane .table-responsive .table > tbody > tr:nth-child(n) > td {
-  background: var(--color-grey-bg-5) !important;
 }
 /* Navigation Menus
 ============================================================================ */
@@ -1043,71 +1037,101 @@ div.header.yellow div.inner_content {
   color: var(--color-grey-table-3);
 }
 table {
-  background-color: var(--color-grey-bg-3);
+  background-color: var(--color-grey-table-1);
   color: var(--color-grey-text-5);
-  border: 0px solid var(--color-grey-border-5) !important;
+  border: 0 !important;
+  border-radius: 12px;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12),
+    0 2px 4px -1px rgba(0, 0, 0, 0.2);
   margin: 0 auto;
   max-width: var(--max-width-big);
+  border-collapse: separate;
+  border-spacing: 0;
 }
 @media screen and (max-width: 992px) {
   table {
-    background-color: var(--color-grey-bg-3);
-    color: var(--color-grey-text-5);
-    border: 0px solid var(--color-grey-border-5) !important;
-    margin: 0 auto;
     max-width: var(--max-width-small);
   }
 }
-table tbody tr:first-child {
-  border-width: 1px 1px 1px 1px;
-  border-style: solid;
-  border-color: var(--color-grey-border-3);
+/* Table borders */
+.table-bordered > thead > tr > th,
+.table-bordered > tbody > tr > td {
+  border-width: 0;
 }
-table tbody tr {
-  border-width: 0 1px 1px 1px;
-  border-style: solid;
-  border-color: var(--color-grey-border-3);
+/* Tables inside panels */
+.panel > .table-responsive > .table,
+.panel > .table-responsive > .table > tbody > tr {
+  border-radius: 0 !important;
 }
-.table-bordered > thead > tr > th {
-  border-width: 1px 0px;
-  border-style: solid;
-  border-color: var(--color-grey-border-2);
-}
-.table-bordered,
-.table-bordered > tbody > tr > td,
-.table-bordered > tbody > tr > th,
-.table-bordered > tfoot > tr > td,
-.table-bordered > tfoot > tr > th,
-.table-bordered > thead > tr > td,
-.table-bordered > thead > tr > th {
-  border: 1px solid var(--color-grey-border-3);
-}
-/* Table for torrent details */
-.panel .table > tbody > tr:nth-child(n) > td {
-  background: var(--color-grey-table-4) !important;
+.panel > .table-responsive > .table > tbody > tr > td {
+  background: transparent !important;
   color: var(--color-grey-text-2);
+  border-radius: 0 !important;
 }
 .panel .table > tbody > tr:nth-child(n) > td strong {
   font-weight: 400 !important;
 }
-.table-bordered > tbody > tr > td {
-  border: 0;
+/* Tables inside panels that are expanded */
+.panel > .table-responsive + .table-responsive > .table {
+  background: var(--color-grey-table-1) !important;
+}
+.panel > .table-responsive + .table-responsive > .table > tbody > tr > td {
+  background: transparent !important;
+}
+/* Table Rows */
+.table > tbody > tr,
+.table-responsive .table tbody tr.success {
+  background: transparent !important;
+}
+/* Pinned torrent */
+.table-responsive .table tbody tr.success > td {
+  background: var(--color-grey-table-5) !important;
 }
 /* Table Row Odd */
-.table > tbody > tr:nth-child(odd) {
-  background: var(--color-grey-table-1) !important;
-}
-.table > tbody > tr:nth-child(odd) > td {
-  background: var(--color-grey-table-1) !important;
-  border-bottom: 1px solid var(--color-grey-border-4);
-}
-/* Table Row Even */
-.table > tbody > tr:nth-child(even) > td {
+.table > tbody > tr:nth-child(odd) > td,
+.panel
+  > .table-responsive
+  + .table-responsive
+  > .table
+  > tbody
+  > tr:nth-child(odd)
+  > td {
   background: var(--color-grey-table-2) !important;
-  border-bottom: 1px solid var(--color-grey-border-4);
 }
-.table > tbody > tr:nth-child(even) {
-  background: var(--color-grey-table-2) !important;
+/* Table corners */
+.table > thead > tr:first-child > th:first-child,
+.table > tbody > tr:first-child > td:first-child {
+  border-top-left-radius: 15px;
+}
+.table > thead > tr:first-child > th:last-child,
+.table > tbody > tr:first-child > td:last-child {
+  border-top-right-radius: 15px;
+}
+.table > tbody > tr:last-child > td:first-child {
+  border-bottom-left-radius: 15px;
+}
+.table > tbody > tr:last-child > td:last-child {
+  border-bottom-right-radius: 15px;
+}
+/* Table corners with header */
+.table > thead + tbody > tr:first-child > td:first-child {
+  border-top-left-radius: 0;
+}
+.table > thead + tbody > tr:first-child > td:last-child {
+  border-top-right-radius: 0;
+}
+/* First Table Row */
+.table > thead > tr:first-child > th,
+.table > tbody > tr:first-child > td {
+  padding-top: 10px;
+}
+.table > thead + tbody > tr:first-child > td {
+  padding-top: 8px;
+}
+/* First Table Column */
+.table > thead > tr > th:first-child,
+.table > tbody > tr > td:first-child {
+  padding-left: 10px;
 }
 .table > tbody > tr > td.text-green {
   color: #3fb618 !important;
@@ -1744,16 +1768,6 @@ form .form-group div .badge-user label {
 }
 /* Search Table
 ============================================================================ */
-/* Search Table Rows Odd */
-#facetedSearch .table > tbody > tr:nth-child(odd) > td {
-  background: var(--color-grey-table-1) !important;
-  border-bottom: 1px solid var(--color-grey-border-4);
-}
-/* Search Table Row Even */
-#facetedSearch .table > tbody > tr:nth-child(even) > td {
-  background: var(--color-grey-table-2) !important;
-  border-bottom: 1px solid var(--color-grey-border-4);
-}
 /* Remove Genres */
 #facetedSearch .table > tbody > tr > td > br:nth-of-type(2) ~ .badge-extra {
   display: none;
