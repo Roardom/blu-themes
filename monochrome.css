@@ -1054,6 +1054,17 @@ table {
     max-width: var(--max-width-small);
   }
 }
+/* Table headers */
+.table > thead > tr > th {
+  white-space: nowrap;
+}
+.table > thead > tr > th > div {
+  display: flex;
+  align-items: center;
+}
+.table > thead > tr > th > div > i:not(:first-child) {
+  margin-left: 0.5ch;
+}
 /* Table borders */
 .table-bordered > thead > tr > th,
 .table-bordered > thead > tr > td,
