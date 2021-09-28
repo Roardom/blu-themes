@@ -354,7 +354,7 @@ h4 .badge-user,
 #frame .content .messages ul li.sent img.chat-user-image {
   height: 1.1em;
   width: 1.1em;
-  border: 0 !important;
+  border-width: 0 !important;
   margin-top: 0.1em;
   position: static;
 }
