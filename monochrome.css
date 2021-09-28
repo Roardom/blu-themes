@@ -364,11 +364,15 @@ h4 .badge-user,
   float: left;
   margin-top: 5px;
 }
+#frame .content .messages ul li.sent h4 .text-muted:after {
+  content: ":";
+}
 /* Message Header */
 .sent h4 {
-  display: inline !important;
-  margin: 0;
+  display: inline-block !important;
   background-color: transparent !important;
+  margin: 0;
+  padding-right: 0;
 }
 /* Message Text */
 .sent .text-bright {
@@ -378,6 +382,7 @@ h4 .badge-user,
   word-break: break-word;
   background-color: transparent !important;
   margin: 0 !important;
+  padding: 0 !important;
 }
 .sent > div:not(.system):before {
   border-right-width: 0;
@@ -385,7 +390,7 @@ h4 .badge-user,
 }
 /* System Message Header */
 .sent a[href="/users/System"] + h4 {
-  display: none;
+  display: none !important;
 }
 /* Typing popup */
 .typing.pull-left {
