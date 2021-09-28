@@ -19,7 +19,7 @@
 #frame .content .messages ul li.sent img.chat-user-image {
   height: 40px;
   width: 40px;
-  border: 2px !important;
+  border-width: 2px !important;
   position: absolute;
 }
 /* Message header */
@@ -30,6 +30,10 @@
   background-color: var(--color-grey-bg-2) !important;
   padding: 4px 12px 0 8px;
   margin: 4px 12px 0 48px;
+}
+/* Message buttons (pm, gift) */
+.sent h4 i {
+  font-weight: 900;
 }
 /* Message text */
 .sent .text-bright {
