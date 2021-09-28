@@ -466,15 +466,25 @@ h4 .badge-user,
 }
 /* Entire content container */
 #frameBody {
-  height: 70vh;
+  height: calc(95vh - 50px - 203px - 56px);
 }
 /* Entire Content */
 #frame > .content {
   background-color: var(--color-grey-bg-5);
 }
 /* Entire Content background */
+#frame > .content .messages,
 #frame > .content .messages ul {
-  max-height: calc(70vh - 42.85px);
+  height: calc(95vh - 42.85px - 203px - 56px - 50px);
+}
+@media only screen and (max-width: 767px) {
+  #frameBody {
+    height: calc(100vh - 50px - 197px);
+  }
+  #frame > .content .messages,
+  #frame > .content .messages ul {
+    height: calc(100vh - 42.85px - 50px - 197px);
+  }
 }
 /* Entire Message */
 #frame .content .messages ul li.sent {
