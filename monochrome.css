@@ -2133,144 +2133,170 @@ div.stats div.content {
     margin: 2px auto;
   }
   /* Torrent tables appearance */
-  #facetedSearch .table-responsive .table thead tr th:nth-child(1) {
+  #torrent-list-table > tbody > tr {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-areas:
+      "overview overview overview overview overview overview overview overview overview"
+      "poster category tmdb tmdb tmdb tmdb tmdb tmdb buttons"
+      "poster type age age age size size size buttons"
+      "poster resolution seeders seeders leechers leechers snatched snatched buttons";
+  }
+  /* Table headers */
+  #torrent-list-table > thead > tr {
+    display: flex;
+    justify-content: space-around;
+  }
+  #torrent-list-table > thead > tr > .torrent-listings-poster,
+  #torrent-list-table > thead > tr > .torrent-listings-format,
+  #torrent-list-table > thead > tr > .torrent-listings-tmdb,
+  #torrent-list-table > thead > tr > .torrent-listings-download {
     display: none;
   }
-  #facetedSearch .table-responsive .table thead tr th:nth-child(2) {
-    display: none;
+  #torrent-list-table > thead > tr > .torrent-listings-overview,
+  #torrent-list-table > thead > tr > .torrent-listings-size,
+  #torrent-list-table > thead > tr > .torrent-listings-seeders,
+  #torrent-list-table > thead > tr > .torrent-listings-leechers,
+  #torrent-list-table > thead > tr > .torrent-listings-completed,
+  #torrent-list-table > thead > tr > .torrent-listings-age {
+    padding-top: 10px !important;
+    display: flex;
+    align-items: center;
   }
-  #facetedSearch .table-responsive .table thead tr th:nth-child(3) {
-    display: none;
+  /* Table cells */
+  #torrent-list-table > tbody > tr > td {
+    padding: 2px !important;
   }
-  #facetedSearch .table-responsive .table thead tr th:nth-child(5) {
-    display: none;
+  #torrent-list-table .torrent-listings-size > span,
+  #torrent-list-table .torrent-listings-age > span {
+    height: 100%;
   }
-  #facetedSearch .table-responsive .table thead tr th:nth-child(6) {
-    display: none;
-  }
-  #facetedSearch .table-responsive .table thead tr th:nth-child(7) .fas {
-    display: none;
-  }
-  #facetedSearch .table-responsive .table thead tr th:nth-child(8) .fas {
-    display: none;
-  }
-  #facetedSearch .table-responsive .table thead tr th:nth-child(9) .fas {
-    display: none;
-  }
-  #facetedSearch .table-responsive .table thead tr th:nth-child(10) .fas {
-    display: none;
-  }
-  #facetedSearch .table-responsive .table thead tr th:nth-child(11) .fas {
-    display: none;
-  }
-  #facetedSearch .table-responsive .table tbody tr:nth-child(odd) td {
-    background-color: var(--color-grey-table-1) !important;
-  }
-  #facetedSearch .table-responsive .table tbody tr:nth-child(even) td {
-    background-color: var(--color-grey-table-2) !important;
-  }
-  #facetedSearch .table-responsive .table tbody tr td {
-    display: inline-block !important;
+  #torrent-list-table .torrent-listings-format > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   /* Poster */
-  #facetedSearch .table-responsive .table tbody tr td:nth-of-type(1) {
-    width: 25% !important;
-    height: 100px !important;
-    float: left;
+  #torrent-list-table .torrent-listings-poster {
+    grid-area: poster;
+    width: 100% !important;
+    padding-left: 6px !important;
+  }
+  #torrent-list-table .torrent-poster {
+    padding-right: 0;
+  }
+  /* Format */
+  #torrent-list-table .torrent-listings-format {
+    display: contents;
   }
   /* TV / Movie / Fanres Icon */
-  #facetedSearch .table-responsive .table tbody tr td:nth-of-type(2) {
-    width: 50% !important;
-    height: 50px !important;
-    float: left;
+  #torrent-list-table .torrent-listings-format > a {
+    grid-area: category;
+    background-color: inherit;
   }
-  /* Type and Resolution */
-  #facetedSearch .table-responsive .table tbody tr td:nth-of-type(3) {
-    width: 50% !important;
-    height: 50px !important;
-    margin: 0;
-    padding: 0;
-    float: left;
+  /* Type */
+  #torrent-list-table .torrent-listings-format > div:nth-of-type(1) {
+    grid-area: type;
+    background-color: inherit;
   }
-  #facetedSearch .table-responsive .table tbody tr td:nth-of-type(3) div {
-    margin: 4px 0;
-    height: 33%;
-    width: 50%;
-    display: inline-block;
+  /* Resolution */
+  #torrent-list-table .torrent-listings-format > div:nth-of-type(2) {
+    grid-area: resolution;
+    background-color: inherit;
+    padding-bottom: 24px;
   }
   /* Title and icons */
-  #facetedSearch .table-responsive .table tbody tr td:nth-of-type(4) {
-    width: 100% !important;
-    display: block !important;
-    float: left;
+  #torrent-list-table .torrent-listings-overview {
+    grid-area: overview;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 6px !important;
   }
-  /* Download Button */
-  #facetedSearch .table-responsive .table tbody tr td:nth-of-type(5) {
-    width: 25% !important;
-    height: 50px !important;
-    margin: 0;
-    padding: 6px;
+  /* Title */
+  #torrent-list-table .torrent-listings-name {
+    white-space: normal;
+    width: 100%;
+    padding: 12px 12px 12px 12px !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   }
-  /* Download Button button*/
-  #facetedSearch .table-responsive .table tbody tr td:nth-of-type(5) a button {
-    width: 100% !important;
-    height: 100% !important;
-    margin: 4px 0;
+  #torrent-list-table tr.success .torrent-listings-name {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
   }
-  /* Bookmark Button */
-  #facetedSearch .table-responsive .table tbody tr td:nth-of-type(6) {
-    width: 25% !important;
-    height: 50px !important;
-    margin: 0;
-    padding: 6px;
+  #torrent-list-table tr.success:first-child .torrent-listings-name {
+    border-top-width: 0;
   }
-  /* Bookmark Button button*/
-  #facetedSearch
-    .table-responsive
-    .table
-    tbody
-    tr
-    td:nth-of-type(6)
-    span
-    button {
-    width: 100% !important;
-    height: 100% !important;
-    margin: 4px 0;
+  /* Uploader */
+  #torrent-list-table .torrent-listings-uploader {
+    white-space: normal;
+    width: 100%;
+    text-align: right;
+    padding-bottom: 6px !important;
   }
-  /* Age */
-  #facetedSearch .table-responsive .table tbody tr td:nth-of-type(7) {
-    width: 30% !important;
-    height: 30px !important;
-    margin: 0;
-    float: left;
+  /* Buttons */
+  #torrent-list-table .torrent-listings-download {
+    grid-area: buttons;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  #torrent-list-table .torrent-listings-download > a,
+  #torrent-list-table .torrent-listings-download > div {
+    display: inline-block;
+    width: 40px;
+  }
+  #torrent-list-table .torrent-listings-download button {
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+  }
+  /* TMDB */
+  #torrent-list-table .torrent-listings-tmdb {
+    grid-area: tmdb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #torrent-list-table .torrent-listings-tmdb > span {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+  }
+  #torrent-list-table .torrent-listings-tmdb > span > a {
+    display: flex;
+    align-items: center;
   }
   /* Size */
-  #facetedSearch .table-responsive .table tbody tr td:nth-of-type(8) {
-    width: 25% !important;
-    height: 30px !important;
-    margin: 0;
-    float: left;
+  #torrent-list-table .torrent-listings-size {
+    grid-area: size;
+    text-align: center;
+  }
+  #torrent-list-table .torrent-listings-size > span {
+    padding: 0 !important;
   }
   /* Seeds */
-  #facetedSearch .table-responsive .table tbody tr td:nth-of-type(9) {
-    width: 10% !important;
-    height: 30px !important;
-    margin: 0;
-    float: left;
+  #torrent-list-table .torrent-listings-seeders {
+    grid-area: seeders;
+    text-align: right;
   }
-  /* Peers */
-  #facetedSearch .table-responsive .table tbody tr td:nth-of-type(10) {
-    width: 10% !important;
-    height: 30px !important;
-    margin: 0;
-    float: left;
+  /* Leeches */
+  #torrent-list-table .torrent-listings-leechers {
+    grid-area: leechers;
+    text-align: center;
   }
   /* Snatched */
-  #facetedSearch .table-responsive .table tbody tr td:nth-of-type(11) {
-    width: 25% !important;
-    height: 30px !important;
-    margin: 0;
-    float: left;
+  #torrent-list-table .torrent-listings-completed {
+    grid-area: snatched;
+    text-align: left;
+  }
+  /* Age */
+  #torrent-list-table .torrent-listings-age {
+    grid-area: age;
+    text-align: center;
+  }
+  #torrent-list-table .torrent-listings-age > span {
+    padding: 0 !important;
   }
   /* Buttons in e.g. mod queue */
   .table-responsive .btn {
