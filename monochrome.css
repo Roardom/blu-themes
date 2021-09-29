@@ -19,7 +19,7 @@
   --color-grey-border-5: #444444; /* pre border */
 
   --color-grey-table-1: #2c2c2c; /* Table rows even */
-  --color-grey-table-2: rgba(255, 255, 255, 0.05); /* Table rows odd */
+  --color-grey-table-2: rgba(255, 255, 255, 0.035); /* Table rows odd */
   --color-grey-table-3: #c7c7c7; /* Table row text */
   --color-grey-table-4: #292929; /* Table rows Details */
   --color-grey-table-5: rgba(255, 255, 255, 0.1); /* Table rows Pinned */
