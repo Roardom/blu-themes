@@ -474,7 +474,7 @@ h4 .badge-user,
 }
 /* Entire Content background */
 #frame > .content .messages,
-#frame > .content .messages ul {
+#frame > .content .messages > ul {
   height: calc(98vh - 42.85px - 203px - 56px - 50px);
   max-height: unset;
 }
