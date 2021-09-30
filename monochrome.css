@@ -233,9 +233,21 @@ body {
   background: var(--color-grey-bg-3);
 }
 /* Hides the left NavBar before it minimizes */
-body[hoe-navigation-type="vertical-compact"]
-  #hoeapp-container:not(.hoe-minimized-lpanel) {
-  visibility: hidden;
+@media only screen and (max-width: 767px) {
+  #hoeapp-wrapper:not([hoe-device-type="phone"]) #hoeapp-container {
+    visibility: hidden;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  #hoeapp-wrapper:not([hoe-device-type="tablet"]) #hoeapp-container {
+    visibility: hidden;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  body[hoe-navigation-type="vertical-compact"]
+    #hoeapp-container:not(.hoe-minimized-lpanel) {
+    visibility: hidden;
+  }
 }
 /* Left NavBar Icons and folders*/
 #hoeapp-container[hoe-color-type="lpanel-bg5"] #hoe-left-panel,
@@ -2112,11 +2124,6 @@ div.stats div.content {
   /* Show Menu expanding icon */
   .hoe-sidebar-toggle {
       display: block;
-  }
-  /* Prevents hiding of expanded left NavBar */
-  body[hoe-navigation-type="vertical-compact"]
-    #hoeapp-container:not(.hoe-minimized-lpanel):not(.hoe-minimized-lpanel) {
-    visibility: visible;
   }
   /* Extra Stats */
   .stats .table-responsive .content .inner_content .inner_stats {
