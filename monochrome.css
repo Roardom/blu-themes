@@ -116,13 +116,13 @@ body {
 .btn {
   color: var(--color-grey-text-2);
   font-weight: bold;
-  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3) !important;
   background-image: none;
   border: 0;
   padding: 11px 13px;
   margin: 2px;
   border-radius: 2px;
-  transition: background 0.8s;
+  transition: background 0.8s !important;
   outline: none;
   line-height: 1;
 }
