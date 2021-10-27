@@ -895,8 +895,11 @@ a.text-bright:hover {
   font-weight: 700;
 }
 /* Torrent Page Cast */
+.movie-wrapper .cast-item {
+  min-width: 0;
+}
 .movie-wrapper .cast-item img {
-  clip-path: inset(0 round 10px);
+  clip-path: circle(closest-side);
 }
 /* Fix poor colouring of meta text */
 .meta-info .text-orange {
