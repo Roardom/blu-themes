@@ -905,6 +905,10 @@ a.text-bright:hover {
 .meta-info .text-orange {
   color: var(--color-grey-text-7);
 }
+/* Torrent Meta Overlay */
+.meta-wrapper .movie-wrapper + div {
+  display: none;
+}
 /* Torrents Page Buttons */
 .torrent-buttons .button-overlay,
 .torrent-buttons .vibrant-overlay {
