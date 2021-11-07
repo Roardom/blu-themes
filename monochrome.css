@@ -1047,15 +1047,17 @@ div.header.yellow div.inner_content {
   grid-area: date;
 }
 /* Comment delete */
-.comments-list > li > div > a[href*="/delete/"] {
+.comments-list > li > div > a[href*="/delete/"]
+.comments-list > li > div > div > form[href*="/delete/"] {
   grid-area: delete;
 }
 /* Comment edit */
-.comments-list > li > div > a[data-toggle="modal"] {
+.comments-list > li > div > a[data-toggle="modal"]
+.comments-list > li > div > div > a[data-toggle="modal"] {
   grid-area: edit;
 }
 /* Comment text */
-.comments-list > li > div > div {
+.comments-list > li > div > div:last-child {
   grid-area: comment;
 }
 /* Comment edit/delete buttons */
