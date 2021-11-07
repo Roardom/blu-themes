@@ -972,7 +972,7 @@ div.header.yellow div.inner_content {
   }
 }
 /* Comments
-============================================================================ */
+============================================================================ 
 #comments .panel {
   box-shadow: none;
   background-color: transparent !important;
@@ -988,7 +988,7 @@ div.header.yellow div.inner_content {
 .comments-list > li > .media-body {
   width: auto;
 }
-/* Comment list item */
+/* Comment list item 
 .comments-list > li {
   border-left-width: 0 !important;
   margin-top: 4px;
@@ -998,13 +998,13 @@ div.header.yellow div.inner_content {
   background-color: var(--color-grey-bg-2) !important;
   color: var(--color-grey-text-2);
 }
-/* Nested comments/quotes */
+/* Nested comments/quotes 
 .comments-list .comments-list > li,
 .topic-posts .post .comments-list > li {
   border-left-width: 5px !important;
   border-left-color: var(--color-grey-border-1) !important;
 }
-/* Comment container */
+/* Comment container 
 .comments-list .media-body {
   display: grid;
   grid-template-columns: 58px auto 1fr auto 30px 30px;
@@ -1020,7 +1020,7 @@ div.header.yellow div.inner_content {
       "avatar comment comment comment ."
   }
 }
-/* Comment avatar */
+/* Comment avatar 
 .comments-list > li > div > a.pull-left {
   display: contents;
 }
@@ -1034,33 +1034,33 @@ div.header.yellow div.inner_content {
 .img-avatar-48 {
   border-radius: 50%;
 }
-/* Comment anonymous username */
+/* Comment anonymous username 
 .comments-list > li > div > a[href*="/users/"] {
   grid-area: username;
 }
-/* Comment username */
+/* Comment username 
 .comments-list > li > div > strong {
   grid-area: username;
 }
-/* Comment date */
+/* Comment date 
 .comments-list > li > div > span {
   grid-area: date;
 }
-/* Comment delete */
+/* Comment delete 
 .comments-list > li > div > a[href*="/delete/"]
 .comments-list > li > div > div > form[href*="/delete/"] {
   grid-area: delete;
 }
-/* Comment edit */
+/* Comment edit 
 .comments-list > li > div > a[data-toggle="modal"]
 .comments-list > li > div > div > a[data-toggle="modal"] {
   grid-area: edit;
 }
-/* Comment text */
+/* Comment text 
 .comments-list > li > div > div:last-child {
   grid-area: comment;
 }
-/* Comment edit/delete buttons */
+/* Comment edit/delete buttons 
 .comments-list > li > div > a[href*="/delete/"],
 .comments-list > li > div > a[data-toggle="modal"] {
   width: 30px;
