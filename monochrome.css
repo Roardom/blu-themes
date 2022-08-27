@@ -42,6 +42,15 @@
   --max-width-small: 100% !important;
   --max-width-big: calc(100% - 100px) !important;
 
+  --data-table-fg: inherit;
+  --data-table-th-bg: #363636;
+  --data-table-thead-border: 1px solid #404040;
+  --data-table-tr-border: none;
+  --data-table-tr-even-bg: #333;
+  --data-table-tr-hover-bg: #404040;
+  --data-table-tr-odd-bg: #2c2c2c;
+  --data-table-tfoot-border: 1px solid #404040;
+
   --key-value-even-bg: #292929;
   --key-value-fg: inherit;
   --key-value-odd-bg: #292929;
