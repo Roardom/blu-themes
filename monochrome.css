@@ -41,6 +41,15 @@
 
   --max-width-small: 100% !important;
   --max-width-big: calc(100% - 100px) !important;
+
+  --panel-action-fg: #ccc;
+  --panel-border: 1px solid #393939;
+  --panel-bg: #292929;
+  --panel-fg: inherit;
+  --panel-box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  --panel-border-radius: 4px;
+  --panel-head-bg: #363636;
+  --panel-head-fg: #fff;
 }
 body {
   background-color: var(--color-grey-bg-4);
