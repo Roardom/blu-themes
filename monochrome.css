@@ -42,6 +42,11 @@
   --max-width-small: 100% !important;
   --max-width-big: calc(100% - 100px) !important;
 
+  --key-value-even-bg: #292929;
+  --key-value-fg: inherit;
+  --key-value-odd-bg: #292929;
+  --key-value-padding: 10px;
+
   --panel-action-fg: #ccc;
   --panel-border: 1px solid #393939;
   --panel-bg: #292929;
