@@ -1741,6 +1741,14 @@ details summary {
 }
 /* Pagination
 ============================================================================ */
+.panelV2 {
+  --paginate-bg: #363636;
+  --paginate-bg-hover: #3c3c3c;
+  --paginate-bg-current: #404040;
+  --paginate-fg: #777;
+  --paginate-fg-disabled: #888;
+  --paginate-divider: #666; 
+}
 .pagination > .active > a,
 .pagination > .active > a:focus,
 .pagination > .active > a:hover,
