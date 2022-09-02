@@ -1109,6 +1109,9 @@ div.header.yellow div.inner_content {
 }
 /* Tables
 ============================================================================ */
+.data-table {
+  max-width: unset;
+}
 .table-responsive {
   /* border: 1px solid var(--color-grey-border-3); */
   color: var(--color-grey-table-3);
