@@ -64,6 +64,14 @@
   --panel-border-radius: 4px;
   --panel-head-bg: #363636;
   --panel-head-fg: #fff;
+  
+  --torrent-card-bg: #292929;
+  --torrent-card-fg: inherit;
+  --torrent-card-border: none;
+  --torrent-card-head-bg: #363636;
+  --torrent-card-head-fg: #b6b6b6;
+  --torrent-card-link-fg: #a6a6a6;
+  --torrent-card-genre-fg: #909090;
 }
 body {
   background-color: var(--color-grey-bg-4);
