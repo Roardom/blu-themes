@@ -708,6 +708,9 @@ i.torrent-icon {
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
   background-color: var(--color-grey-bg-3);
 }
+.panel-body {
+  background-color: #2c2c2c;
+}
 /* Main page container shadow */
 .block,
 .container > .block,
