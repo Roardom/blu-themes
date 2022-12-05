@@ -65,6 +65,24 @@
   --panel-head-bg: #363636;
   --panel-head-fg: #fff;
   
+  --post-bg: #2b2b2b;
+  --post-fg: #ccc;
+  --post-shadow: none;
+  --post-head-fg: var(--text-color);
+  --post-head-bg: none;
+  --post-toolbar-bg: #1d1d1d;
+  --post-toolbar-fg: #ccc;
+  --post-toolbar-hover-bg: #262626;
+  --post-toolbar-hover-fg: inherit;
+  --post-like-fg: green;
+  --post-dislike-fg: red;
+  --post-aside-bg: #393939;
+  --post-aside-fg: #ccc;
+  --post-footer-fg: #ccc;
+  
+  --subforum-listing-odd-bg: #2a2a2a;
+  --subforum-listing-even-bg: transparent;
+  
   --torrent-card-bg: #292929;
   --torrent-card-fg: inherit;
   --torrent-card-border: none;
