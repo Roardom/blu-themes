@@ -1,0 +1,225 @@
+:root {
+  --text-color: #d8dee9;
+  --color-dark-magenta: hsl(300, 10%, 25%);
+  --color-dark-green: hsl(120, 10%, 25%);
+  --color-dark-blue: hsl(240, 10%, 30%);
+  --color-dark-red: hsl(0, 10%, 25%);
+  --color-red: hsl(0, 20%, 40%);
+  --color-light-red: hsl(0, 20%, 50%);
+  --color-green: hsl(120, 20%, 40%);
+  --color-light-green: hsl(120, 20%, 50%);
+  --color-yellow: hsl(30, 20%, 40%);
+  --color-light-yellow: hsl(30, 20%, 50%);
+  --color-magenta: hsl(300, 20%, 40%);
+  --color-light-magenta: hsl(300, 20%, 50%);
+  --color-dark-purple: hsl(240, 20%, 30%);
+  --color-purple: hsl(240, 20%, 40%);
+  --color-light-purple: hsl(240, 20%, 50%);
+  --color-blue: hsl(205, 35%, 50%);
+  --color-light-blue: hsl(205, 35%, 60%);
+  --color-bright-white: hsl(0, 0%, 100%);
+  --color-light-orange: hsl(20, 20%, 50%);
+  --message-bubble-bg: #222;
+  --message-bubble-fg: currentColor;
+  --achievement-fg: #d8dee9;
+  --achievement-bg: #3b4252;
+  --article-card-bg: #3b4252;
+  --article-card-fg: #d8dee9;
+  --article-card-head-fg: #d8dee9;
+  --article-card-time-fg: #d8dee9;
+  --bbcode-input-header-bg: #3b4252;
+  --bbcode-input-body-bg: #3b4252;
+  --bbcode-input-border: 1px solid #4c566a;
+  --bbcode-input-border-radius: 10px;
+  --button-filled-bg: #8fbcbb;
+  --button-filled-border: none;
+  --button-filled-border-radius: 9999px;
+  --button-filled-fg: #eceff4;
+  --button-outlined-bg: inherit;
+  --button-outlined-border: 1px solid #4c566a;
+  --button-outlined-border-radius: 9999px;
+  --button-outlined-fg: currentColor;
+  --button-text-bg: inherit;
+  --button-text-border: none;
+  --button-text-border-radius: 5px;
+  --button-text-fg: currentColor;
+  --comparison-divider-fg: #fff;
+  --comparison-button-fg: #fff;
+  --data-table-fg: var(--text-color);
+  --data-table-th-bg: #3b4252;
+  --data-table-thead-border: none;
+  --data-table-tr-border: none;
+  --data-table-tr-even-bg: #3b4252;
+  --data-table-tr-hover-bg: #434c5e;
+  --data-table-tr-odd-bg: #3b4252;
+  --data-table-tfoot-border: none;
+  --dialog-bg: #3b4252;
+  --dialog-border: none;
+  --dialog-border-radius: 10px;
+  --dialog-box-shadow: none;
+  --dialog-fg: #d8dee9;
+  --dialog-head-bg: #3b4252;
+  --dialog-head-fg: #d8dee9;
+  --icon-button-bg: inherit;
+  --icon-button-border: none;
+  --icon-button-border-radius: 9999px;
+  --icon-button-fg: currentColor;
+  --input-text-border: 1px solid #4c566a;
+  --input-text-border-active: 2px solid #88c0d0;
+  --input-text-border-error: 1px solid #bf616a;
+  --input-text-border-hover: 2px solid #8fbcbb;
+  --input-text-border-radius: 10px;
+  --input-text-fg: #bbb;
+  --key-value-even-bg: #3b4252;
+  --key-value-fg: var(--text-color);
+  --key-value-odd-bg: #3b4252;
+  --key-value-padding: 10px;
+  --label-bg: #eceff4;
+  --label-fg: #5e81ac;
+  --label-fg-active: #88c0d0;
+  --label-fg-error: #bf616a;
+  --label-fg-hover: #8fbcbb;
+  --meter-fg: #8fbcbb;
+  --meter-bg: #5e81ac;
+  --notification-read: transparent;
+  --notification-unread: #a3be8c;
+  --paginate-bg: #3b4252;
+  --paginate-bg-hover: #434c5e;
+  --paginate-bg-current: #4c566a;
+  --paginate-fg: #d8dee9;
+  --paginate-fg-disabled: #d8dee9;
+  --paginate-divider: #d8dee9;
+  --panel-action-fg: #aaa;
+  --panel-border: none;
+  --panel-bg: #272727;
+  --panel-fg: var(--text-color);
+  --panel-box-shadow: none;
+  --panel-border-radius: 0;
+  --panel-head-bg: #1c1c1c;
+  --panel-head-fg: #fff;
+  --post-bg: #434c5e;
+  --post-fg: #d8dee9;
+  --post-shadow: none;
+  --post-head-fg: #d8dee9;
+  --post-head-bg: none;
+  --post-toolbar-bg: #2e3440;
+  --post-toolbar-fg: #ccc;
+  --post-toolbar-hover-bg: #3b4252;
+  --post-toolbar-hover-fg: inherit;
+  --post-like-fg: #a3be8c;
+  --post-dislike-fg: #bf616a;
+  --post-aside-bg: #4c566a;
+  --post-aside-fg: #d8dee9;
+  --post-footer-fg: #d8dee9;
+  --select-border: 1px solid #555;
+  --select-border-active: 2px solid #2195f3;
+  --select-border-error: 1px solid #ba1b1b;
+  --select-border-hover: 2px solid #999;
+  --select-border-radius: 5px;
+  --select-fg: #bbb;
+  --subforum-listing-odd-bg: #3b4252;
+  --subforum-listing-even-bg: #434c5e;
+  --textarea-border: 1px solid #4c566a;
+  --textarea-border-active: 2px solid #88c0d0;
+  --textarea-border-error: 1px solid #bf616a;
+  --textarea-border-hover: 2px solid #8fbcbb;
+  --textarea-border-radius: 10px;
+  --textarea-fg: #bbb;
+  --torrent-card-bg: #434c5e;
+  --torrent-card-fg: #d8dee9;
+  --torrent-card-border: none;
+  --torrent-card-head-bg: #434c5e;
+  --torrent-card-head-fg: #d8dee9;
+  --torrent-card-link-fg: #d8dee9;
+  --torrent-card-genre-fg: #d8dee9;
+}
+
+.panelV2 {
+    background-color: transparent;
+}
+
+.panel__head, .panel__header, .panel__heading, .panel__actions, .panel__action {
+    background-color: #2e3440;
+    color: #999;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.panel__body {
+    border-radius: 10px;
+    background-color: #3b4252;
+}
+
+.subforum-listings, .topic-listings, .data-table-wrapper, .data-table, .key-value {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.achievement__progress::-moz-progress-bar, .achievement__progress::-webkit-progress-value {
+    background-color: #8fbcbb;
+}
+
+.top-nav {
+    background-color: #2c323d;
+}
+
+.secondary-nav {
+    background-color: #242933;
+}
+
+.top-nav__icon-bar > li > a > i {
+    background-color: #3b4252;
+}
+
+.top-nav__dropdown:hover > a, .top-nav__dropdown:focus-within > a {
+    background-color: #3b4252;
+}
+
+.top-nav__dropdown > ul > li > a:hover, .top-nav__dropdown > ul > li > a:focus, .top-nav__dropdown > ul > li > form > button:hover, .top-nav__dropdown > ul > li > form > button:focus {
+    background-color: #3b4252;
+}
+
+.top-nav__dropdown > ul {
+    background-color: #2e3440;
+}
+
+.top-nav__dropdown > ul > li > a > i, .top-nav__dropdown > ul > li > form > button > i {
+    background-color: #434c5e;
+}
+
+.quick-search__inputs {
+    background-color: #3b4252;
+}
+
+.quick-search__radio-icon:hover, .quick-search__radio-label:focus-within .quick-search__radio-icon {
+    background-color: #434c5e;
+}
+
+.quick-search__radio:checked ~ .quick-search__radio-icon::before {
+    background-color: #4c566a;
+}
+
+.quick-search__result-link, .quick-search__result--empty, .quick-search__result--keep-typing {
+    background-color: #3b4252;
+}
+
+svg > circle:first-child {
+    stroke: #ebcb8b;
+}
+
+svg > circle:last-child {
+    fill: #ebcb8b;
+}
+
+a:hover {
+    color: #eceff4
+}
+
+body {
+    background-color: #2e3440 !important;
+}
+
+#l-footer {
+    background-image: none !important;
+}
