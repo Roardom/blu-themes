@@ -2,6 +2,7 @@ a.view-torrent:visited {
   color: inherit !important;
 }
 
-#vue + .mobile-hide + div {
+/* Hide random media */
+#vue + div + div {
   display: none;
 }
