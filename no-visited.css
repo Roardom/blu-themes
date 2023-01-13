@@ -3,6 +3,6 @@ a.view-torrent:visited {
 }
 
 /* Hide random media */
-#vue + div + div {
+#vue + div > div {
   display: none;
 }
