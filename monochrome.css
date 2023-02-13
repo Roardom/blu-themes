@@ -41,6 +41,19 @@
 
   --max-width-small: 100% !important;
   --max-width-big: calc(100% - 100px) !important;
+    
+  --bbcode-rendered-fg-default: #b9c1c9;
+  --bbcode-rendered-fg-muted: #8b949e;
+  --bbcode-rendered-fg-subtle: #484f58;
+  --bbcode-rendered-canvas-default: transparent;
+  --bbcode-rendered-canvas-subtle: #313131;
+  --bbcode-rendered-border-default: #3c3d3d;
+  --bbcode-rendered-border-muted: #464749;
+  --bbcode-rendered-neutral-muted: #46484b66;
+  --bbcode-rendered-accent-fg: #2196f3;
+  --bbcode-rendered-accent-emphasis: #279cf9;
+  --bbcode-rendered-attention-subtle: #7289da;
+  --bbcode-rendered-danger-fg: #ff141ccc;
 
   --data-table-fg: inherit;
   --data-table-th-bg: #363636;
@@ -60,6 +73,8 @@
   --select-fg: #666;
   --textarea-fg: #666;
   --label-fg: #666;
+  
+  --message-bubble-bg: #393939;
 
   --panel-action-fg: #ccc;
   --panel-border: 1px solid #393939;
