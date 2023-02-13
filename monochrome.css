@@ -55,6 +55,11 @@
   --key-value-fg: inherit;
   --key-value-odd-bg: #292929;
   --key-value-padding: 10px;
+  
+  --input-text-fg: #666;
+  --select-fg: #666;
+  --textarea-fg: #666;
+  --label-fg: #666;
 
   --panel-action-fg: #ccc;
   --panel-border: 1px solid #393939;
