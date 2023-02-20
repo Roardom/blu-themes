@@ -1955,6 +1955,23 @@ form .form-group div .badge-user label {
   box-shadow: none;
   border: 1px solid var(--color-grey-border-3);
 }
+/* Torrent search grouped layout
+=========================================================================== */
+/* Grouped torrents */
+.torrent-search--grouped__results {
+  --bg: #303030;
+  --header-bg: #444;
+  --text: #ddd;
+  --text-muted: #888;
+  --table-stripe: rgba(255, 255, 255, 0.03);
+  --hover-brightness-emphasis: 1.2;
+}
+.torrent-search--grouped__torrents {
+  margin: 0;
+  max-width: unset;
+  border-radius: unset;
+  box-shadow: unset;
+}
 /* Search Table
 ============================================================================ */
 /* Remove Genres */
