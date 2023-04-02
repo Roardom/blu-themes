@@ -110,6 +110,28 @@
   --torrent-card-head-fg: #b6b6b6;
   --torrent-card-link-fg: #a6a6a6;
   --torrent-card-genre-fg: #909090;
+  
+  --torrent-row-visited-fg: #a295fe;
+  --torrent-row-sticky-bg: #404040;
+  --torrent-row-fg: #ccc;
+  --torrent-row-format-fg: #ccc;
+  --torrent-row-format-bg: #3c3c3c;
+  --torrent-row-buttons-fg: currentColor;
+  --torrent-row-seeders-fg: #3fb618;
+  --torrent-row-leechers-fg: #966;
+  --torrent-row-completed-fg:#42a5f5;
+  --torrent-row-thanks-fg: #42a5f5;
+  --torrent-row-comments-fg: #3fb618;
+  --torrent-row-internal-fg: #baaf92;
+  --torrent-row-personal-fg: #865be9;
+  --torrent-row-stream-optimized-fg: #966;
+  --torrent-row-featured-fg: #42a5f5;
+  --torrent-row-freeleech-fg: #ffb800;
+  --torrent-row-double-upload-fg: #3fb618;
+  --torrent-row-sticky-fg: #000;
+  --torrent-row-highspeed-fg: #966;
+  --torrent-row-sd-fg: #42a5f5;
+  --torrent-row-bumped-fg: #ffb800;
 }
 body {
   background-color: var(--color-grey-bg-4);
