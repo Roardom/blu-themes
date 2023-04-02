@@ -153,6 +153,11 @@
   --torrent-row-highspeed-fg: #966;
   --torrent-row-sd-fg: #42a5f5;
   --torrent-row-bumped-fg: #ffb800;
+
+  --torrent-tag-fg: #eee;
+  --torrent-tag-bg: transparent;
+  --torrent-tag-hover-fg: #fff;
+  --torrent-tag-hover-bg: hsla(0,0%,100%,.1);
 }
 body {
   background-color: var(--color-grey-bg-4);
