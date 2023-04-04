@@ -39,6 +39,11 @@
   --color-A200: var(--color-grey-text-2);
   --color-A400: var(--color-grey-text-2);
 
+  --article-card-bg: #2c2c2c;
+  --article-card-fg: #aaa;
+  --article-card-head-fg: #aaa;
+  --article-card-time-fg: #aaa;
+
   --max-width-small: 100% !important;
   --max-width-big: calc(100% - 100px) !important;
     
