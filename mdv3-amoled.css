@@ -13,11 +13,11 @@
   --article-card-time-fg: #999;
   --article-box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 1px 8px 0 rgba(0, 0, 0, 0.12), 0 3px 3px -2px rgba(0, 0, 0, 0.4);
 
-  --bbcode-input-header-bg: #333;
-  --bbcode-input-body-bg: #2A292E;
-  --bbcode-input-border: 1px solid #555;
+  --bbcode-input-header-bg: #000;
+  --bbcode-input-body-bg: #000;
+  --bbcode-input-border: 1px solid #222;
   --bbcode-input-border-radius: 22px;
-  --bbcode-input-bg: #2A292E;
+  --bbcode-input-bg: #000;
 
   --bbcode-rendered-fg-default: #c9d1d9;
   --bbcode-rendered-fg-muted: #8b949e;
@@ -77,7 +77,7 @@
   --fieldset-bg: inherit;
   --fieldset-fg: #aaa;
   --fieldset-border-radius: 20px;
-  --fieldset-border: 1px solid #606060;
+  --fieldset-border: 1px solid #444;
 
   --icon-button-bg: inherit;
   --icon-button-border: none;
@@ -88,7 +88,7 @@
   --icon-button-filled-fg: white;
   --icon-button-filled-border: none;
 
-  --input-text-border: 1px solid #555;
+  --input-text-border: 1px solid #444;
   --input-text-border-active: 2px solid #2195f3;
   --input-text-border-error: 1px solid #ba1b1b;
   --input-text-border-hover: 2px solid #999;
@@ -206,7 +206,7 @@
   --secondary-nav-tab-menu-border-radius: 6px;
   --secondary-nav-tab-menu-box-shadow: 0 12px 17px 2px rgba(0, 0, 0, 0.14), 0 5px 22px 4px rgba(0, 0, 0, 0.12), 0 7px 8px -4px rgba(0, 0, 0, 0.2);
 
-  --select-border: 1px solid #606060;
+  --select-border: 1px solid #444;
   --select-border-active: 2px solid #2195f3;
   --select-border-error: 1px solid #ba1b1b;
   --select-border-hover: 2px solid #999;
@@ -221,7 +221,7 @@
   --subforum-listing-even-bg: transparent;
   --subforum-listing-border: 1px solid #3c3c3c;
 
-  --textarea-border: 1px solid #555;
+  --textarea-border: 1px solid #444;
   --textarea-border-active: 2px solid #2196f3;
   --textarea-border-error: 1px solid #ba1b1b;
   --textarea-border-hover: 2px solid #999;
@@ -257,25 +257,25 @@
   --top-nav-stats-fg: #EAE9EE;
   --top-nav-toggle-fg: #EAE9EE;
 
-  --torrent-card-bg: #343338;
-  --torrent-card-fg: #bbb;
-  --torrent-card-border: none;
-  --torrent-card-head-bg: #343338;
-  --torrent-card-head-fg: #ccc;
-  --torrent-card-link-fg: #ccc;
-  --torrent-card-genre-fg: #aaa;
+  --torrent-card-bg: #000;
+  --torrent-card-fg: #ddd;
+  --torrent-card-border: 1px solid #444;
+  --torrent-card-head-bg: #000;
+  --torrent-card-head-fg: #ddd;
+  --torrent-card-link-fg: #fff;
+  --torrent-card-genre-fg: #999;
 
-  --torrent-group-bg: #343338;
-  --torrent-group-header-bg: #343338;
+  --torrent-group-bg: #000;
+  --torrent-group-header-bg: #000;
   --torrent-group-text: #aaa;
   --torrent-group-text-muted: #888;
-  --torrent-group-table-stripe: rgba(0, 0, 0, 0.08);
+  --torrent-group-table-stripe: rgba(255, 255, 255, 0.06);
   --torrent-group-hover-brightness-emphasis: 1.13;
-  --torrent-group-chip-border: #444;
+  --torrent-group-chip-border: #222;
 
   --torrent-row-fg: #bbb;
   --torrent-row-visited-fg: #555;
-  --torrent-row-sticky-bg: #e9f6ff;
+  --torrent-row-sticky-bg: #111;
   --torrent-row-format-fg: #bbb;
   --torrent-row-format-bg: transparent;
   --torrent-row-buttons-fg: #888;
@@ -290,7 +290,7 @@
   --torrent-row-featured-fg: #f92672;
   --torrent-row-freeleech-fg: #ffb800;
   --torrent-row-double-upload-fg: #4cb828;
-  --torrent-row-sticky-fg: #111111;
+  --torrent-row-sticky-fg: #444;
   --torrent-row-highspeed-fg: #ff0039;
   --torrent-row-sd-fg: #ff7518;
   --torrent-row-bumped-fg: #f9ba13;
@@ -377,10 +377,6 @@ body {
   border-radius: 22px;
 }
 
-.page__forum--topic .bbcode-input {
-  --bbcode-input-border: none;
-}
-
 .post {
   border-radius: 22px;
   border: 1px solid #262626;
@@ -457,6 +453,7 @@ a:hover {
 
 .torrent-search--grouped__result {
   border-radius: 22px;
+  border: 1px solid #222;
 }
 
 .torrent-card {
@@ -477,12 +474,16 @@ a:hover {
   margin-top: 4px;
 }
 
+.torrent__name {
+  color: #fff;
+}
+
 .meta__title {
-  color: #bbb;
+  color: #fff;
 }
 
 .meta__backdrop {
-  mask-image: linear-gradient(to bottom, #000D 0%, #0002 65%, #0000 100%);
+  mask-image: linear-gradient(#0000, #0000);
 }
 
 .user-card {
