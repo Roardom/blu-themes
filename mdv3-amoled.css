@@ -31,8 +31,8 @@
   --bbcode-rendered-accent-emphasis: #2260be;
   --bbcode-rendered-attention-subtle: #7289da;
   --bbcode-rendered-danger-fg: #ff141ccc;
-  --bbcode-rendered-quote-bg: #6662;
-  --bbcode-rendered-quote-border: #3981F6;
+  --bbcode-rendered-quote-bg: #000;
+  --bbcode-rendered-quote-border: #606060;
 
   --breadcrumb-fg: #ccc;
   --breadcrumb-active-fg: #999;
