@@ -891,10 +891,6 @@ h6 {
   background-color: var(--color-grey-1);
   border-bottom: 0px solid var(--color-danger) !important;
 }
-select,
-select option {
-  background-color: #454545 !important;
-}
 .bbcode-code,
 .bbcode-quote {
   border: 1px solid var(--color-light-blue);
