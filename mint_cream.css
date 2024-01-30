@@ -11,6 +11,11 @@
     --achievement-box-shadow: none;
     --achievement-progress-bg: #8FCC9B;
 
+    --alert-bg: #E6F6E6;
+    --alert-fg: #533824;
+    --alert-gap-color: #8FCC9B;
+    --alert-gap-width: 1px;
+
     --article-card-bg: #F4FAF5;
     --article-card-fg: inherit;
     --article-card-head-fg: inherit;
@@ -38,6 +43,9 @@
     --bbcode-rendered-quote-bg: #6662;
     --bbcode-rendered-quote-border: #707070;
 
+    --body-fg: #533824;
+    --body-bg: #FFFEF4;
+  
     --breadcrumb-fg: inherit;
     --breadcrumb-active-fg: inherit;
     --breadcrumb-hover-fg: inherit;
@@ -57,6 +65,8 @@
     --button-text-border: none;
     --button-text-border-radius: 0;
     --button-text-fg: currentColor;
+
+    --collection-fg: #ccc;
 
     --comparison-divider-fg: #533824;
     --comparison-button-fg: #533824;
@@ -79,6 +89,7 @@
     --dialog-head-fg: #533824;
 
     --fieldset-bg: #fbfef4;
+    --fieldset-fg: #444;
     --fieldset-border-radius: 4px;
     --fieldset-border: 1px #bbb solid;
 
@@ -117,6 +128,13 @@
     --legend-border: 1px #ccc solid !important;
     --legend-border-radius: 2px !important;
 
+    --mediahub-card-bg: #F4FAF5;
+    --mediahub-card-fg: #533824;
+    --mediahub-card-hover-fg: #63474D;
+    --mediahub-card-border: 1px dashed #533824;
+    --mediahub-card-border-radius: 0;
+    --mediahub-card-box-shadow: none;
+  
     --meta-backdrop-filter:  brightness(150%) contrast(30%);
     --meta-dropdown-backdrop-filter:  brightness(130%) blur(10px);
     --meta-dropdown-bg: #4449;
@@ -145,6 +163,9 @@
     --notification-read: transparent;
     --notification-unread: #8FCC9B;
 
+    --option-bg: #fff;
+    --option-fg: #533824;
+  
     --paginate-bg: transparent;
     --paginate-bg-hover: #0001;
     --paginate-bg-current: transparent;
@@ -301,25 +322,18 @@
     --torrent-tag-bg: #FFFEF4;
     --torrent-tag-hover-fg: #533824;
     --torrent-tag-hover-bg: rgba(255,255,255,0.4);
+
+    --user-stat-card-bg: #F4FAF5;
+    --user-stat-card-fg: #533824;
+    --user-stat-card-border: 1px dashed #533824;
+    --user-stat-card-border-radius: 0;
+    --user-stat-card-box-shadow: none;
 }
 
 
 body {
 	font-family: myriad, tahoma, arial, helvetica, sans-serif;
 	/* font-size: 10pt; */
-    background-color: #FFFEF4;
-    color: #533824;
-}
-
-.top-nav__branding {
-    font-size: 0;
-    background-image: url(https://hostik.cinematik.net/pic/logo.png);
-    background-repeat: no-repeat;
-    width: 200px;
-}
-
-.top-nav__site-logo {
-    font-size: 0;
 }
 
 .meta__backdrop {
@@ -337,4 +351,18 @@ body {
 
 .meta-chip__icon {
     border-radius: 0;
+}
+
+.torrent-search--poster__poster > img {
+    border-radius: 0;
+}
+
+.collection {
+    border-radius: 0;
+}
+
+.torrent-search--grouped__result {
+    border-radius: 0;
+    box-shadow: none;
+    border: 1px dashed #533824;
 }
