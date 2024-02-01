@@ -366,3 +366,15 @@ body {
     box-shadow: none;
     border: 1px dashed #533824;
 }
+
+.bbcode-rendered.bbcode-rendered ol,
+.bbcode-rendered.bbcode-rendered ul {
+    padding-left: 0;
+}
+
+.bbcode-rendered.bbcode-rendered ol ol,
+.bbcode-rendered.bbcode-rendered ol ul,
+.bbcode-rendered.bbcode-rendered ul ol,
+.bbcode-rendered.bbcode-rendered ul ul {
+    padding-left: 2em;
+}
