@@ -635,17 +635,24 @@ h4 .badge-user,
 .chatroom__messages {
     gap: 0;
 }
+.chatroom__messages > li {
+    width: 100%;
+}
 .chatbox-message {
     display: block;
     background-color: transparent;
     border-bottom: 1px dashed #393939;
-    margin: 2px 2px 2px 32px;
+    margin-left: 64px;
+    padding: 2px;
+    border-radius: 0;
 }
 .chatbox-message::before {
     display: none;
 }
 .chatbox-message__header {
-    display: inline;
+    display: inline-flex;
+    flex-direction: row-reverse;
+    margin-right: 4px;
 }
 .chatbox-message__time {
     display: inline;
@@ -656,7 +663,7 @@ h4 .badge-user,
 }
 .chatbox-message__aside {
     display: inline;
-    top: 0;
+    top: 4px;
     left: -32px;
 }
 .chatbox-message__avatar {
@@ -666,6 +673,8 @@ h4 .badge-user,
 }
 .chatbox-message__menu {
     display: inline-block;
+    position: absolute;
+    left: -64px;
 }
 .chatbox-message__content {
     display: inline-block;
