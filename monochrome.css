@@ -661,6 +661,12 @@ h4 .badge-user,
 .chatbox-message__address {
     padding: 4px 0;
 }
+.chatbox-message__address > [href="/users/System"] {
+    display: none;
+}
+.chatbox-message__header:has([href="/users/System"]) + .chatbox-message__aside {
+    display: none;
+}
 .chatbox-message__aside {
     display: inline;
     top: 4px;
